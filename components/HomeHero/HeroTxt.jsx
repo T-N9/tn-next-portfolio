@@ -12,11 +12,6 @@ const HeroTxt = () => {
           <h1 className="hero_txt--text">
             <span className="ht_text">Front-end </span> Developer
           </h1>
-          {/* <h1 className="hero_txt--text">
-                    Hello there, <br className="hide_on_desktop"/> I am <span className="ht_text">TeNyain</span>, <br className="hide_on_mobile"/>
-                    a <span className="ht_text">front-end</span> developer who
-                    delivers <span className="ht_text">fast and reliable</span> websites.
-                    </h1> */}
           <p className="description">
             A developer who delivers fast and reliable websites. I care about
             your business values and targeted customers to meet your golden
@@ -29,7 +24,7 @@ const HeroTxt = () => {
             aria-label="contact tenyain"
             className="hero_txt--btn primary_btn"
           >
-            About Me
+            View Works
           </button>
         </Link>
       </div>
