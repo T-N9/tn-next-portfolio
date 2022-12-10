@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import { client, urlFor } from "../../client";
 import { nanoid } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
+
+import Image from "next/image";
 import Link from "next/link";
+
+import { client, urlFor } from "../../client";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 /* Components */
@@ -16,9 +19,6 @@ import { setProjectData } from "../../store/slices/ProjectsSlice";
 
 // import required modules
 import { Pagination } from "swiper";
-
-/* Data */
-import { projectData } from "../../data/projectData";
 
 const SwiperCards = () => {
   const dispatch = useDispatch();
