@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <Head>
         <meta charset="utf-8" />
-        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#1192d3" />
         <meta name="title" content="TeNyain | Creative Front-end developer" />
@@ -57,7 +57,6 @@ export default function Home() {
           a front-end developer who delivers fast and reliable websites."
         />
         <meta property="twitter:image" content="meta-tn.png" />
-        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
         <meta
           name="google-site-verification"
