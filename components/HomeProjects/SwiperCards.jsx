@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { client, urlFor } from "../../client";
 import { nanoid } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
@@ -19,9 +20,6 @@ import { Pagination } from "swiper";
 /* Data */
 import { projectData } from "../../data/projectData";
 
-// Import Swiper styles
-// import "swiper-bundle.min.css";
-
 const SwiperCards = () => {
   const dispatch = useDispatch();
   const { contentData } = useSelector((state) => state.projectData);
@@ -30,13 +28,15 @@ const SwiperCards = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    const query = '*[_type == "projects"] | order(order asc)';
 
     if (contentData.length === 0) {
       setIsLoading(true);
-
-      setProjects(projectData);
-      dispatch(setProjectData(projectData));
-      setIsLoading(false);
+      client.fetch(query).then((data) => {
+        setProjects(data);
+        dispatch(setProjectData(data));
+        setIsLoading(false);
+      });
     }
   }, []);
 
@@ -62,8 +62,22 @@ const SwiperCards = () => {
       {isLoading ? (
         <div className="loading-projects">
           <div>
-            <img className="light" src={LoadingIcon} alt="loading" />
-            <img className="dark" src={LoadingIconDark} alt="loading" />
+            <Image
+              width={100}
+              height={200}
+              priority
+              className="light"
+              src={LoadingIcon}
+              alt="loading"
+            />
+            <Image
+              width={100}
+              height={200}
+              priority
+              className="dark"
+              src={LoadingIconDark}
+              alt="loading"
+            />
             <p>Loading</p>
           </div>
         </div>
