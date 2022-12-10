@@ -31,6 +31,49 @@
 @import "../components/AboutWriting/AboutWriting";
 @import "../components/AboutWishing/AboutWishing";
 
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a6a6a6;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8a8a8a;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #d6d6d6;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff00;
+  border: 0px none #ffffff00;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #ffffff00;
+}
+
+::-webkit-scrollbar-track:active {
+  background: #ffffff00;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 /* Selection Styles */
 ::-moz-selection {
   /* Code for Firefox */
