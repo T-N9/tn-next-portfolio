@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { client, urlFor } from "../../client";
 import { nanoid } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 /* Components */
@@ -11,10 +11,13 @@ import LoadingIcon from "../../assets/loading.svg";
 import LoadingIconDark from "../../assets/loading-dark.svg";
 
 /* Actions */
-import { setProjectData } from "../../redux/slices/ProjectsSlice";
+import { setProjectData } from "../../store/slices/ProjectsSlice";
 
 // import required modules
 import { Pagination } from "swiper";
+
+/* Data */
+import { projectData } from "../../data/projectData";
 
 // Import Swiper styles
 // import "swiper-bundle.min.css";
@@ -27,15 +30,13 @@ const SwiperCards = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const query = '*[_type == "projects"] | order(order asc)';
 
     if (contentData.length === 0) {
       setIsLoading(true);
-      client.fetch(query).then((data) => {
-        setProjects(data);
-        dispatch(setProjectData(data));
-        setIsLoading(false);
-      });
+
+      setProjects(projectData);
+      dispatch(setProjectData(projectData));
+      setIsLoading(false);
     }
   }, []);
 
@@ -43,7 +44,7 @@ const SwiperCards = () => {
     const { title, description, icon, category, slug } = project;
     return (
       <SwiperSlide key={nanoid()}>
-        <Link to={`/works/${slug.current}`}>
+        <Link href={`/works/${slug.current}`}>
           <ProjectCard
             title={title}
             desc={description}

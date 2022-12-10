@@ -7,8 +7,8 @@ import "css.gg/icons/css/color-bucket.css";
 /* Images */
 import Placeholder from '../../assets/placeholder.webp';
 
-/* Component */
-import { ImageLoader } from "render-img";
+// /* Component */
+// import { ImageLoader } from "render-img";
 
 const ProjectCard = (props) => {
     const { title, desc, image, icon, category} = props;
@@ -25,7 +25,7 @@ const ProjectCard = (props) => {
                         </div>
                     </div>
                     <div className="projectCard--image">
-                        <ImageLoader
+                        {/* <ImageLoader
                         // placeHolderSrc={Placeholder}
                         src={image}
                         errorSrc={Placeholder}
@@ -35,8 +35,8 @@ const ProjectCard = (props) => {
                         threshold={100} // default => 100
                         isUseblur={true} // default => false
                         // backgroundColor="#b4b4b4" // background for overlay
-                        />
-                        {/* <img src={image} width="525px" height="339.66px" alt="portfolio project"/> */}
+                        /> */}
+                        <img src={image} width="525px" height="339.66px" alt="portfolio project"/>
                     </div>
                 </div>
                 <div className="col_2">

@@ -25,10 +25,10 @@ const HomePageLayout = () => {
       <Transitions>
         <div className="nav_spacer"></div>
         <HomeHero />
-        {/* <div id="portfolio">
+        <div id="portfolio">
           <HomeProject />
         </div>
-        <Testimonials />
+        {/* <Testimonials />
         <HomeSkills />
         <HomeContact />
         <Footer /> */}

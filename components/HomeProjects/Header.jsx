@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const Header = () => {
     return (
@@ -9,7 +9,7 @@ const Header = () => {
                     Projects
                 </h1>
 
-                <Link to='/works'>
+                <Link href='/works'>
                     <button className="header_btn link_hover">
                         view all works &gt;
                     </button>
