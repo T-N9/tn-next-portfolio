@@ -1,0 +1,214 @@
+@import "./mixins";
+@import "./variables";
+@import "./animations";
+@import "./utilities";
+
+// @import "./components/Navbar/Navbar";
+// @import "./components/HomeHero/HomeHero";
+// @import "./components/HomeAbout/HomeAbout";
+// @import "./components/HomeProjects/HomeProjects";
+// @import "./components/HomeMotto/HomeMotto";
+// @import "./components/HomeSkills/HomeSkills";
+// @import "./components/HomeContact/HomeContact";
+// @import "./components/Footer/Footer";
+
+// @import "./components/ContactHero/ContactHero";
+
+// @import "./components/ProjectHero/ProjectHero";
+// @import "./components/ProjectStatus/ProjectStatus";
+// @import "./components/ProjectDescription/ProjectDescription";
+
+// @import "./components/ServiceHero/ServiceHero";
+// @import "./components/ServiceBody/ServiceBody";
+
+// @import "./components/Animated/AnimatedSVG";
+
+// @import "./components/AboutHero/AboutHero";
+// @import "./components/AboutTimeline/AboutTimeline";
+// @import "./components/AllCredits/AllCredits";
+
+// @import "./components/Testimonials/Testimonials";
+// @import "./components/AboutWriting/AboutWriting";
+// @import "./components/AboutWishing/AboutWishing";
+
+/* Selection Styles */
+::-moz-selection {
+  /* Code for Firefox */
+  color: $white;
+  background: $primary-color;
+}
+
+::selection {
+  color: $white;
+  background: $primary-color;
+}
+
+.dark {
+  ::-moz-selection {
+    /* Code for Firefox */
+    color: $white;
+    background: $accent-color;
+  }
+
+  ::selection {
+    color: $white;
+    background: $accent-color;
+  }
+}
+
+/* Cursor Styles */
+html,
+body {
+  .main_content {
+    min-height: 100vh;
+    cursor: url(../assets/light-cursor.svg), auto !important;
+  }
+
+  .main_content.dark {
+    cursor: url(../assets/dark-cursor.svg), auto !important;
+  }
+}
+
+a,
+button {
+  cursor: url(../assets/light-cursor-pointer.svg), auto !important;
+}
+
+.dark {
+  a,
+  button {
+    cursor: url(../assets/dark-cursor-pointer.svg), auto !important;
+  }
+}
+
+/* Minor Tags */
+strong {
+  color: $primary-color;
+}
+
+.dark strong {
+  color: $accent-color;
+}
+
+code {
+  padding: 10px;
+  background-color: $light-color;
+  border-radius: 5px;
+  line-height: 3;
+}
+
+.dark code {
+  background-color: #333;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  pointer-events: none;
+  user-select: none;
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: smooth !important;
+  }
+}
+
+/* Simplify.css */
+.simple_container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  h1 {
+    margin-bottom: 20px;
+  }
+}
+
+.simple_skills p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.simple_states p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.simple_projects p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
