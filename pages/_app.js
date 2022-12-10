@@ -12,6 +12,7 @@ import { NavBar } from "../components";
 
 /* Wrapper */
 import ThemeWrapper from "../wrapper/ThemeWrapper";
+import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
@@ -23,10 +24,12 @@ function MyApp({ Component, pageProps }) {
   }, []);
   return (
     <Provider store={store}>
-      <ThemeWrapper>
-        <NavBar />
-        <Component {...pageProps} />
-      </ThemeWrapper>
+      <ThemeProvider attribute="class">
+        <ThemeWrapper>
+          <NavBar />
+          <Component {...pageProps} />
+        </ThemeWrapper>
+      </ThemeProvider>
     </Provider>
   );
 }

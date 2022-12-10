@@ -20,6 +20,7 @@
     "framer-motion": "^7.6.19",
     "next": "13.0.6",
     "next-sanity-image": "^5.0.0",
+    "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-markdown": "^8.0.4",
