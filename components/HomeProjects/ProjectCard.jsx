@@ -1,4 +1,8 @@
 import React from "react";
+import Image from "next/image";
+
+import { client } from "../../client";
+import { useNextSanityImage } from "next-sanity-image";
 
 /* Icons */
 import "css.gg/icons/css/code-slash.css";
@@ -8,6 +12,9 @@ import "css.gg/icons/css/color-bucket.css";
 
 const ProjectCard = (props) => {
   const { title, desc, image, icon, category } = props;
+  console.log({image})
+
+  const imageProps = useNextSanityImage(client, image);
   return (
     <>
       <div className="projectCard">
@@ -19,11 +26,16 @@ const ProjectCard = (props) => {
             </div>
           </div>
           <div className="projectCard--image">
-            <img
-              src={image}
-              width="525px"
-              height="339.66px"
+            <Image
+              {...imageProps}
+              // src={imageProps.src}
+              // src={image}
+              // width="525px"
+              // height="339.66px"
+              width={525}
+              height={339.66}
               alt="portfolio project"
+              // placeholder="blur"
             />
           </div>
         </div>

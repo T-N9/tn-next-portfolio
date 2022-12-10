@@ -48,7 +48,7 @@ const SwiperCards = () => {
           <ProjectCard
             title={title}
             desc={description}
-            image={urlFor(project.imgUrl)}
+            image={project.imgUrl}
             icon={icon}
             category={category}
           />
