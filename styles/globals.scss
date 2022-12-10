@@ -3,33 +3,33 @@
 @import "./animations";
 @import "./utilities";
 
-// @import "./components/Navbar/Navbar";
-// @import "./components/HomeHero/HomeHero";
-// @import "./components/HomeAbout/HomeAbout";
-// @import "./components/HomeProjects/HomeProjects";
-// @import "./components/HomeMotto/HomeMotto";
-// @import "./components/HomeSkills/HomeSkills";
-// @import "./components/HomeContact/HomeContact";
-// @import "./components/Footer/Footer";
+@import "../components/Navbar/Navbar";
+@import "../components/HomeHero/HomeHero";
+@import "../components/HomeAbout/HomeAbout";
+@import "../components/HomeProjects/HomeProjects";
+@import "../components/HomeMotto/HomeMotto";
+@import "../components/HomeSkills/HomeSkills";
+@import "../components/HomeContact/HomeContact";
+@import "../components/Footer/Footer";
 
-// @import "./components/ContactHero/ContactHero";
+@import "../components/ContactHero/ContactHero";
 
-// @import "./components/ProjectHero/ProjectHero";
-// @import "./components/ProjectStatus/ProjectStatus";
-// @import "./components/ProjectDescription/ProjectDescription";
+@import "../components/ProjectHero/ProjectHero";
+@import "../components/ProjectStatus/ProjectStatus";
+@import "../components/ProjectDescription/ProjectDescription";
 
-// @import "./components/ServiceHero/ServiceHero";
-// @import "./components/ServiceBody/ServiceBody";
+@import "../components/ServiceHero/ServiceHero";
+@import "../components/ServiceBody/ServiceBody";
 
-// @import "./components/Animated/AnimatedSVG";
+@import "../components/Animated/AnimatedSVG";
 
-// @import "./components/AboutHero/AboutHero";
-// @import "./components/AboutTimeline/AboutTimeline";
-// @import "./components/AllCredits/AllCredits";
+@import "../components/AboutHero/AboutHero";
+@import "../components/AboutTimeline/AboutTimeline";
+@import "../components/AllCredits/AllCredits";
 
-// @import "./components/Testimonials/Testimonials";
-// @import "./components/AboutWriting/AboutWriting";
-// @import "./components/AboutWishing/AboutWishing";
+@import "../components/Testimonials/Testimonials";
+@import "../components/AboutWriting/AboutWriting";
+@import "../components/AboutWishing/AboutWishing";
 
 /* Selection Styles */
 ::-moz-selection {
