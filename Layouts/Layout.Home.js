@@ -30,8 +30,8 @@ const HomePageLayout = () => {
         </div>
         <Testimonials />
         <HomeSkills />
-        {/* <HomeContact />
-        <Footer /> */}
+        <HomeContact />
+        <Footer />
       </Transitions>
     </>
   );
