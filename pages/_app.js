@@ -1,9 +1,18 @@
-import '../styles/globals.scss'
+/* CSS */
+import "../styles/globals.scss";
+
+/* Redux */
+import { Provider } from "react-redux";
+import store from "../store/store";
 
 function MyApp({ Component, pageProps }) {
-  return <section className='main_content'>
-    <Component {...pageProps} />
-  </section>
+  return (
+    <Provider store={store}>
+      <section className="main_content">
+        <Component {...pageProps} />
+      </section>
+    </Provider>
+  );
 }
 
-export default MyApp
+export default MyApp;
