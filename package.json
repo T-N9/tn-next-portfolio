@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@icons-pack/react-simple-icons": "^6.2.0",
     "@reduxjs/toolkit": "^1.9.1",
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^3.4.1",

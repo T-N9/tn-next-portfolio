@@ -28,9 +28,9 @@ const HomePageLayout = () => {
         <div id="portfolio">
           <HomeProject />
         </div>
-        {/* <Testimonials />
+        <Testimonials />
         <HomeSkills />
-        <HomeContact />
+        {/* <HomeContact />
         <Footer /> */}
       </Transitions>
     </>
