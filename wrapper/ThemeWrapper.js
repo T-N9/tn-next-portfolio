@@ -11,7 +11,7 @@ const ThemeWrapper = (props) => {
   useEffect(() => {
     let persistedTheme = localStorage.getItem(localStorageKey);
     console.log({ persistedTheme });
-    if (persistedTheme === null && typeof window !== "undefined") {
+    if (persistedTheme === "null") {
       localStorage.setItem(localStorageKey, false);
       persistedTheme = localStorage.getItem(localStorageKey) && false;
     } else if (persistedTheme === "true") {
