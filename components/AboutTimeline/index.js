@@ -87,7 +87,7 @@ const AboutTimeline = () => {
                       className="ht_text"
                       href="https://www.facebook.com/mmsoss"
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noreferrer"
                     >
                       @MMSIT
                     </a>

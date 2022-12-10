@@ -10,7 +10,7 @@ const AboutWriting = () => {
         <h1 className="title_text text_center">Writing</h1>
 
         <div className="writing--grid">
-          <a href="https://sesbytnml.netlify.app/" target="_blank">
+          <a href="https://sesbytnml.netlify.app/" target="_blank" rel="noreferrer">
             <div className="card">
               <img src={SESImg} alt="Software Engineering Study" />
 
