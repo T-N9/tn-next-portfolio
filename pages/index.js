@@ -1,4 +1,6 @@
 import Head from "next/head";
+/* Layout */
+import { HomePageLayout } from "../Layouts";
 
 export default function Home() {
   return (
@@ -66,7 +68,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Hello World!</h1>
+        <HomePageLayout />
       </main>
     </>
   );

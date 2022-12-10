@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import Hamburger from "./Hamburger";
 import Toggler from "./Toggler";
-import { setActive } from "../../redux/slices/NavbarSlice";
+import { setActive } from "../../store/slices/NavbarSlice";
 
 const pages = [
   {
@@ -51,7 +51,7 @@ const MobileMenu = () => {
                   currentPage === page.name && "ht_text"
                 }`}
               >
-                <Link to={page.route}>{page.name}</Link>
+                <Link href={page.route}>{page.name}</Link>
               </li>
             );
           })}

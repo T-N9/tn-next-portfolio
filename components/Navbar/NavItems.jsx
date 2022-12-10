@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { useSelector } from "react-redux";
-
 
 const pages = [
   {
@@ -34,8 +33,13 @@ const NavItems = () => {
       <ul className="nav_items">
         {pages.map((page, index) => {
           return (
-            <li key={index} className={`nav_item link_hover ${currentPage === page.name && 'ht_text'}`}>
-              <Link to={page.route}>{page.name}</Link>
+            <li
+              key={index}
+              className={`nav_item link_hover ${
+                currentPage === page.name && "ht_text"
+              }`}
+            >
+              <Link href={page.route}>{page.name}</Link>
             </li>
           );
         })}

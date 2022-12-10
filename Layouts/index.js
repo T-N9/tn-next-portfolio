@@ -1,0 +1,1 @@
+export { default as HomePageLayout } from './Layout.Home';

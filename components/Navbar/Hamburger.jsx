@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setActive } from '../../redux/slices/NavbarSlice';
+import { setActive } from '../../store/slices/NavbarSlice';
 
 const Hamburger = () => {
 

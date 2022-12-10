@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const HeroTxt = () => {
   return (
@@ -24,7 +24,7 @@ const HeroTxt = () => {
           </p>
         </div>
 
-        <Link to="/about">
+        <Link href="/about">
           <button
             aria-label="contact tenyain"
             className="hero_txt--btn primary_btn"
