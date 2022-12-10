@@ -1,0 +1,56 @@
+.service_hero {
+  position: relative;
+  height: 70vh;
+  // @include flex-center;
+  background-color: white;
+  background-image: url("https://www.transparenttextures.com/patterns/diagonal-striped-brick.png");
+
+  .container_sm {
+    height: 100%;
+    @include flex-center;
+  }
+
+  &--overlay {
+    position: absolute;
+    background: conic-gradient(
+      from 180deg at 50% 50%,
+      rgba(255, 255, 255, 0.5) 0deg,
+      rgba(255, 255, 255, 0.5049) 178.12deg,
+      rgba(17, 146, 214, 0.06) 360deg
+    );
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    transition: background-color 200ms 100ms ease-out;
+  }
+
+  &--text {
+    position: relative;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 500;
+    font-family: $font-primary;
+    font-weight: 800;
+
+    @include m-breakpoint-down(lmedium) {
+      font-size: 1.865rem;
+    }
+
+    @include m-breakpoint-down(small) {
+      font-size: 1.6rem;
+      padding: 20px;
+    }
+  }
+}
+
+.dark {
+  .service_hero {
+    background-color: $dark-color;
+
+    &--overlay {
+      background-color: $dark-color;
+    }
+  }
+}

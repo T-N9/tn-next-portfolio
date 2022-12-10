@@ -1,0 +1,47 @@
+.about_wishing {
+  &--title {
+    font-family: $font-writing;
+    text-align: center;
+    font-size: 3.3rem;
+    font-weight: normal;
+    margin-top: 1rem;
+
+    @include m-breakpoint-down(lmedium) {
+        font-size: 2.5rem;
+    }
+  }
+  &--letter {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 0.8rem;
+
+    @include m-breakpoint-down(lmedium) {
+        width: 80%;
+    }
+
+    @include m-breakpoint-down(small) {
+        width: 100%;
+    }
+  }
+
+  .yt_video {
+    width: 100%;
+    min-height: 600px;
+    border: 5px solid $primary-color;
+    border-radius: 10px;
+    margin-top: 1rem;
+
+    @include m-breakpoint-down(small) {
+        min-height: 300px;
+    }
+  }
+}
+
+.dark {
+  .about_wishing {
+    .yt_video {
+      border: 5px solid $accent-color;
+    }
+  }
+}

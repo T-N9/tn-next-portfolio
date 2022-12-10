@@ -1,0 +1,154 @@
+.footer_page_wrapper {
+ 
+    a {
+        color: white !important;
+    }
+    
+    background-image: linear-gradient(
+        90deg
+        , rgba(17, 146, 211, 0.2) 5%, rgba(17, 146, 211, 0.5) 50%, rgba(17, 146, 211, 0.2) 100%);
+
+    @include m-breakpoint-down(lmedium) {
+        background-image: linear-gradient(
+        180deg
+        , rgba(17, 146, 211, 0.2) 5%, rgba(17, 146, 211, 0.5) 50%, rgba(17, 146, 211, 0.2) 100%);
+    }
+    .footer_page {
+        
+        .footer_flexbox {
+            padding-top: 3rem;
+            display: flex;
+
+            @include m-breakpoint-down(lmedium) {
+                flex-direction: column;
+            }
+            
+            .greeting_txt {
+                flex: 1;
+                @include flex-center;
+                &--wish {
+                    color: $white;
+                    font-size: 2.465rem;
+                    line-height: 1;
+                    text-shadow: 1px 1px 2px $primary-color;
+
+                    @include m-breakpoint-down(small) {
+                        font-size: 2.465rem;
+                    }
+
+                    > span {
+                        display: block;
+                    }
+
+                    .emoji {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+
+            .reach_me {
+                padding: 2rem 0;
+                // padding-left: 8rem;
+                @include flex-center;
+                flex-direction: column;
+                flex: 1;
+
+                @include m-breakpoint-down(lmedium) {
+                    padding-left: 0;
+                }
+
+                @include m-breakpoint-down(small) {
+                    align-items: flex-start;
+                }
+                > * {
+                    font-family: $font-primary !important;
+                    color: white;
+                }
+
+                h1 {
+                    font-size: 22px;
+                }
+                
+                .icon_banner {
+                    padding: 1rem 0;
+                    svg {
+                        width: 40px;
+                        height: 40px;
+                        // margin-right: 2rem;
+                        transition: all 200ms ease;
+
+                        &:hover {
+                            filter: drop-shadow(1px 1px 2px $primary-color);
+                        }
+                    }
+
+                    >:not(:last-child){
+                        margin-right: 2rem;
+                    }
+                }
+            }
+        }
+
+        .footer_line {
+            text-align: center;
+            color: rgba($dark-color, 0.5);
+            padding-bottom: 3rem;
+            .ht_text {
+                font-weight: 800;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.dark {
+    .footer_page_wrapper {
+
+        a {
+            color: white !important;
+        }
+
+        background-image: linear-gradient(
+        90deg
+        , rgba($accent-color, 0.2) 5%, rgba($accent-color, 0.5) 50%, rgba($accent-color, 0.2) 100%);
+        @include m-breakpoint-down(lmedium) {
+            background-image: linear-gradient(
+            180deg
+            , rgba($accent-color, 0.2) 5%, rgba($accent-color, 0.5) 50%, rgba($accent-color, 0.2) 100%);
+        }
+        .footer_page {
+        
+            .footer_flexbox {
+                
+                .greeting_txt {
+                    &--wish {
+                        color: $light-color;
+                        text-shadow: 1px 1px 2px $accent-color;
+                    }
+                }
+    
+                .reach_me {
+                    > * {
+                        font-family: $font-primary !important;
+                        color: $light-color;
+                    }
+                    
+                    .icon_banner {
+                        svg {
+    
+                            &:hover {
+                                filter: drop-shadow(1px 1px 2px $accent-color);
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .footer_line {
+                color: rgba($light-color, 0.5);
+            }
+        }
+    }
+}

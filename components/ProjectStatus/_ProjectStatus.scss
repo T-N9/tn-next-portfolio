@@ -1,0 +1,53 @@
+.status {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @include m-breakpoint-down(small) {
+    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0.5rem;
+  }
+
+  > :not(:last-child) {
+    margin-right: 1rem;
+
+    @include m-breakpoint-down(small) {
+      margin-right: 0;
+    }
+  }
+  &--card {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    box-shadow: rgba(223, 223, 223, 0.3) 0px 0px 0px 3px;
+
+    @include m-breakpoint-down(small) {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+    .name {
+      font-weight: bold;
+    }
+
+    .status_t {
+      color: $primary-color;
+      text-transform: uppercase;
+    }
+
+    @include m-breakpoint-down(small) {
+      font-size: 14px;
+    }
+  }
+}
+
+.dark {
+  .status {
+    &--card {
+      .status_t {
+        color: $accent-color;
+      }
+    }
+  }
+}

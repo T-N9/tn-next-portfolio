@@ -1,0 +1,170 @@
+.testimonials {
+  margin: 3.75rem 0;
+
+  background-color: rgba($light-color, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  // background-image: url("https://www.transparenttextures.com/patterns/grid-me.png");
+  background-attachment: fixed;
+  position: relative;
+
+  .background_div {
+    // background-attachment: fixed;
+    padding: 6rem 0;
+    // background: #2193b0; /* fallback for old browsers */
+    // background: -webkit-linear-gradient(
+    //   to right,
+    //   #00B0DC,
+    //   #1192D3
+    // ); /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(
+    //   to right,
+    //   #00B0DC,
+    //   #1192D3
+    // ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-image: radial-gradient(
+      circle at top left,
+      #fffffa 0%,
+      #fffffa 2%,
+      #fcfcfc 2%,
+      #fcfcfc 23%,
+      #fffffa 23%,
+      #fffffa 55%,
+      #fcfcfc 55%,
+      #fcfcfc 80%,
+      #42c0ff60 80%,
+      #42c0ff60 86%,
+      #26a8ea60 86%,
+      #26a8ea60 96%,
+      #1192d360 96%,
+      #1192d360 100%
+    );
+  }
+
+  .warn-top {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $warning-color;
+    font-weight: 800;
+    @include m-breakpoint-down(small) {
+      font-size: 1rem;
+    }
+  }
+
+  .warn-bottom {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $warning-color;
+    font-weight: 800;
+    @include m-breakpoint-down(small) {
+      font-size: 1rem;
+    }
+  }
+
+  .desc_text {
+    font-weight: 600;
+    font-size: 0.9rem;
+    @include m-breakpoint-down(small) {
+      font-size: 0.8rem;
+    }
+  }
+  .card_wrapper {
+    margin-top: 2rem;
+    display: flex;
+    gap: 5rem;
+    overflow: visible;
+
+    .swiper {
+      padding: 20px 5rem !important;
+      padding-bottom: 50px !important;
+
+      @include m-breakpoint-down(small) {
+        padding: 20px 1rem !important;
+        padding-bottom: 50px !important;
+      }
+    }
+
+    .card {
+      background-color: white;
+      user-select: none;
+      pointer-events: none;
+      box-shadow: rgba(223, 223, 223, 0.3) 0px 0px 0px 3px;
+      background-image: url(../../assets/contact-bg.svg);
+      background-position: center center;
+      background-size: cover;
+      // border-left: 5px solid $primary-color;
+      padding: 25px 30px;
+      border-radius: 15px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      // min-width: 500px;
+      .saying {
+        &::first-letter {
+          font-size: 2rem;
+          font-weight: 800;
+          color: $primary-color;
+        }
+
+        @include m-breakpoint-down(small) {
+          font-size: 1rem;
+        }
+      }
+
+      .info {
+        border-top: 2px solid rgba($primary-color, 0.5);
+        padding-top: 5px;
+        // margin-top: 2rem;
+      }
+    }
+  }
+}
+
+.dark {
+  .testimonials {
+    background-color: rgba(#333, 0.2);
+
+    .background_div {
+      background-image: radial-gradient(
+        circle at top left,
+        #2d3a47 0%,
+        #2d3a47 2%,
+        #4e5d6c70 2%,
+        #4e5d6c70 23%,
+        #414d59 23%,
+        #414d59 55%,
+        #3a4856 55%,
+        #3a4856 80%,
+        #83ffda60 80%,
+        #83ffda60 86%,
+        #64e9c260 86%,
+        #64e9c260 96%,
+        #2fe0ac60 96%,
+        #2fe0ac60 100%
+      );
+    }
+    .card_wrapper {
+      .card {
+        background-color: #4d5a68;
+        box-shadow: rgba(223, 223, 223, 0.3) 0px 0px 0px 3px;
+        background-image: url(../../assets/contact-bg-dark.svg);
+        .saying {
+          &::first-letter {
+            color: $accent-color;
+          }
+        }
+
+        .info {
+          border-top: 2px solid rgba($accent-color, 0.5);
+        }
+      }
+    }
+  }
+}

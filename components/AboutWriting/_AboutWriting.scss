@@ -1,0 +1,53 @@
+.aboutWriting {
+  margin-bottom: 4rem;
+  .writing--grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include m-breakpoint-down(medium) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card {
+      padding: 20px;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+      transition: all 200ms ease;
+      border-radius: 20px;
+
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 1px;
+      }
+
+      .heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 0.5rem;
+      }
+
+      h1 {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+.dark {
+  .aboutWriting {
+    margin-bottom: 4rem;
+    .writing--grid {
+      .card {
+        box-shadow: rgba($accent-color, 0.1) 0px 0px 0px 1px;
+
+        p {
+            color: $light-color !important;
+        }
+
+        &:hover {
+          box-shadow: rgba($accent-color, 0.4) 0px 0px 5px 1px;
+        }
+      }
+    }
+  }
+}

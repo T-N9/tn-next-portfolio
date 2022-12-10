@@ -1,0 +1,114 @@
+.skill_page_wrapper {
+    padding: 3.75rem 0;
+    .skill_page {
+        background-image: url(../../assets/skills-bg.webp);
+        background-size: 75%;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        @include m-breakpoint-down(large) {
+            background-size: 85%;
+        }
+
+        @include m-breakpoint-down(small) {
+            background-size: 105%;
+            background-position: center calUni(125px);
+        }
+        &--grid {
+            display: grid;
+            margin: 3rem auto;
+            width: 40%;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 30px 0;
+
+            @include m-breakpoint-down(large) {
+                width: 60%;
+            }
+
+            @include m-breakpoint-down(small) {
+                width: 90%;
+            }
+
+            .skill_item {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                color: rgba($dark-color, 0.5);
+
+                transition: color 200ms ease;
+
+                @include m-breakpoint-down(lmedium) {
+                    font-size: calUni(12px);
+                }
+
+                &:hover {
+                    color: rgba($primary-color, 0.5);
+
+                    svg {
+                        filter: grayscale(0) drop-shadow(0px 1px 2px $primary-color);
+                    }
+                }
+
+            }
+            svg {
+                margin: auto;
+                fill: rgba($primary-color, 0.5);
+                width: 60px;
+                height: 60px;
+                filter: grayscale(1) drop-shadow(0px 0px 0px $primary-color);
+                transition: filter 200ms ease;
+
+                @include m-breakpoint-down(small) {
+                    width: 90%;
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+
+        .service_intro {
+            width: 40%;
+            text-align: center;
+            margin: auto;
+
+            @include m-breakpoint-down(large) {
+                width: 60%;
+            }
+
+            @include m-breakpoint-down(small) {
+                width: 100%;
+            }
+
+            p {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+.dark {
+    .skill_page_wrapper {
+        .skill_page {
+            background-image: url(../../assets/skills-dark-bg.webp);
+
+            .skill_item {
+                color: rgba($light-color, 0.5);
+
+                &:hover {
+                    color: rgba($accent-color, 0.6);
+
+                    svg {
+                        filter: grayscale(0) drop-shadow(0px 1px 2px $accent-color);
+                    }
+                }
+
+            }
+            svg {
+                fill: rgba($accent-color, 0.5);
+
+                filter: grayscale(1) drop-shadow(0px 0px 0px $accent-color);
+
+            }
+        }
+    }
+}

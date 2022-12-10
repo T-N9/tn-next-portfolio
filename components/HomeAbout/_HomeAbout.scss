@@ -1,0 +1,97 @@
+.about_page_wrapper {
+  margin-top: 5rem;
+  position: relative;
+  padding: 10rem 0;
+  .about_page {
+    .media_left_wrapper {
+      position: absolute;
+      left: 0;
+      top: calUni(15px);
+
+      @include m-breakpoint-down(large) {
+        transform: scale(0.8);
+        left: -22px;
+        top: 0.0625rem;
+      }
+
+      @include m-breakpoint-down(small) {
+        transform: scale(0.7);
+        left: -35px;
+      }
+
+      .computer_ill {
+        position: absolute;
+        top: 95px;
+        left: 90px;
+      }
+
+      .listen_music_ill {
+        position: absolute;
+        bottom: -35px;
+        left: 145px;
+
+        @include m-breakpoint-down(large) {
+          bottom: unset;
+          top: calUni(50px);
+          left: calUni(335px);
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    .media_right_wrapper {
+      position: absolute;
+      right: 0;
+      top: calUni(50px);
+
+      .pencils_ill {
+        position: absolute;
+        left: calUni(-120px);
+        top: calUni(150px);
+      }
+
+      .palette_ill {
+        position: absolute;
+        bottom: calUni(-55px);
+        right: calUni(100px);
+
+        @include m-breakpoint-down(small) {
+          bottom: calUni(125px);
+          right: calUni(345px);
+          transform: rotate(165deg);
+        }
+      }
+
+      @include m-breakpoint-down(large) {
+        transform: scale(0.8);
+        top: unset;
+        bottom: -12.375rem;
+        right: calUni(-22px);
+      }
+
+      @include m-breakpoint-down(small) {
+        transform: scale(0.7);
+        bottom: -12.375rem;
+        right: calUni(-35px);
+      }
+    }
+
+    .content_wrapper {
+      width: 47%;
+      margin: auto;
+
+      @include m-breakpoint-down(large) {
+        width: 72%;
+        margin-top: 15rem;
+      }
+
+      @include m-breakpoint-down(small) {
+        width: 100%;
+      }
+    }
+  }
+
+  @include m-breakpoint-down(small) {
+    margin-top: 2rem;
+  }
+}

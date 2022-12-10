@@ -1,0 +1,422 @@
+#portfolio {
+  @include m-breakpoint-down(large) {
+    margin-top: 15rem;
+  }
+
+  @include m-breakpoint-down(small) {
+    margin-top: 5rem;
+  }
+
+  .swiper-slide {
+    display: inline-block;
+    background-color: rgba($primary-color, 0.1) !important;
+
+    height: calUni(695px) !important;
+    border-radius: 20px;
+    transition: all 200ms ease !important;
+
+    @include m-breakpoint-up(xlarge) {
+      width: calUni(565px) !important;
+    }
+
+    @include m-breakpoint-down(large) {
+      height: auto !important;
+    }
+
+    &:hover {
+      box-shadow: rgba($dark-color, 0.3) 0px 2px 5px -1px,
+        rgba($dark-color, 0.3) 0px 1px 3px -1px;
+    }
+  }
+
+  .swiper {
+    overflow: visible !important;
+    width: 86vw;
+    max-width: 120rem;
+    margin-right: auto;
+    margin-left: auto;
+    touch-action: pan-y;
+    padding: calUni(20px) 0 calUni(80px) 0 !important;
+    margin-top: 3rem;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $primary-color;
+  }
+}
+
+.portfolio_page_wrapper {
+  padding: 3.75rem 0;
+
+  .portfolio_page {
+    padding-right: 0;
+  }
+}
+
+.portfolio {
+  &--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include m-breakpoint-down(small) {
+      flex-direction: column;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .header_btn {
+      color: $dark-color;
+      border-radius: 5px;
+      background-color: transparent;
+      padding: 5px 10px;
+
+      @include m-breakpoint-down(small) {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.dark {
+  #portfolio {
+    .swiper-slide {
+      background-color: rgba($accent-color, 0.1) !important;
+      &:hover {
+        box-shadow: rgba($accent-color, 0.5) 0px 2px 5px -1px,
+          rgba($accent-color, 0.5) 0px 1px 3px -1px;
+      }
+    }
+  }
+}
+
+.dark {
+  .swiper-pagination-bullet-active {
+    background-color: $accent-color;
+  }
+  #portfolio {
+    .swiper-pagination-bullet-active {
+      background-color: $accent-color !important;
+    }
+  }
+  .portfolio {
+    &--header {
+      .header_btn {
+        color: $light-color;
+      }
+    }
+  }
+}
+
+.projectCard {
+  padding: calUni(20px) 0;
+  user-select: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &--image {
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &:hover {
+    .col_2 {
+      .view_pjBtn {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .projectCard--text {
+      transform: translateY(0px) !important;
+    }
+
+    .projectCard--image {
+      img {
+        transform: scale(1.0125);
+      }
+
+      @include m-breakpoint-down(large) {
+        img {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  .col_2 {
+    margin-bottom: 40px;
+    padding: 0 calUni(20px);
+
+    @include m-breakpoint-down(large) {
+      margin-bottom: 0;
+    }
+
+    .view_pjBtn {
+      visibility: hidden;
+      opacity: 0;
+      transition: all 200ms linear;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 0;
+      width: 120px;
+      color: rgba($dark-color, 0.7);
+      background-color: transparent;
+      overflow: hidden;
+      margin-top: 10px;
+
+      i {
+        z-index: -1;
+      }
+
+      @include m-breakpoint-down(lmedium) {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  &--header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+    padding: 0 calUni(20px);
+
+    @include m-breakpoint-down(large) {
+      margin-bottom: 10px;
+    }
+
+    .category_tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 30px;
+      background-color: $white;
+      color: $primary-color;
+      border-radius: 5px;
+      font-size: 14px;
+
+      p {
+        margin-left: 20px;
+        text-transform: lowercase;
+      }
+    }
+  }
+
+  &--text {
+    transition: transform 200ms ease-in;
+    transform: translateY(40px);
+
+    @include m-breakpoint-down(large) {
+      transform: translateY(0);
+    }
+    h1 {
+      font-family: $font-primary;
+      font-weight: 700;
+      font-size: calUni(28px);
+      color: $primary-color;
+
+      @include m-breakpoint-up(large) {
+        font-size: $fs-400;
+      }
+    }
+
+    p {
+      position: relative;
+      z-index: 200;
+      // background-color: #e6f4fb !important;
+      @include m-breakpoint-up(large) {
+        font-size: $fs-300;
+      }
+    }
+  }
+
+  &--image {
+    padding: 0 calUni(20px);
+    pointer-events: none;
+
+    img {
+      transform: scale(1);
+      transition: transform 200ms ease-in;
+    }
+
+    @include m-breakpoint-down(lmedium) {
+      padding: 0;
+      width: 102%;
+    }
+  }
+
+  &--desc {
+    padding: 0 calUni(20px);
+  }
+}
+
+.dark {
+  .projectCard {
+    &--header {
+      .category-tag {
+        background-color: $dark-color;
+        color: $accent-color;
+      }
+    }
+
+    .category_tag {
+      background-color: $dark-color;
+      color: $accent-color;
+    }
+
+    &--text {
+      h1 {
+        color: $accent-color;
+      }
+
+      p {
+        color: $light-color !important;
+        // transition: all 200ms op;
+        //  background-color: #355063 !important;
+      }
+    }
+
+    .col_2 {
+      .view_pjBtn {
+        color: rgba($light-color, 0.7);
+      }
+    }
+  }
+}
+
+.hero_portfolio {
+  height: 70vh;
+  background-color: $white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px inset;
+  position: relative;
+
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  // background-image: url("https://www.transparenttextures.com/patterns/mirrored-squares.png");
+
+  .flex_auto {
+    height: 100%;
+  }
+
+  .hero_txt {
+    font-weight: 800;
+    font-family: $font-primary !important;
+    font-size: 2rem;
+    margin-bottom: 0;
+    @include m-breakpoint-down(lmedium) {
+      font-size: 1.865rem;
+    }
+
+    @include m-breakpoint-down(small) {
+      font-size: 1.6rem;
+      padding: 20px;
+    }
+  }
+
+  h1 {
+    margin-bottom: 5rem;
+    text-align: center;
+    color: $dark-color;
+  }
+
+  @include m-breakpoint-down(small) {
+    background-size: 12%;
+  }
+}
+
+.portfolio_route_wrapper {
+  .content_wrapper {
+    // background: linear-gradient(0deg, rgba($primary-color, 0.5) 0%, $white 100%);
+    background-color: $white;
+
+    .projectContent {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+      &--grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
+        padding-top: 20px;
+
+        @include m-breakpoint-down(large) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include m-breakpoint-down(small) {
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        .projectCard {
+          background-color: rgba($primary-color, 0.1) !important;
+          border-radius: 20px;
+          transition: all 200ms ease !important;
+
+          .col_2 {
+            .view_pjBtn {
+              visibility: hidden;
+              opacity: 0;
+              transition: all 200ms ease-in;
+
+              @include m-breakpoint-down(large) {
+                opacity: 1;
+                visibility: visible;
+              }
+              i {
+                z-index: 1;
+              }
+            }
+          }
+
+          &:hover {
+            .col_2 {
+              .view_pjBtn {
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+            box-shadow: rgba($dark-color, 0.3) 0px 2px 5px -1px,
+              rgba($dark-color, 0.3) 0px 1px 3px -1px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dark {
+  .hero_portfolio {
+    background-color: $dark-color;
+
+    h1 {
+      color: $light-color;
+    }
+  }
+
+  .portfolio_route_wrapper {
+    .content_wrapper {
+      // background: linear-gradient(0deg, rgba($accent-color, 0.5) 0%, $dark-color 100%);
+      background-color: $dark-color !important;
+
+      .projectContent {
+        .projectCard {
+          background-color: rgba($accent-color, 0.1) !important;
+          &:hover {
+            box-shadow: rgba($accent-color, 0.5) 0px 2px 5px -1px,
+              rgba($accent-color, 0.5) 0px 1px 3px -1px;
+          }
+        }
+      }
+    }
+  }
+}

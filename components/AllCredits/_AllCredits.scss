@@ -1,0 +1,14 @@
+.credit-section {
+  min-height: 100vh;
+  @include flex-center;
+
+  a {
+    color: $primary-color !important;
+  }
+}
+
+.dark .credit-section {
+  a {
+    color: $accent-color !important;
+  }
+}

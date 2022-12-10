@@ -1,0 +1,121 @@
+.motto_page_wrapper {
+    padding: calUni(60px) 0;
+
+    .motto_page {
+
+        h1 {
+            color: rgba( $dark_color, 0.3);
+            text-align: center;
+
+            @include m_breakpoint_down(large) {
+                font-size: $fs_100;
+                padding: 0 4rem;
+            }
+
+            @include m_breakpoint_down(small) {
+                padding: 0 1rem;
+            }
+        }
+
+        .bricks {
+            display: table;
+            margin: 20px auto;
+
+            .brick_svg {
+                max-width: 100%;
+            }
+
+            .pro_head_front {
+                fill: #1192D6;
+            }
+
+            .pro_cap_side {
+                fill: #1192D5;
+            }
+
+            .pro_top {
+                fill: #1192D8;
+            }
+
+            .com_head_side {
+                fill: #00608F;
+            }
+
+            .com_cap_front {
+                fill: #1192D3;
+            }
+
+            .com_top {
+                fill: #0077B1;
+            }
+
+            .alt_head_side {
+                fill: #00A774 ;
+            }
+
+            .alt_cap_front {
+                fill: #12c996;
+            }
+
+            .alt_top {
+                fill: #2FE0AC;
+            }
+
+            .lines {
+                stroke: $dark_color;
+            }
+        }
+    }
+}
+
+.dark {
+    .motto_page {
+
+        h1 {
+            color: rgba( $light_color, 0.3);
+
+        }
+
+        .bricks {
+            .pro_head_front {
+                fill: #2FE0AC;
+            }
+
+            .pro_cap_side {
+                fill: #2FE0AB;
+            }
+
+            .pro_top {
+                fill: #2FE0AF;
+            }
+
+            .com_head_side {
+                fill: #00A774;
+            }
+
+            .com_cap_front {
+                fill: #12C996;
+            }
+
+            .com_top {
+                fill: #2FE0AC;
+            }
+
+            .alt_head_side {
+                fill: #00608F;
+            }
+
+            .alt_cap_front {
+                fill: #1192D3;
+            }
+
+            .alt_top {
+                fill: #0077B1;
+            }
+
+            .lines {
+                stroke: $light_color;
+            }
+        }
+    }
+}

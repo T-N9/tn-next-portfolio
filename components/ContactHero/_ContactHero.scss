@@ -1,0 +1,100 @@
+.contact_hero_wrapper {
+  background-color: $white;
+  background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
+  transition: all 200ms ease 150ms;
+  height: 70vh;
+  .contact_hero {
+    @include flex-center;
+    text-align: center;
+    height: 100%;
+  }
+}
+
+.open_to_work {
+  .otw_content {
+    margin-top: 3rem;
+    .content {
+      text-align: left;
+
+      h1 {
+        color: $white;
+        -webkit-text-stroke: $primary-color;
+        -webkit-text-stroke-width: 2px;
+        text-align: center;
+      }
+
+      .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .opening_positions {
+        margin: 2rem 0;
+        text-align: left;
+        font-size: 18px;
+
+        @include m-breakpoint-down(small) {
+          font-size: 14px;
+        }
+
+        p {
+          width: 100%;
+        }
+
+        .position_list {
+          text-align: left;
+          font-size: 18px;
+          margin: 0;
+          list-style-type: none;
+          padding-left: 1rem;
+          @include m-breakpoint-down(small) {
+            font-size: 14px;
+          }
+
+          li {
+            position: relative;
+            font-weight: bold;
+          }
+
+          li::before {
+            content: "";
+            position: absolute;
+            left: -5px;
+            top: 7px;
+
+            width: 0.4rem;
+            height: 0.4rem;
+            border-radius: 20px;
+            margin-left: -0.5rem;
+            display: inline-block;
+            background-color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dark {
+  .contact_hero_wrapper {
+    background-color: $dark-color;
+  }
+  .open_to_work {
+    .otw_content {
+      h1 {
+        color: $dark-color;
+        -webkit-text-stroke: $accent-color;
+        -webkit-text-stroke-width: 2px;
+      }
+
+      .opening_positions {
+        .position_list {
+          li::before {
+            background-color: $accent-color;
+          }
+        }
+      }
+    }
+  }
+}
