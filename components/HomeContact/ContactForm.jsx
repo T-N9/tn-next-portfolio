@@ -61,7 +61,11 @@ const ContactForm = () => {
   return (
     <>
       <div className="contact_form">
-        <div className={`mail--paper ${isPaper ? "paper-on" : "paper-off"} ${isFormSubmitted && 'paper-sent'}`}>
+        <div
+          className={`mail--paper ${isPaper ? "paper-on" : "paper-off"} ${
+            isFormSubmitted && "paper-sent"
+          }`}
+        >
           <p className="to">To Te Nyain</p>
 
           <p className="from">
@@ -69,15 +73,21 @@ const ContactForm = () => {
             Mail : {email}
           </p>
 
-          <textarea
-            className="message"
-            value={message}
-            disabled
-            name=""
-            id=""
-            cols="30"
-            rows="4"
-          ></textarea>
+          <form>
+            <label className="d_none" htmlFor="visiterMessage">
+              Message
+            </label>
+            <textarea
+              className="message"
+              value={message}
+              disabled
+              name="visiterMessage"
+              id="visiterMessage"
+              cols="30"
+              rows="4"
+              aria-label="Typed Message"
+            ></textarea>
+          </form>
         </div>
 
         <h1 className="title_text">Get In Touch</h1>
