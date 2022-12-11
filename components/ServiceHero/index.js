@@ -1,5 +1,9 @@
 import React from "react";
 
+import * as Scroll from "react-scroll";
+
+var ScrollLink = Scroll.Link;
+
 const ServiceHero = () => {
   return (
     <section className="service_hero">
@@ -14,9 +18,14 @@ const ServiceHero = () => {
           </h1>
         </div>
 
-        <a href="#services">
+        <ScrollLink
+            to={"services_section"}
+            spy={true}
+            duration={100}
+            smooth={"linear"}
+          >
           <button className="downToContent"><i className="gg-arrow-down"></i></button>
-        </a>
+        </ScrollLink>
       </div>
     </section>
   );

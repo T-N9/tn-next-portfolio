@@ -4,7 +4,6 @@ import "css.gg/icons/css/arrow-down.css";
 import * as Scroll from "react-scroll";
 
 var ScrollLink = Scroll.Link;
-var scrollSpy = Scroll.scrollSpy;
 
 const PortfolioHero = () => {
   return (

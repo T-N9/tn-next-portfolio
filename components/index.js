@@ -17,8 +17,8 @@ export { default as ProjectDirect } from './ProjectDirect';
 export { default as PortfolioHero } from './PortfolioHero';
 export { default as PortfolioProjects } from './PortfolioProjects';
 
-// export { default as ServiceHero } from './ServiceHero';
-// export { default as ServiceBody } from './ServiceBody';
+export { default as ServiceHero } from './ServiceHero';
+export { default as ServiceBody } from './ServiceBody';
 
 export { default as AboutHero } from './AboutHero';
 export { default as AboutTimeline } from './AboutTimeline';
