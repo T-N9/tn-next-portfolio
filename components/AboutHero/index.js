@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 /* Images */
 import HeroImage from "../../assets/aboutHero.webp";
@@ -27,7 +28,7 @@ const AboutHero = () => {
           </div>
 
           <div className="about_hero--image">
-            <img src={HeroImage} alt="tenayin at ucsh" />
+            <Image src={HeroImage} width={'auto'} quality={100} alt="tenayin at ucsh" />
           </div>
         </div>
       </div>

@@ -20,7 +20,7 @@ export { default as ProjectDirect } from './ProjectDirect';
 // export { default as ServiceHero } from './ServiceHero';
 // export { default as ServiceBody } from './ServiceBody';
 
-// export { default as AboutHero } from './AboutHero';
+export { default as AboutHero } from './AboutHero';
 // export { default as AboutTimeline } from './AboutTimeline';
 
 // export { default as AllCredits } from './AllCredits';

@@ -16,13 +16,11 @@ export default function index() {
 
           <iframe
             className="yt_video"
-            // width="560"
-            // height="315"
             src="https://www.youtube.com/embed/7r3VVMUhAxU"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
           <div className="separator"></div>
         </div>
