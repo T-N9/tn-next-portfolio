@@ -12,7 +12,6 @@ import "css.gg/icons/css/color-bucket.css";
 
 const ProjectCard = (props) => {
   const { title, desc, image, icon, category } = props;
-  console.log({image})
 
   const imageProps = useNextSanityImage(client, image);
   return (
@@ -28,14 +27,9 @@ const ProjectCard = (props) => {
           <div className="projectCard--image">
             <Image
               {...imageProps}
-              // src={imageProps.src}
-              // src={image}
-              // width="525px"
-              // height="339.66px"
               width={525}
               height={339.66}
               alt="portfolio project"
-              // placeholder="blur"
             />
           </div>
         </div>
