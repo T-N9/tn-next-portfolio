@@ -8,7 +8,7 @@ import { ProjectHero } from "../components";
 
 const ProjectDetailPageLayout = ({ data }) => {
   const title = data?.title;
-  const image = urlFor(data?.imgUrl);
+  const image = data?.imgUrl;
   const intro = data?.description;
   const category = data?.category;
   const icon = data?.icon;
