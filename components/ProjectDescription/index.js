@@ -1,6 +1,9 @@
 import React from "react";
 import BlockContent from "@sanity/block-content-to-react";
 import "css.gg/icons/css/chevron-right-r.css";
+import Image from "next/image";
+import { useNextSanityImage } from "next-sanity-image";
+import { client } from "../../client";
 
 const ProjectDescription = (props) => {
   const {
@@ -18,6 +21,11 @@ const ProjectDescription = (props) => {
     result,
     conclusion,
   } = props;
+
+  const mockupProps = useNextSanityImage(client, mockup);
+  const mockup_dProps = useNextSanityImage(client, mockup_d);
+  const typo_Props = useNextSanityImage(client, typo);
+  const logo_Props = useNextSanityImage(client, logo);
 
   const paletteList = palette?.map((item) => {
     let color = item.split(",");
@@ -83,7 +91,13 @@ const ProjectDescription = (props) => {
                 <BlockContent blocks={development} />
               </div>
               {mockup && (
-                <img className="mockup_img" src={mockup} alt="mockup" />
+                <Image
+                  className="mockup_img"
+                  {...mockupProps}
+                  style={{ maxWidth: "100%", height: "auto" }}
+                  quality={100}
+                  alt="mockup"
+                />
               )}
             </>
           )}
@@ -112,7 +126,13 @@ const ProjectDescription = (props) => {
                 <BlockContent blocks={designing} />
               </div>
 
-              <img className="mockup_img" src={mockup_d} alt="mockup" />
+              <Image
+                className="mockup_img"
+                {...mockup_dProps}
+                style={{ maxWidth: "100%", height: "auto" }}
+                quality={100}
+                alt="mockup"
+              />
             </div>
             {paletteList && (
               <div className="container_sm container_y_1">
@@ -124,14 +144,25 @@ const ProjectDescription = (props) => {
             {typo && (
               <div className="container_sm no_pad_con container_y_1">
                 <h1 className="title_text_1 text_center typo">Typo</h1>
-                <img src={typo} alt="Typo" />
+                <Image
+                  {...typo_Props}
+                  style={{ maxWidth: "100%", height: "auto" }}
+                  quality={100}
+                  alt="Typo"
+                />
               </div>
             )}
 
             {logo && (
               <div className="container_sm no_pad_con container_y_1">
                 <h1 className="title_text_1 text_center">Logo</h1>
-                <img className="logo_img" src={logo} alt="logo" />
+                <Image
+                  className="logo_img"
+                  {...logo_Props}
+                  style={{ maxWidth: "100%", height: "auto" }}
+                  quality={100}
+                  alt="logo"
+                />
               </div>
             )}
           </div>

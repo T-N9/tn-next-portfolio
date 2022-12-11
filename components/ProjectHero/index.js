@@ -32,6 +32,7 @@ const ProjectHero = (props) => {
           style={{ maxWidth: "100%", height: "auto" }}
           alt={`${title} project`}
           quality={100}
+          priority
         />
       </div>
     </section>

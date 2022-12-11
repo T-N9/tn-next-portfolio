@@ -10,8 +10,8 @@ export { default as Footer } from './Footer';
 // export { default as ContactHero } from './ContactHero';
 
 export { default as ProjectHero } from './ProjectHero';
-// export { default as ProjectStatus } from './ProjectStatus';
-// export { default as ProjectDescription } from './ProjectDescription';
+export { default as ProjectStatus } from './ProjectStatus';
+export { default as ProjectDescription } from './ProjectDescription';
 
 // export { default as PortfolioHero } from './PortfolioHero';
 // export { default as PortfolioProjects } from './PortfolioProjects';

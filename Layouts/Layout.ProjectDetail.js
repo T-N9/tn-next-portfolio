@@ -1,10 +1,9 @@
 import React from "react";
 
 import Transitions from "../components/Animated/Transitions";
-import { urlFor } from "../client";
 
 /* Components */
-import { ProjectHero } from "../components";
+import { ProjectHero, ProjectStatus, ProjectDescription } from "../components";
 
 const ProjectDetailPageLayout = ({ data }) => {
   const title = data?.title;
@@ -19,13 +18,13 @@ const ProjectDetailPageLayout = ({ data }) => {
   const period = data?.period;
   const introduction = data?.introduction;
   const development = data?.development && data?.development;
-  const mockup = data?.mockup && urlFor(data?.mockup);
+  const mockup = data?.mockup && data?.mockup;
   const pandp = data?.pandp && data?.pandp;
   const designing = data?.designing && data?.designing;
-  const mockup_d = data?.mockup_d && urlFor(data?.mockup_d);
+  const mockup_d = data?.mockup_d && data?.mockup_d;
   const palette = data?.colors && data?.colors;
-  const typo = data?.typo && urlFor(data?.typo);
-  const logo = data?.logo && urlFor(data?.logo);
+  const typo = data?.typo && data?.typo;
+  const logo = data?.logo && data?.logo;
   const challenge = data?.challenge;
   const result = data?.result;
   const conclusion = data?.conclusion;
@@ -38,6 +37,22 @@ const ProjectDetailPageLayout = ({ data }) => {
         intro={intro}
         category={category}
         icon={icon}
+      />
+      <ProjectStatus status={status} type={type} role={role} period={period} />
+      <ProjectDescription
+        introduction={introduction}
+        url={url}
+        development={development}
+        mockup={mockup}
+        pandp={pandp}
+        designing={designing}
+        mockup_d={mockup_d}
+        palette={palette}
+        typo={typo}
+        logo={logo}
+        challenge={challenge}
+        result={result}
+        conclusion={conclusion}
       />
     </Transitions>
   );
