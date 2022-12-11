@@ -27,6 +27,7 @@ function MyApp({ Component, pageProps }) {
       <ThemeProvider attribute="class">
         <ThemeWrapper>
           <NavBar />
+          <div className="nav_spacer"></div>
           <Component {...pageProps} />
         </ThemeWrapper>
       </ThemeProvider>

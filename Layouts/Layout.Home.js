@@ -27,7 +27,6 @@ const HomePageLayout = () => {
   return (
     <>
       <Transitions>
-        <div className="nav_spacer"></div>
         <HomeHero />
         <Element name="portfolio_section">
           <div id="portfolio">

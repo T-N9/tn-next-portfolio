@@ -30,7 +30,6 @@ const ProjectDetailPageLayout = ({ data, slug }) => {
   const conclusion = data?.conclusion;
   return (
     <Transitions>
-      <div className="nav_spacer"></div>
       <ProjectHero
         title={title}
         mainImage={image}
