@@ -8,7 +8,7 @@ import { Provider } from "react-redux";
 import store from "../store/store";
 
 /* Components */
-import { NavBar } from "../components";
+import { NavBar, Footer } from "../components";
 
 /* Wrapper */
 import ThemeWrapper from "../wrapper/ThemeWrapper";
@@ -29,6 +29,7 @@ function MyApp({ Component, pageProps }) {
           <NavBar />
           <div className="nav_spacer"></div>
           <Component {...pageProps} />
+          <Footer/>
         </ThemeWrapper>
       </ThemeProvider>
     </Provider>

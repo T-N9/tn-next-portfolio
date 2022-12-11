@@ -36,7 +36,6 @@ const HomePageLayout = () => {
         <Testimonials />
         <HomeSkills />
         <HomeContact />
-        <Footer />
       </Transitions>
     </>
   );
