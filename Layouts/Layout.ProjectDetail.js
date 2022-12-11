@@ -3,9 +3,9 @@ import React from "react";
 import Transitions from "../components/Animated/Transitions";
 
 /* Components */
-import { ProjectHero, ProjectStatus, ProjectDescription } from "../components";
+import { ProjectHero, ProjectStatus, ProjectDescription, ProjectDirect } from "../components";
 
-const ProjectDetailPageLayout = ({ data }) => {
+const ProjectDetailPageLayout = ({ data, slug }) => {
   const title = data?.title;
   const image = data?.imgUrl;
   const intro = data?.description;
@@ -54,6 +54,7 @@ const ProjectDetailPageLayout = ({ data }) => {
         result={result}
         conclusion={conclusion}
       />
+      <ProjectDirect slug={slug}/>
     </Transitions>
   );
 };

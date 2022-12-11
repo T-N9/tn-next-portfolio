@@ -5,14 +5,14 @@ import { client } from "../../client";
 /* Layout */
 import { ProjectDetailPageLayout } from "../../Layouts";
 
-const ProjectDetail = ({ project }) => {
+const ProjectDetail = ({ project, slug }) => {
   return (
     <>
       <Head>
         <title>{project?.title}</title>
       </Head>
       <main>
-        <ProjectDetailPageLayout data={project} />
+        <ProjectDetailPageLayout data={project} slug={slug} />
       </main>
     </>
   );
@@ -44,6 +44,7 @@ export async function getStaticProps(context) {
   return {
     props: {
       project,
+      slug,
     },
   };
 }
