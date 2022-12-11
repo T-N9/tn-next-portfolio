@@ -2,16 +2,18 @@ import React from "react";
 import Head from "next/head";
 import { client } from "../../client";
 
+/* Layout */
+import { ProjectDetailPageLayout } from "../../Layouts";
+
 const ProjectDetail = ({ project }) => {
-  console.log({ project });
   return (
     <>
       <Head>
         <title>{project?.title}</title>
       </Head>
-      <div>
-        <h1>Hello Project</h1>
-      </div>
+      <main>
+        <ProjectDetailPageLayout data={project} />
+      </main>
     </>
   );
 };
