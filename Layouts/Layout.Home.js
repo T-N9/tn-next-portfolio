@@ -13,6 +13,10 @@ import {
 } from "../components";
 import Transitions from "../components/Animated/Transitions";
 
+import * as Scroll from 'react-scroll';
+
+var Element = Scroll.Element;
+
 const HomePageLayout = () => {
   const dispatch = useDispatch();
 
@@ -25,9 +29,11 @@ const HomePageLayout = () => {
       <Transitions>
         <div className="nav_spacer"></div>
         <HomeHero />
-        <div id="portfolio">
-          <HomeProject />
-        </div>
+        <Element name="portfolio_section">
+          <div id="portfolio">
+            <HomeProject />
+          </div>
+        </Element>
         <Testimonials />
         <HomeSkills />
         <HomeContact />

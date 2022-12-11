@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
+import * as Scroll from "react-scroll";
+
+var ScrollLink = Scroll.Link;
+var scrollSpy = Scroll.scrollSpy;
 
 const HeroTxt = () => {
+  useEffect(() => {
+    scrollSpy.update();
+  });
   return (
     <>
       <div className="hero_txt">
@@ -19,14 +26,19 @@ const HeroTxt = () => {
           </p>
         </div>
 
-        <Link href="/about">
+        <ScrollLink
+          to={"portfolio_section"}
+          spy={true}
+          duration={100}
+          smooth={"linear"}
+        >
           <button
             aria-label="contact tenyain"
             className="hero_txt--btn primary_btn"
           >
             View Works
           </button>
-        </Link>
+        </ScrollLink>
       </div>
     </>
   );
