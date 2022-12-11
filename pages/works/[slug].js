@@ -7,9 +7,7 @@ const ProjectDetail = ({ project }) => {
   return (
     <>
       <Head>
-        <title>
-          {project.title}
-        </title>
+        <title>{project?.title}</title>
       </Head>
       <div>
         <h1>Hello Project</h1>
