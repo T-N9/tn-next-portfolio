@@ -9,7 +9,6 @@ import {
   HomeSkills,
   HomeContact,
   Testimonials,
-  Footer,
 } from "../components";
 import Transitions from "../components/Animated/Transitions";
 
