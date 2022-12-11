@@ -4,7 +4,7 @@ const AllCredits = () => {
   return (
     <section className="credit-section">
       <div className="credit-section--wrapper container">
-        <div>
+        <div className="container_x_sm">
           <h1>
             All Vectors, SVGs, and Icons used in this website have their
             rightful owners.
