@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const AboutContent = () => {
   return (
@@ -27,12 +26,6 @@ const AboutContent = () => {
         <p className="quote_para center_text">
           “I care about your business values and targeted customers to meet your golden goals for tomorrow.”
         </p>
-
-        {/* <Link to="/about">
-                    <button className="primary_btn table_center">
-                        More about me
-                    </button>
-                </Link> */}
       </div>
     </>
   );

@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { setCurrentPage } from "../store/slices/NavbarSlice";
 
 /* Components */
-import {AboutWishing,AboutHero} from '../components'
+import {AboutWishing,AboutHero, HomeAbout } from '../components'
 
 const AboutPageLayout = () => {
   const dispatch = useDispatch();
@@ -17,8 +17,8 @@ const AboutPageLayout = () => {
     <Transitions>
       <AboutWishing />
       <AboutHero />
-      {/* <HomeAbout />
-      <AboutTimeline />
+      <HomeAbout />
+      {/* <AboutTimeline />
       <HomeMotto />
       <Testimonials />
       <AboutWriting /> */}
