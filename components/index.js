@@ -2,7 +2,7 @@ export { default as NavBar } from './Navbar';
 export { default as HomeHero } from './HomeHero';
 export { default as HomeAbout } from './HomeAbout';
 export { default as HomeProject } from './HomeProjects';
-// export { default as HomeMotto } from './HomeMotto';
+export { default as HomeMotto } from './HomeMotto';
 export { default as HomeSkills } from './HomeSkills';
 export { default as HomeContact } from './HomeContact';
 export { default as Footer } from './Footer';
@@ -21,7 +21,7 @@ export { default as ProjectDirect } from './ProjectDirect';
 // export { default as ServiceBody } from './ServiceBody';
 
 export { default as AboutHero } from './AboutHero';
-// export { default as AboutTimeline } from './AboutTimeline';
+export { default as AboutTimeline } from './AboutTimeline';
 
 // export { default as AllCredits } from './AllCredits';
 export { default as Testimonials } from './Testimonials';
