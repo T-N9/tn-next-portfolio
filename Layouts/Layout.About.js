@@ -10,6 +10,9 @@ import {
   AboutHero,
   HomeAbout,
   AboutTimeline,
+  HomeMotto,
+  Testimonials,
+  AboutWriting,
 } from "../components";
 
 const AboutPageLayout = () => {
@@ -25,8 +28,8 @@ const AboutPageLayout = () => {
       <HomeAbout />
       <AboutTimeline />
       <HomeMotto />
-      {/* <Testimonials />
-      <AboutWriting /> */}
+      <Testimonials />
+      <AboutWriting />
     </Transitions>
   );
 };

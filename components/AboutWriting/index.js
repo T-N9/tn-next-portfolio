@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 /* Images */
 import SESImg from "../../assets/writing.png";
@@ -10,9 +11,18 @@ const AboutWriting = () => {
         <h1 className="title_text text_center">Writing</h1>
 
         <div className="writing--grid">
-          <a href="https://sesbytnml.netlify.app/" target="_blank" rel="noreferrer">
+          <a
+            href="https://sesbytnml.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <div className="card">
-              <img src={SESImg} alt="Software Engineering Study" />
+              <Image
+                src={SESImg}
+                style={{ maxWidth: "100%", height: "auto" }}
+                quality={100}
+                alt="Software Engineering Study"
+              />
 
               <div className="heading">
                 <h1 className="ht_text">Software Engineering Study</h1>
@@ -28,8 +38,6 @@ const AboutWriting = () => {
           </a>
         </div>
       </div>
-
-      {/* https://sesbytnml.netlify.app/ */}
     </section>
   );
 };
