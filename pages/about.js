@@ -1,11 +1,16 @@
-import React from 'react';
+import React from "react";
+
+/* Layout */
+import { AboutPageLayout } from "../Layouts";
 
 const About = () => {
-    return (
-        <div>
-            <h1>About Me</h1>
-        </div>
-    );
-}
+  return (
+    <>
+      <main>
+        <AboutPageLayout />
+      </main>
+    </>
+  );
+};
 
 export default About;
