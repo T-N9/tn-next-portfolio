@@ -14,8 +14,8 @@ export { default as ProjectStatus } from './ProjectStatus';
 export { default as ProjectDescription } from './ProjectDescription';
 export { default as ProjectDirect } from './ProjectDirect';
 
-// export { default as PortfolioHero } from './PortfolioHero';
-// export { default as PortfolioProjects } from './PortfolioProjects';
+export { default as PortfolioHero } from './PortfolioHero';
+export { default as PortfolioProjects } from './PortfolioProjects';
 
 // export { default as ServiceHero } from './ServiceHero';
 // export { default as ServiceBody } from './ServiceBody';

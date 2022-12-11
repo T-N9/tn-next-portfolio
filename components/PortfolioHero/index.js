@@ -1,6 +1,11 @@
 import React from "react";
 import "css.gg/icons/css/arrow-down.css";
 
+import * as Scroll from "react-scroll";
+
+var ScrollLink = Scroll.Link;
+var scrollSpy = Scroll.scrollSpy;
+
 const PortfolioHero = () => {
   return (
     <>
@@ -16,11 +21,16 @@ const PortfolioHero = () => {
             </h1>
           </div>
 
-          <a href="#projects">
+          <ScrollLink
+            to={"projects_section"}
+            spy={true}
+            duration={100}
+            smooth={"linear"}
+          >
             <button className="downToContent">
               <i className={`gg-${"arrow-down"}`}></i>
             </button>
-          </a>
+          </ScrollLink>
         </div>
       </div>
     </>
