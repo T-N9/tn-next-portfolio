@@ -2,4 +2,4 @@
 [[plugins]]
 package = "@netlify/plugin-nextjs"
 [build]
-command = “CI= npm run build”
+command = “CI='' npm run build”
