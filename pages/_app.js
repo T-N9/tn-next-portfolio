@@ -1,6 +1,8 @@
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+
 /* CSS */
 import "../styles/globals.scss";
-import { useState, useEffect } from "react";
 import "css.gg/icons/css/spinner.css";
 
 /* Redux */
@@ -15,21 +17,44 @@ import ThemeWrapper from "../wrapper/ThemeWrapper";
 import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }) {
-  const [loading, setLoading] = useState(true);
+  const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    setInterval(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
+    const handleStart = (url) => url !== router.asPath && setIsLoading(true);
+    const handleComplete = (url) =>
+      url === router.asPath && setIsLoading(false);
+
+    router.events.on("routeChangeStart", handleStart);
+    router.events.on("routeChangeComplete", handleComplete);
+    router.events.on("routeChangeError", handleComplete);
+
+    return () => {
+      router.events.off("routeChangeStart", handleStart);
+      router.events.off("routeChangeComplete", handleComplete);
+      router.events.off("routeChangeError", handleComplete);
+    };
+  }, [router]);
   return (
     <Provider store={store}>
       <ThemeProvider attribute="class">
         <ThemeWrapper>
-          <NavBar />
-          <div className="nav_spacer"></div>
-          <Component {...pageProps} />
-          <Footer/>
+          {isLoading ? (
+            <div
+              className={
+                isLoading ? "loading_page visible" : "loading_page hidden"
+              }
+            >
+              <i className={`gg-${"spinner"}`}></i>
+            </div>
+          ) : (
+            <>
+              <NavBar />
+              <div className="nav_spacer"></div>
+              <Component {...pageProps} />
+              <Footer />
+            </>
+          )}
         </ThemeWrapper>
       </ThemeProvider>
     </Provider>
