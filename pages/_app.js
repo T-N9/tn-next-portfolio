@@ -54,16 +54,6 @@ function MyApp({ Component, pageProps }) {
     <Provider store={store}>
       <ThemeProvider attribute="class">
         <ThemeWrapper>
-          {/* {isLoading ? (
-            <div
-              className={
-                isLoading ? "loading_page visible" : "loading_page hidden"
-              }
-            >
-              <i className={`gg-${"spinner"}`}></i>
-            </div>
-          ) : ( */}
-
           <div
             className={
               isLoading ? "loading_page visible" : "loading_page hidden"
@@ -72,13 +62,14 @@ function MyApp({ Component, pageProps }) {
             <i className={`gg-${"spinner"}`}></i>
           </div>
 
-          <>
-            <NavBar />
-            <div className="nav_spacer"></div>
-            <Component {...pageProps} />
-            <Footer />
-          </>
-          {/* )} */}
+          {!isLoading && (
+            <>
+              <NavBar />
+              <div className="nav_spacer"></div>
+              <Component {...pageProps} />
+              <Footer />
+            </>
+          )}
         </ThemeWrapper>
       </ThemeProvider>
     </Provider>
