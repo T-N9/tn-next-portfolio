@@ -25,19 +25,14 @@ const HeroTxt = () => {
           </p>
         </div>
 
-        <ScrollLink
-          to={"portfolio_section"}
-          spy={true}
-          duration={100}
-          smooth={"linear"}
-        >
+        <a href="#portfolio">
           <button
             aria-label="contact tenyain"
             className="hero_txt--btn primary_btn"
           >
             View Works
           </button>
-        </ScrollLink>
+        </a>
       </div>
     </>
   );
