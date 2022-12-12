@@ -114,6 +114,10 @@ body {
   }
 }
 
+.dark .main_content {
+  cursor: url(../assets/dark-cursor.svg), auto !important;
+}
+
 a,
 button {
   cursor: url(../assets/light-cursor-pointer.svg), auto !important;
