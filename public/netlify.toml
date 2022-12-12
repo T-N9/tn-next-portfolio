@@ -1,0 +1,3 @@
+# Configuration for a plugin published to npm
+[[plugins]]
+package = "@netlify/plugin-nextjs"
