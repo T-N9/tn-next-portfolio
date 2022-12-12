@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { client } from "../../client";
+import { client, urlFor } from "../../client";
 
 /* Layout */
 import { ProjectDetailPageLayout } from "../../Layouts";
@@ -32,10 +32,13 @@ const ProjectDetail = ({ project, slug }) => {
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://www.tenyain.com/works/${slug}`} />
+        <meta
+          property="og:url"
+          content={`https://www.tenyain.com/works/${slug}`}
+        />
         <meta property="og:title" content={project?.title} />
         <meta property="og:description" content={project?.description} />
-        <meta property="og:image" content="meta-tn.png" />
+        <meta property="og:image" content={urlFor(project?.imgUrl)} />
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -45,7 +48,7 @@ const ProjectDetail = ({ project, slug }) => {
         />
         <meta property="twitter:title" content={project?.title} />
         <meta property="twitter:description" content={project?.description} />
-        <meta property="twitter:image" content="meta-tn.png" />
+        <meta property="twitter:image" content={urlFor(project?.imgUrl)} />
 
         <meta
           name="google-site-verification"
