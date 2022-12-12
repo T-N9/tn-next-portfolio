@@ -1,5 +1,0 @@
-# Configuration for a plugin published to npm
-[[plugins]]
-package = "@netlify/plugin-nextjs"
-[build]
-command = “CI='' npm run build”
