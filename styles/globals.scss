@@ -118,6 +118,26 @@ body {
   cursor: url(../assets/dark-cursor.svg), auto !important;
 }
 
+.sun_icon {
+  visibility: visible;
+  opacity: 1;
+}
+
+.dark .sun_icon{
+  visibility: hidden;
+  opacity: 0;
+}
+
+.moon_icon {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.dark .moon_icon{
+  visibility: visible;
+  opacity: 1;
+}
+
 a,
 button {
   cursor: url(../assets/light-cursor-pointer.svg), auto !important;

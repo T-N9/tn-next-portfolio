@@ -16,7 +16,12 @@ const Toggler = () => {
       >
         <title>Change Theme</title>
 
-        <i className={`gg-${theme === "dark" ? "moon" : "sun"}`}></i>
+        <span className="moon_icon">
+          <i className="gg-moon"></i>
+        </span>
+        <span className="sun_icon">
+          <i className="gg-sun"></i>
+        </span>
       </button>
     </>
   );
