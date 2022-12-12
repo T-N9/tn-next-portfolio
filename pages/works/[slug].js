@@ -32,7 +32,7 @@ const ProjectDetail = ({ project, slug }) => {
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://www.tenyain.com/${slug}`} />
+        <meta property="og:url" content={`https://www.tenyain.com/works/${slug}`} />
         <meta property="og:title" content={project?.title} />
         <meta property="og:description" content={project?.description} />
         <meta property="og:image" content="meta-tn.png" />
@@ -41,7 +41,7 @@ const ProjectDetail = ({ project, slug }) => {
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content={`https://www.tenyain.com/${slug}`}
+          content={`https://www.tenyain.com/works/${slug}`}
         />
         <meta property="twitter:title" content={project?.title} />
         <meta property="twitter:description" content={project?.description} />
