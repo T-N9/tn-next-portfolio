@@ -20,10 +20,25 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
+  const targetPath = router.asPath;
+
   useEffect(() => {
-    const handleStart = (url) => url !== router.asPath && setIsLoading(true);
-    const handleComplete = (url) =>
-      url === router.asPath && setIsLoading(false);
+    const handleStart = (url) => {
+      if (url !== router.asPath) {
+        console.log("Route Start.", { url, asPath: router.asPath });
+        setIsLoading(true);
+
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 5000);
+      }
+    };
+    const handleComplete = (url) => {
+      if (url === router.asPath) {
+        console.log("Route End.", { url, asPath: router.asPath });
+        setIsLoading(false);
+      }
+    };
 
     router.events.on("routeChangeStart", handleStart);
     router.events.on("routeChangeComplete", handleComplete);
@@ -34,7 +49,7 @@ function MyApp({ Component, pageProps }) {
       router.events.off("routeChangeComplete", handleComplete);
       router.events.off("routeChangeError", handleComplete);
     };
-  }, [router]);
+  }, [JSON.stringify(router), router, targetPath]);
   return (
     <Provider store={store}>
       <ThemeProvider attribute="class">
