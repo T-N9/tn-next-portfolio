@@ -48,12 +48,21 @@ function MyApp({ Component, pageProps }) {
               <i className={`gg-${"spinner"}`}></i>
             </div>
           ) : ( */}
-            <>
-              <NavBar />
-              <div className="nav_spacer"></div>
-              <Component {...pageProps} />
-              <Footer />
-            </>
+
+          <div
+            className={
+              isLoading ? "loading_page visible" : "loading_page hidden"
+            }
+          >
+            <i className={`gg-${"spinner"}`}></i>
+          </div>
+
+          <>
+            <NavBar />
+            <div className="nav_spacer"></div>
+            <Component {...pageProps} />
+            <Footer />
+          </>
           {/* )} */}
         </ThemeWrapper>
       </ThemeProvider>
