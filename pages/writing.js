@@ -5,15 +5,6 @@ import Head from "next/head";
 import { WritingPageLayout } from "../Layouts";
 
 const Writing = () => {
-  // const [blogData, setBlogData] = useState(null);
-
-  // useEffect(() => {
-  //   const query = '*[_type == "category"]';
-  //   client.fetch(query).then((data) => {
-  //     setBlogData(data);
-  //     console.log({ data });
-  //   });
-  // }, []);
 
   return (
     <>
