@@ -16,6 +16,10 @@ const pages = [
     route: "/works",
   },
   {
+    name: "Writing",
+    route: "/writing",
+  },
+  {
     name: "Services",
     route: "/services",
   },
