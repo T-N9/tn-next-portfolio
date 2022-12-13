@@ -5,6 +5,22 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        {/* <!-- Google tag (gtag.js) --> */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-LTSQJ48F8N"
+        ></script>
+        <Script
+          id="google-tag"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LTSQJ48F8N');`,
+          }}
+        ></Script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -15,21 +31,6 @@ export default function Document() {
           crossorigin="anonymous"
           referrerpolicy="no-referrer"
         />
-
-        {/* <!-- Google tag (gtag.js) --> */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-LTSQJ48F8N"
-        ></script>
-        <Script id="google-tag"
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LTSQJ48F8N');`,
-          }}
-        ></Script>
       </Head>
       <body>
         <Main />

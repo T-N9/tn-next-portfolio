@@ -1,11 +1,24 @@
 import Head from "next/head";
 /* Layout */
 import { HomePageLayout } from "../Layouts";
+import Script from "next/script";
 
 export default function Home() {
   return (
     <>
       <Head>
+        {/* <!-- Google tag (gtag.js) --> */}
+        {/* <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-LTSQJ48F8N"
+        ></script>
+        <script id="google-tag">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-LTSQJ48F8N');`}
+        </script> */}
         <meta charset="utf-8" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
