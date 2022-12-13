@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     const handleStart = (url) => {
       if (url !== router.asPath) {
-        console.log("Route Start.", { url, asPath: router.asPath });
+        // console.log("Route Start.", { url, asPath: router.asPath });
         setIsLoading(true);
 
         setTimeout(() => {
@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }) {
     };
     const handleComplete = (url) => {
       if (url === router.asPath) {
-        console.log("Route End.", { url, asPath: router.asPath });
+        // console.log("Route End.", { url, asPath: router.asPath });
         setIsLoading(false);
       }
     };
