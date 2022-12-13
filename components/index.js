@@ -28,3 +28,5 @@ export { default as Testimonials } from './Testimonials';
 
 export { default as AboutWriting } from './AboutWriting';
 export { default as AboutWishing } from './AboutWishing';
+
+export { default as WritingHero } from './WritingHero';
