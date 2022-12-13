@@ -2,12 +2,13 @@ import React from "react";
 import Transitions from "../components/Animated/Transitions";
 
 /* Components */
-import { WritingHero } from "../components";
+import { WritingHero, WritingCategory } from "../components";
 
 const WritingPageLayout = () => {
   return (
     <Transitions>
       <WritingHero />
+      <WritingCategory />
     </Transitions>
   );
 };
