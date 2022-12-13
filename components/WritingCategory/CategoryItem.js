@@ -4,7 +4,7 @@ import { urlFor } from "../../client";
 
 const CategoryItem = ({ title, slug, image }) => {
   return (
-    <Link href={`/writing/${slug}`}>
+    <Link href={`/writing/categories/${slug}`}>
       <div
         style={{ backgroundImage: `url(${urlFor(image)})` }}
         className="category_item"
