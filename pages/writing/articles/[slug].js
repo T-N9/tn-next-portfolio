@@ -40,7 +40,7 @@ const ArticleDetail = ({ article, slug }) => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content={`https://www.tenyain.com/writing/articles/${article.title}`}
+          content={`https://www.tenyain.com/writing/articles/${article.slug.current}`}
         />
         <meta property="og:title" content={article.title} />
         <meta
@@ -53,7 +53,7 @@ const ArticleDetail = ({ article, slug }) => {
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content={`https://www.tenyain.com/writing/articles/${article.title}`}
+          content={`https://www.tenyain.com/writing/articles/${article.slug.current}`}
         />
         <meta property="twitter:title" content={article.title} />
         <meta
