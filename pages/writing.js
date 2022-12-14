@@ -30,7 +30,7 @@ const Writing = () => {
 
         {/* <!-- Primary Meta Tags --> */}
         <title>Writing | TeNyain's thoughts</title>
-        <meta name="title" content="Writing | TeNyain's thoughts" />
+        <meta name="title" content="Writing | TeNyain&apos;s thoughts" />
         <meta
           name="description"
           content="I would like to write and do some knowledge sharing besides
@@ -40,7 +40,7 @@ const Writing = () => {
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.tenyain.com/writing/" />
-        <meta property="og:title" content="Writing | TeNyain's thoughts" />
+        <meta property="og:title" content="Writing | TeNyain&apos;s thoughts" />
         <meta
           property="og:description"
           content="I would like to write and do some knowledge sharing besides
@@ -51,7 +51,7 @@ const Writing = () => {
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.tenyain.com/writing/" />
-        <meta property="twitter:title" content="Writing | TeNyain's thoughts" />
+        <meta property="twitter:title" content="Writing | TeNyain&apos;s thoughts" />
         <meta
           property="twitter:description"
           content="I would like to write and do some knowledge sharing besides
@@ -63,7 +63,7 @@ const Writing = () => {
           name="google-site-verification"
           content="nstIYPUM8pyaUUrW69SvgmJkxRRe_hS9tN_VAfzoLeI"
         />
-        <title>Writing | TeNyain's thoughts</title>
+        <title>Writing | TeNyain&apos;s thoughts</title>
       </Head>
       <main>
         <WritingPageLayout />
