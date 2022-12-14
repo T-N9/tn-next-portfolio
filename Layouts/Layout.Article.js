@@ -1,10 +1,13 @@
 import React from "react";
 import Transitions from "../components/Animated/Transitions";
 
+/* Components */
+import { ArticleDetail } from "../components";
+
 const ArticlePageLayout = ({ data }) => {
   return (
     <Transitions>
-      <h1>{data.title}</h1>
+      <ArticleDetail data={data} />
     </Transitions>
   );
 };

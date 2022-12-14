@@ -32,3 +32,5 @@ export { default as AboutWishing } from "./AboutWishing";
 export { default as WritingHero } from "./WritingHero";
 export { default as WritingCategory } from "./WritingCategory";
 export { default as WritingAllArticles } from "./WritingAllArticles";
+
+export { default as ArticleDetail } from './ArticleDetail'; 
