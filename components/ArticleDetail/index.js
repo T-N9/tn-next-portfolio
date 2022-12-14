@@ -76,6 +76,8 @@ const ArticleDetail = ({ data, slug }) => {
               blocks={data.content}
             />
           </div>
+
+          <div className="separator"></div>
         </div>
       </div>
     </section>
