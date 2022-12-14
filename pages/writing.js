@@ -29,7 +29,7 @@ const Writing = () => {
         <meta property="og:locale" content="en-US" />
 
         {/* <!-- Primary Meta Tags --> */}
-        <title>Writing | TeNyain's thoughts</title>
+        <title>Writing | TeNyain&apos;s thoughts</title>
         <meta name="title" content="Writing | TeNyain&apos;s thoughts" />
         <meta
           name="description"
