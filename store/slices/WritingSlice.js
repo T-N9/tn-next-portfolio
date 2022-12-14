@@ -4,14 +4,17 @@ export const writingSlice = createSlice({
   name: "writingData",
   initialState: {
     categoryData: [],
-    articles: [],
+    articleData: [],
   },
   reducers: {
     setCategoryData: (state, action) => {
       state.categoryData = [...action.payload];
     },
+    setArticleData : (state, action) => {
+      state.articleData = [...action.payload ]
+    } 
   },
 });
 
-export const { setCategoryData } = writingSlice.actions;
+export const { setCategoryData, setArticleData } = writingSlice.actions;
 export default writingSlice.reducer;
