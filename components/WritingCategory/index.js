@@ -11,6 +11,7 @@ const WritingCategory = () => {
     const query = '*[_type == "category"]';
     client.fetch(query).then((data) => {
       setCategories(data);
+      console.log({data})
     });
   }, []);
   return (

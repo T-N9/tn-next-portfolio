@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { setCurrentPage } from "../store/slices/NavbarSlice";
 
 /* Components */
-import { WritingHero, WritingCategory } from "../components";
+import { WritingHero, WritingCategory, WritingAllBlogs } from "../components";
 
 const WritingPageLayout = () => {
   const dispatch = useDispatch();
@@ -16,6 +16,7 @@ const WritingPageLayout = () => {
     <Transitions>
       <WritingHero />
       <WritingCategory />
+      <WritingAllBlogs />
     </Transitions>
   );
 };
