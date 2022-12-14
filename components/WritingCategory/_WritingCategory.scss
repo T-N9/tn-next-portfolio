@@ -4,10 +4,19 @@
   }
 
   &--item_wrapper {
-    display: flex;
+    display: grid;
     gap: 15px;
     margin-top: 1rem;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(6, 1fr);
+
+    @include m-breakpoint-down(lmedium) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include m-breakpoint-down(small) {
+      gap: 5px;
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     .category_item {
       border-radius: 10px;
@@ -29,7 +38,7 @@
       }
 
       .overlay {
-        width: 200px;
+        // width: 200px;
         height: 100px;
         background-color: rgba($dark-color, 0.8);
         @include flex-center;
