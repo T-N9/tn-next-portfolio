@@ -1,4 +1,4 @@
-.writing_allBlogs {
+.writing_allArticles {
   .title {
     font-weight: bold;
     margin-bottom: 1rem;
@@ -7,7 +7,7 @@
   &--post_wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    .blog_card {
+    .article_card {
       display: flex;
       flex-direction: column;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
@@ -24,9 +24,9 @@
 }
 
 .dark {
-  .writing_allBlogs {
+  .writing_allArticles {
     &--post_wrapper {
-      .blog_card {
+      .article_card {
         background-color: #2d3a47;
       }
     }
