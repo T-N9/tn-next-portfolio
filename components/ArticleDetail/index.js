@@ -1,24 +1,41 @@
 import React from "react";
+import { useRouter } from "next/router";
 import moment from "moment/moment";
-import Link from "next/link";
 import Image from "next/image";
 import BlockContent from "@sanity/block-content-to-react";
 
 /* Hook */
 import Hook from "./hook";
 
-const ArticleDetail = ({ data }) => {
+const ArticleDetail = ({ data, slug }) => {
   const { categoryData, titleImgProps } = Hook(data.titleImage);
+
+  const router = useRouter();
 
   return (
     <section className="article_page">
       <div className="container_sm container_y_3">
         <div className="container_x_sm">
+          <div className="breadcrumb">
+            <p>
+              {" "}
+              <span
+                className="item route"
+                onClick={() => {
+                  router.push("/writing");
+                }}
+              >
+                Writing
+              </span>{" "}
+              &gt; <span className="ht_text">{data.title}</span>
+            </p>
+          </div>
+
           <div className="article_page--header">
-            <h1 className="ht_text">{data.title}</h1>
+            <h1 className="title ht_text">{data.title}</h1>
 
             <p className="created_date">
-              {moment(data._createdAt).format("L")}
+              Published on {moment(data._createdAt).format("MMMM Do YYYY")}
             </p>
           </div>
 
@@ -28,17 +45,22 @@ const ArticleDetail = ({ data }) => {
                 (cate) => cate._id === item._ref
               );
               return (
-                <Link
+                <p
                   key={index}
-                  href={`writing/categories/${selectedCategory[0]?.slug.current}`}
+                  onClick={() => {
+                    router.push(
+                      `writing/categories/${selectedCategory[0]?.slug.current}`
+                    );
+                  }}
+                  className="category route"
                 >
-                  <p className="category">{selectedCategory[0]?.title}</p>
-                </Link>
+                  {selectedCategory[0]?.title}
+                </p>
               );
             })}
           </div>
 
-          <div>
+          <div className="title_image">
             <Image
               {...titleImgProps}
               style={{ maxWidth: "100%", height: "auto" }}

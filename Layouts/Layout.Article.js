@@ -4,10 +4,10 @@ import Transitions from "../components/Animated/Transitions";
 /* Components */
 import { ArticleDetail } from "../components";
 
-const ArticlePageLayout = ({ data }) => {
+const ArticlePageLayout = ({ data, slug }) => {
   return (
     <Transitions>
-      <ArticleDetail data={data} />
+      <ArticleDetail data={data} slug={slug} />
     </Transitions>
   );
 };

@@ -156,6 +156,17 @@ button {
   }
 }
 
+
+.route {
+  cursor: url(../assets/light-cursor-pointer.svg), auto !important;
+}
+
+.dark {
+  .route {
+    cursor: url(../assets/dark-cursor-pointer.svg), auto !important;
+  }
+}
+
 /* Minor Tags */
 strong {
   color: $primary-color;

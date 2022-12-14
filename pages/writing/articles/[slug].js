@@ -10,7 +10,7 @@ const ArticleDetail = ({ article, slug }) => {
     <>
       <Head></Head>
       <main>
-        <ArticlePageLayout data={article} />
+        <ArticlePageLayout data={article} slug={slug} />
       </main>
     </>
   );
