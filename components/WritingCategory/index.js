@@ -15,7 +15,7 @@ const WritingCategory = () => {
   useEffect(() => {
     const query = '*[_type == "category"]';
 
-    if (categoryData.length > 0) {
+    if (categoryData.length === 0) {
       client.fetch(query).then((data) => {
         setCategories(data);
         dispatch(setCategoryData(data));

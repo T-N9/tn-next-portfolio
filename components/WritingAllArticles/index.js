@@ -8,7 +8,7 @@ const WritingAllArticles = () => {
   const [articleData, setArticleData] = useState(null);
 
   useEffect(() => {
-    const query = '*[_type == "article"]';
+    const query = '*[_type == "article"] | order(_createdAt desc)';
     client.fetch(query).then((data) => {
       setArticleData(data);
       console.log({ data });
