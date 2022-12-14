@@ -22,7 +22,7 @@ const ArticleCard = ({ data }) => {
           alt="Post Image"
         />
         <div className="article_card--content">
-          <p className="created_date">{moment(data._createdAt).format("L")}</p>
+          <p className="created_date">{moment(data._createdAt).format("MMMM Do YYYY")}</p>
 
           <h1 className="ht_text">{data.title}</h1>
 

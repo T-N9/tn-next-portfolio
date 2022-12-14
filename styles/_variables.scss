@@ -3,13 +3,19 @@
 }
 
 @font-face {
+  font-family: NotoSans;
+  src: url(../fonts/NotoSansMyanmarUI.ttf);
+  font-display: swap;
+}
+
+@font-face {
   font-family: MyanmarSabae;
   src: url(../fonts/MyanmarSabae.ttf);
   font-display: swap;
 }
 
 // Font families
-$font-title: "Poppins", sans-serif;
+$font-title: "Poppins", MyanmarSabae,sans-serif;
 // $font-primary: 'Karla', sans-serif;
 $font-primary: "Inter", MyanmarSabae, sans-serif;
 $font-writing: "Berkshire Swash", cursive;
