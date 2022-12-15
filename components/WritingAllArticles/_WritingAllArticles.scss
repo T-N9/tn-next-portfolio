@@ -28,6 +28,11 @@
   border-radius: 10px;
   overflow: hidden;
   background-color: #fcfcfc;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
 
   &--content {
     padding: 20px;
