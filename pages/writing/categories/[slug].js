@@ -5,6 +5,12 @@ import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { setCategoryData } from "../../../store/slices/WritingSlice";
 
+/* action */
+import {
+  setStartLoading,
+  setStopLoading,
+} from "../../../store/slices/LoadingSlice";
+
 /* Layout */
 import { WritingByCategoryPageLayout } from "../../../Layouts";
 
@@ -18,16 +24,21 @@ const SearchByCategory = () => {
   const [currentCategory, setCurrentCategory] = useState(null);
 
   useEffect(() => {
+    dispatch(setStartLoading());
     const query = '*[_type == "category"]';
 
     if (categoryData.length === 0) {
       client.fetch(query).then((data) => {
         dispatch(setCategoryData(data));
+        dispatch(setStopLoading());
       });
+    } else {
+      dispatch(setStopLoading());
     }
   }, []);
 
   useEffect(() => {
+    dispatch(setStartLoading());
     const selectedCategory = categoryData.filter(
       (cate) => cate.slug.current === slug
     );
@@ -37,6 +48,7 @@ const SearchByCategory = () => {
     client.fetch(query).then((data) => {
       setArticleData(data);
       setCurrentCategory(selectedCategory[0]);
+      dispatch(setStopLoading());
     });
   }, [categoryData, slug]);
 
