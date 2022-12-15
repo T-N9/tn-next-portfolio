@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 import Image from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
 import { client } from "../../client";
-import BlockContent from "@sanity/block-content-to-react";
 
 const ArticleCard = ({ data }) => {
   const { categoryData } = useSelector((state) => state.writingData);
@@ -42,12 +41,6 @@ const ArticleCard = ({ data }) => {
             );
           })}
         </div>
-
-        <div className="demo_content">
-          <BlockContent blocks={data.content[0]} />
-        </div>
-
-        {/* <p className="read_more ht_text">Read More</p> */}
       </div>
     </div>
   );
