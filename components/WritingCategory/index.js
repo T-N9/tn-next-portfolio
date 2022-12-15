@@ -19,7 +19,6 @@ const WritingCategory = () => {
       client.fetch(query).then((data) => {
         setCategories(data);
         dispatch(setCategoryData(data));
-        console.log({ data });
       });
     }
   }, []);
