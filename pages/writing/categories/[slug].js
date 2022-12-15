@@ -36,7 +36,7 @@ const SearchByCategory = ({ category, slug }) => {
   useEffect(() => {
     dispatch(setStartLoading());
 
-    const query = `*[_type == "article" && "${category?._id}" in categories[]._ref]`;
+    const query = `*[_type == "article" && "${category?._id}" in categories[]._ref] | order(_createdAt desc)`;
 
     client.fetch(query).then((data) => {
       setArticleData(data);
