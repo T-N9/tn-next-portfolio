@@ -3,6 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { setCategoryData } from "../../store/slices/WritingSlice";
 import { client } from "../../client";
 
+/* action */
+import {
+  setStartLoading,
+  setStopLoading,
+} from "../../store/slices/LoadingSlice";
+
 /* Component */
 import CategoryItem from "./CategoryItem";
 
@@ -13,13 +19,17 @@ const WritingCategory = () => {
   const [categories, setCategories] = useState(null);
 
   useEffect(() => {
+    dispatch(setStartLoading());
     const query = '*[_type == "category"]';
 
     if (categoryData.length === 0) {
       client.fetch(query).then((data) => {
         setCategories(data);
         dispatch(setCategoryData(data));
+        dispatch(setStopLoading());
       });
+    } else {
+      dispatch(setStopLoading());
     }
   }, []);
   return (

@@ -1,8 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { client } from "../../client";
 import { useDispatch, useSelector } from "react-redux";
 import { setArticleData } from "../../store/slices/WritingSlice";
 import Link from "next/link";
+
+/* action */
+import {
+  setStartLoading,
+  setStopLoading,
+} from "../../store/slices/LoadingSlice";
 
 /* Components */
 import ArticleCard from "./ArticleCard";
@@ -11,16 +17,17 @@ const WritingAllArticles = () => {
   const dispatch = useDispatch();
   const { articleData } = useSelector((state) => state.writingData);
 
-  // const [articleData, setArticleData] = useState(null);
-
   useEffect(() => {
+    dispatch(setStartLoading());
     const query = '*[_type == "article"] | order(_createdAt desc)';
 
     if (articleData.length === 0) {
       client.fetch(query).then((data) => {
         dispatch(setArticleData(data));
-        console.log({ data });
+        dispatch(setStopLoading());
       });
+    } else {
+      dispatch(setStopLoading());
     }
   }, []);
   return (
