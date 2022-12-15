@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import { client } from "../../../client";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setCategoryData } from "../../../store/slices/WritingSlice";
 
 /* action */
 import {
@@ -14,8 +15,23 @@ import { WritingByCategoryPageLayout } from "../../../Layouts";
 
 const SearchByCategory = ({ category, slug }) => {
   const dispatch = useDispatch();
+  const { categoryData } = useSelector((state) => state.writingData);
 
   const [articleData, setArticleData] = useState(null);
+
+  useEffect(() => {
+    dispatch(setStartLoading());
+    const query = '*[_type == "category"]';
+
+    if (categoryData.length === 0) {
+      client.fetch(query).then((data) => {
+        dispatch(setCategoryData(data));
+        dispatch(setStopLoading());
+      });
+    } else {
+      dispatch(setStopLoading());
+    }
+  }, []);
 
   useEffect(() => {
     dispatch(setStartLoading());
@@ -26,7 +42,7 @@ const SearchByCategory = ({ category, slug }) => {
       setArticleData(data);
       dispatch(setStopLoading());
     });
-  }, [slug]);
+  }, [categoryData, slug]);
 
   return (
     <>
