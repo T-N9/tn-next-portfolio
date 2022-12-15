@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import { client } from "../../../client";
-import { useRouter } from "next/router";
-import { useDispatch, useSelector } from "react-redux";
-import { setCategoryData } from "../../../store/slices/WritingSlice";
+import { useDispatch } from "react-redux";
 
 /* action */
 import {
@@ -14,43 +12,21 @@ import {
 /* Layout */
 import { WritingByCategoryPageLayout } from "../../../Layouts";
 
-const SearchByCategory = () => {
+const SearchByCategory = ({ category, slug }) => {
   const dispatch = useDispatch();
-  const { categoryData } = useSelector((state) => state.writingData);
-  const router = useRouter();
-  const slug = router.query.slug;
 
   const [articleData, setArticleData] = useState(null);
-  const [currentCategory, setCurrentCategory] = useState(null);
 
   useEffect(() => {
     dispatch(setStartLoading());
-    const query = '*[_type == "category"]';
 
-    if (categoryData.length === 0) {
-      client.fetch(query).then((data) => {
-        dispatch(setCategoryData(data));
-        dispatch(setStopLoading());
-      });
-    } else {
-      dispatch(setStopLoading());
-    }
-  }, []);
-
-  useEffect(() => {
-    dispatch(setStartLoading());
-    const selectedCategory = categoryData.filter(
-      (cate) => cate.slug.current === slug
-    );
-
-    const query = `*[_type == "article" && "${selectedCategory[0]?._id}" in categories[]._ref]`;
+    const query = `*[_type == "article" && "${category?._id}" in categories[]._ref]`;
 
     client.fetch(query).then((data) => {
       setArticleData(data);
-      setCurrentCategory(selectedCategory[0]);
       dispatch(setStopLoading());
     });
-  }, [categoryData, slug]);
+  }, [slug]);
 
   return (
     <>
@@ -61,11 +37,11 @@ const SearchByCategory = () => {
         <meta name="theme-color" content="#1192d3" />
         <meta
           name="title"
-          content={`${currentCategory?.title} | Articles by category`}
+          content={`${category?.title} | Articles by category`}
         />
         <meta
           name="description"
-          content={`Read ${currentCategory?.title} articles.`}
+          content={`Read my ${category?.title} articles.`}
         />
         <meta
           name="keywords"
@@ -78,14 +54,14 @@ const SearchByCategory = () => {
         <meta property="og:locale" content="en-US" />
 
         {/* <!-- Primary Meta Tags --> */}
-        <title>{currentCategory?.title} | Articles by category</title>
+        <title>{category?.title} | Articles by category</title>
         <meta
           name="title"
-          content={`${currentCategory?.title} | Articles by category`}
+          content={`${category?.title} | Articles by category`}
         />
         <meta
           name="description"
-          content={`Read ${currentCategory?.title} articles.`}
+          content={`Read my ${category?.title} articles.`}
         />
 
         {/* <!-- Open Graph / Facebook --> */}
@@ -96,11 +72,11 @@ const SearchByCategory = () => {
         />
         <meta
           property="og:title"
-          content={`${currentCategory?.title} | Articles by category`}
+          content={`${category?.title} | Articles by category`}
         />
         <meta
           property="og:description"
-          content={`Read ${currentCategory?.title} articles.`}
+          content={`Read my ${category?.title} articles.`}
         />
         <meta property="og:image" content="meta-tn.png" />
 
@@ -112,11 +88,11 @@ const SearchByCategory = () => {
         />
         <meta
           property="twitter:title"
-          content={`${currentCategory?.title} | Articles by category`}
+          content={`${category?.title} | Articles by category`}
         />
         <meta
           property="twitter:description"
-          content={`Read ${currentCategory?.title} articles.`}
+          content={`Read my ${category?.title} articles.`}
         />
         <meta property="twitter:image" content="meta-tn.png" />
 
@@ -124,16 +100,43 @@ const SearchByCategory = () => {
           name="google-site-verification"
           content="nstIYPUM8pyaUUrW69SvgmJkxRRe_hS9tN_VAfzoLeI"
         />
-        <title>{currentCategory?.title} | Articles by category</title>
+        <title>{category?.title} | Articles by category</title>
       </Head>
       <main>
-        <WritingByCategoryPageLayout
-          data={articleData}
-          category={currentCategory}
-        />
+        <WritingByCategoryPageLayout data={articleData} category={category} />
       </main>
     </>
   );
 };
 
 export default SearchByCategory;
+
+export async function getStaticPaths() {
+  const paths = await client.fetch(
+    `*[_type == "category" && defined(slug.current)][].slug.current`
+  );
+
+  return {
+    paths: paths.map((slug) => ({ params: { slug } })),
+    fallback: "blocking",
+  };
+}
+
+export async function getStaticProps(context) {
+  // It's important to default the slug so that it doesn't return "undefined"
+  const { slug = "" } = context.params;
+  const category = await client.fetch(
+    `
+      *[_type == "category" && slug.current == $slug][0]
+    `,
+    { slug }
+  );
+
+  return {
+    props: {
+      category,
+      slug,
+    },
+    revalidate: 10,
+  };
+}
