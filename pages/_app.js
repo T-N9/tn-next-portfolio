@@ -10,7 +10,7 @@ import { Provider } from "react-redux";
 import store from "../store/store";
 
 /* Components */
-import { NavBar, Footer } from "../components";
+import { NavBar, Footer, GlobalLoad } from "../components";
 
 /* Wrapper */
 import ThemeWrapper from "../wrapper/ThemeWrapper";
@@ -54,13 +54,7 @@ function MyApp({ Component, pageProps }) {
     <Provider store={store}>
       <ThemeProvider attribute="class">
         <ThemeWrapper>
-          <div
-            className={
-              isLoading ? "loading_page visible" : "loading_page hidden"
-            }
-          >
-            <i className={`gg-${"spinner"}`}></i>
-          </div>
+          <GlobalLoad loading={isLoading} />
 
           {!isLoading && (
             <>

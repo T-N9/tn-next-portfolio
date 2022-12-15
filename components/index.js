@@ -35,3 +35,5 @@ export { default as WritingAllArticles } from "./WritingAllArticles";
 
 export { default as ArticleDetail } from './ArticleDetail'; 
 export { default as ArticleByCategory } from './ArticleByCategory';
+
+export { default as GlobalLoad } from './GlobalLoad';
