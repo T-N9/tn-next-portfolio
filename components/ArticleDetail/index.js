@@ -5,6 +5,14 @@ import moment from "moment/moment";
 import Image from "next/image";
 import BlockContent from "@sanity/block-content-to-react";
 
+/* Icons */
+import {
+  Facebook,
+  Twitter,
+  Gmail,
+  Linkedin,
+} from "@icons-pack/react-simple-icons";
+
 /* Hook */
 import Hook from "./hook";
 
@@ -12,6 +20,7 @@ const ArticleDetail = ({ data, slug }) => {
   const { categoryData, titleImgProps } = Hook(data.titleImage);
 
   const router = useRouter();
+  const path = router.asPath;
 
   return (
     <section className="article_page">
@@ -70,6 +79,44 @@ const ArticleDetail = ({ data, slug }) => {
           </div>
 
           <div className="separator"></div>
+
+          <div className="share_banner">
+            <p className="ht_text">Share on :</p>
+
+            <div className="icons">
+              <a
+                href={`https://www.facebook.com/sharer/sharer.php?u=https://tenyain.com/${path}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Facebook xlinkTitle="true" />
+              </a>
+
+              <a
+                href={`https://twitter.com/intent/tweet?text=${data?.title}&url=https://tenyain.com/${path}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Twitter xlinkTitle="true" />
+              </a>
+
+              <a
+                href={`http://www.linkedin.com/shareArticle?mini=true&url=https://tenyain.com/${path}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Linkedin xlinkTitle="true" />
+              </a>
+
+              <a
+                href={`mailto:?subject=Thought you might like ${data?.title}.&body=Hello, This is my article ${data?.title}. I would like to share it with you.%0D%0A%0D%0Ahttps://tenyain.com/${path}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Gmail xlinkTitle="true" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
