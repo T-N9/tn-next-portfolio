@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
 
         setTimeout(() => {
           setIsLoading(false);
-        }, 5000);
+        }, 3000);
       }
     };
     const handleComplete = (url) => {
