@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import moment from "moment/moment";
 import Image from "next/image";
@@ -19,14 +20,9 @@ const ArticleDetail = ({ data, slug }) => {
           <div className="breadcrumb">
             <p>
               {" "}
-              <span
-                className="item route"
-                onClick={() => {
-                  router.push("/writing");
-                }}
-              >
+              <Link className="item route" href={"/writing"}>
                 Writing
-              </span>{" "}
+              </Link>{" "}
               &gt; <span className="ht_text">{data.title}</span>
             </p>
           </div>
@@ -45,17 +41,13 @@ const ArticleDetail = ({ data, slug }) => {
                 (cate) => cate._id === item._ref
               );
               return (
-                <p
+                <Link
                   key={index}
-                  onClick={() => {
-                    router.push(
-                      `writing/categories/${selectedCategory[0]?.slug.current}`
-                    );
-                  }}
+                  href={`/writing/categories/${selectedCategory[0]?.slug.current}`}
                   className="category route"
                 >
                   {selectedCategory[0]?.title}
-                </p>
+                </Link>
               );
             })}
           </div>

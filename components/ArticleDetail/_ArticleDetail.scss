@@ -1,10 +1,12 @@
 .article_page {
   .container_x_sm {
     @include m-breakpoint-down(small) {
-        padding: 0;
+      padding: 0;
     }
   }
   .breadcrumb {
+    margin-bottom: 1rem;
+    font-size: 18px;
     .item {
       cursor: pointer;
     }

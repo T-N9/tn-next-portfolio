@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { client } from "../../client";
 import { useDispatch, useSelector } from "react-redux";
 import { setArticleData } from "../../store/slices/WritingSlice";
+import Link from "next/link";
 
 /* Components */
 import ArticleCard from "./ArticleCard";
@@ -18,6 +19,7 @@ const WritingAllArticles = () => {
     if (articleData.length === 0) {
       client.fetch(query).then((data) => {
         dispatch(setArticleData(data));
+        console.log({data});
       });
     }
   }, []);
@@ -29,7 +31,9 @@ const WritingAllArticles = () => {
         <div className="writing_allArticles--post_wrapper">
           {articleData.length > 0 &&
             articleData?.map((article, index) => {
-              return <ArticleCard key={index} data={article} />;
+              return <Link href={`writing/articles/${article.slug.current}`}>
+                <ArticleCard key={index} data={article} />
+              </Link>;
             })}
         </div>
       </div>
