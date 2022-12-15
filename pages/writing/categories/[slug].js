@@ -94,7 +94,7 @@ const SearchByCategory = ({ category, slug }) => {
           property="og:description"
           content={`Read my ${category?.title} articles.`}
         />
-        <meta property="og:image" content="meta-tn.png" />
+        <meta property="og:image" content="../meta-tn.png" />
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -110,7 +110,7 @@ const SearchByCategory = ({ category, slug }) => {
           property="twitter:description"
           content={`Read my ${category?.title} articles.`}
         />
-        <meta property="twitter:image" content="meta-tn.png" />
+        <meta property="twitter:image" content="../meta-tn.png" />
 
         <meta
           name="google-site-verification"
