@@ -3,7 +3,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    
 
     @include m-breakpoint-down(lmedium) {
       grid-template-columns: repeat(2, 1fr);
@@ -11,6 +10,20 @@
 
     @include m-breakpoint-down(small) {
       grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .not_found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    margin: 4rem auto;
+
+    p {
+      font-size: 14px;
     }
   }
 }
