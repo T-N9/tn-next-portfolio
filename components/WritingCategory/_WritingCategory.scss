@@ -15,7 +15,7 @@
 
     @include m-breakpoint-down(small) {
       gap: 5px;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 50%);
     }
 
     .category_item {
@@ -44,7 +44,6 @@
         @include flex-center;
 
         @include m-breakpoint-down(small) {
-            width: 170px;
             height: 70px;
         }
       }

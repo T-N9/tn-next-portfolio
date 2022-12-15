@@ -11,6 +11,7 @@ import {
   Twitter,
   Gmail,
   Linkedin,
+  Messenger
 } from "@icons-pack/react-simple-icons";
 
 /* Hook */
@@ -106,6 +107,10 @@ const ArticleDetail = ({ data, slug }) => {
                 rel="noreferrer"
               >
                 <Linkedin xlinkTitle="true" />
+              </a>
+
+              <a href="fb-messenger://share/?link=https://tenyain.com/${path}">
+                <Messenger xlinkTitle="true"/>
               </a>
 
               <a
