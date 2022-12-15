@@ -32,12 +32,9 @@ const ArticleCard = ({ data }) => {
               (cate) => cate._id === item._ref
             );
             return (
-              <Link
-                key={index}
-                href={`/writing/categories/${selectedCategory[0]?.slug.current}`}
-              >
-                <p className="category">{selectedCategory[0]?.title}</p>
-              </Link>
+              <p key={index} className="category">
+                {selectedCategory[0]?.title}
+              </p>
             );
           })}
         </div>
