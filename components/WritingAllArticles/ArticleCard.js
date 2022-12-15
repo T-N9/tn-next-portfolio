@@ -34,7 +34,7 @@ const ArticleCard = ({ data }) => {
             return (
               <Link
                 key={index}
-                href={`writing/categories/${selectedCategory[0]?.slug.current}`}
+                href={`/writing/categories/${selectedCategory[0]?.slug.current}`}
               >
                 <p className="category">{selectedCategory[0]?.title}</p>
               </Link>
