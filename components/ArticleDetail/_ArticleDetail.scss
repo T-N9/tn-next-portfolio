@@ -51,6 +51,9 @@
     gap: 20px;
     align-items: center;
 
+    @include m-breakpoint-down(small) {
+      flex-direction: column;
+    }
     p {
       font-size: 16px;
       font-weight: bold;
