@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import { client } from "../../../client";
 import { useDispatch, useSelector } from "react-redux";
+import { useRouter } from "next/router";
 import { setCategoryData } from "../../../store/slices/WritingSlice";
 
 /* action */
@@ -9,6 +10,9 @@ import {
   setStartLoading,
   setStopLoading,
 } from "../../../store/slices/LoadingSlice";
+
+/* Hook */
+import CalPaginate from "../../../utils/CalPaginate";
 
 /* Layout */
 import { WritingByCategoryPageLayout } from "../../../Layouts";
@@ -18,6 +22,33 @@ const SearchByCategory = ({ category, slug }) => {
   const { categoryData } = useSelector((state) => state.writingData);
 
   const [articleData, setArticleData] = useState(null);
+
+  const [dataCount, setDataCount] = useState(null);
+
+  const router = useRouter();
+  const pageNumber = parseInt(router.query.page) || 1;
+  console.log({ router });
+
+  const { startIndex, endIndex, pages, noItems } = CalPaginate(
+    dataCount,
+    pageNumber
+  );
+  console.log({
+    startIndex,
+    endIndex,
+    pages,
+    noItems,
+  });
+
+  useEffect(() => {
+    client
+      .fetch(
+        `count(*[_type == "article" && "${category?._id}" in categories[]._ref])`
+      )
+      .then((data) => {
+        setDataCount(data);
+      });
+  }, []);
 
   useEffect(() => {
     dispatch(setStartLoading());
@@ -36,13 +67,15 @@ const SearchByCategory = ({ category, slug }) => {
   useEffect(() => {
     dispatch(setStartLoading());
 
-    const query = `*[_type == "article" && "${category?._id}" in categories[]._ref] | order(_createdAt desc)`;
+    if (startIndex !== null && endIndex !== null) {
+      const query = `*[_type == "article" && "${category?._id}" in categories[]._ref] | order(_createdAt desc) [${startIndex}...${endIndex}]`;
 
-    client.fetch(query).then((data) => {
-      setArticleData(data);
-      dispatch(setStopLoading());
-    });
-  }, [categoryData, slug]);
+      client.fetch(query).then((data) => {
+        setArticleData(data);
+        dispatch(setStopLoading());
+      });
+    }
+  }, [categoryData, slug, pageNumber, startIndex, endIndex]);
 
   return (
     <>
@@ -119,7 +152,14 @@ const SearchByCategory = ({ category, slug }) => {
         <title>{category?.title} | Articles by category</title>
       </Head>
       <main>
-        <WritingByCategoryPageLayout data={articleData} category={category} />
+        <WritingByCategoryPageLayout
+          data={articleData}
+          category={category}
+          pageNumber={pageNumber}
+          pages={pages}
+          noItems={noItems}
+          slug={slug}
+        />
       </main>
     </>
   );

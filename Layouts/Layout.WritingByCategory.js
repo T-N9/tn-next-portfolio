@@ -6,19 +6,33 @@ import { setCurrentPage } from "../store/slices/NavbarSlice";
 /* Component */
 import { ArticleByCategory, GlobalLoad } from "../components";
 
-const WritingByCategoryPageLayout = ({ data, category }) => {
+const WritingByCategoryPageLayout = ({
+  data,
+  category,
+  pageNumber,
+  pages,
+  noItems,
+  slug
+}) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(setCurrentPage("Writing"));
   }, []);
 
-  const { isLoading } = useSelector((state) => state.loadingState)
+  const { isLoading } = useSelector((state) => state.loadingState);
 
   return (
     <Transitions>
-      <GlobalLoad loading={isLoading}/>
-      <ArticleByCategory data={data} category={category} />
+      <GlobalLoad loading={isLoading} />
+      <ArticleByCategory
+        data={data}
+        category={category}
+        pageNumber={pageNumber}
+        pages={pages}
+        noItems={noItems}
+        slug={slug}
+      />
     </Transitions>
   );
 };

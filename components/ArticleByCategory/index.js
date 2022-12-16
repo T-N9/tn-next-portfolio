@@ -4,13 +4,18 @@ import Link from "next/link";
 /* Components */
 import ArticleCard from "../WritingAllArticles/ArticleCard";
 import NotFound from "../../assets/NotFound";
+import Pagination from "../Pagination";
 
-const ArticleByCategory = ({ data, category }) => {
+const ArticleByCategory = ({ data, category, pageNumber, pages, noItems,slug }) => {
   return (
     <section className="article_by_category">
       <div className="container_sm container_y_3">
         <h1 className="ht_text center_text">#{category?.title}</h1>
         <p className="center_text">Articles by this category</p>
+
+        <div className="container_y_2">
+          <Pagination baseLink={`/writing/categories/${slug}`} pageNumber={pageNumber} pages={pages} noItems={noItems} />
+        </div>
 
         {data?.length > 0 ? (
           <div className="article_by_category--wrapper container_y_3">
@@ -31,6 +36,7 @@ const ArticleByCategory = ({ data, category }) => {
             <p>Articles not found.</p>
           </div>
         )}
+        <Pagination baseLink={`/writing/categories/${slug}`} pageNumber={pageNumber} pages={pages} noItems={noItems} />
       </div>
     </section>
   );

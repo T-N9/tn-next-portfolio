@@ -62,7 +62,7 @@ const WritingAllArticles = () => {
         <div className="writing_allArticles--header container_y_2">
           <p className="title ht_text">All articles :</p>
 
-          <Pagination pageNumber={pageNumber} pages={pages} noItems={noItems} />
+          <Pagination baseLink={'/writing'} pageNumber={pageNumber} pages={pages} noItems={noItems} />
         </div>
 
         <div className="writing_allArticles--post_wrapper">
@@ -80,7 +80,7 @@ const WritingAllArticles = () => {
         </div>
 
         <div className="container_y_2">
-          <Pagination pageNumber={pageNumber} pages={pages} noItems={noItems} />
+          <Pagination baseLink={'/writing'} pageNumber={pageNumber} pages={pages} noItems={noItems} />
         </div>
       </div>
     </section>
