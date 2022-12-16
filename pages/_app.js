@@ -50,6 +50,9 @@ function MyApp({ Component, pageProps }) {
       router.events.off("routeChangeError", handleComplete);
     };
   }, [JSON.stringify(router), router, targetPath]);
+
+  const maintenance = true;
+
   return (
     <Provider store={store}>
       <ThemeProvider attribute="class">
@@ -58,10 +61,16 @@ function MyApp({ Component, pageProps }) {
 
           {!isLoading && (
             <>
-              <NavBar />
-              <div className="nav_spacer"></div>
-              <Component {...pageProps} />
-              <Footer />
+              {maintenance ? (
+                <p>tn.dev in maintenance.</p>
+              ) : (
+                <>
+                  <NavBar />
+                  <div className="nav_spacer"></div>
+                  <Component {...pageProps} />
+                  <Footer />
+                </>
+              )}
             </>
           )}
         </ThemeWrapper>
