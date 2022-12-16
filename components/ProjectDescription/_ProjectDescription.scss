@@ -64,7 +64,8 @@
     color: $primary-color;
   }
 
-  p, img {
+  p,
+  img {
     margin-bottom: 2rem;
 
     @include m-breakpoint-down(small) {
@@ -94,6 +95,10 @@
   ul,
   ol {
     margin: 0;
+  }
+
+  img {
+    margin: auto;
   }
 }
 
