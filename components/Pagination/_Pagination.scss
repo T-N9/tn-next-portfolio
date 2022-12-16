@@ -1,0 +1,38 @@
+.pagination_wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    @include flex-center;
+  }
+
+  .page_numbers {
+    display: flex;
+    gap: 10px;
+
+    &--item {
+      width: 25px;
+      height: 25px;
+      @include flex-center;
+      background-color: #2d3a47;
+      color: white;
+      font-weight: bold;
+    }
+
+    .active {
+      background-color: $primary-color;
+    }
+  }
+}
+
+.dark {
+  .pagination_wrapper {
+    .page_numbers {
+      .active {
+        background-color: $accent-color;
+      }
+    }
+  }
+}

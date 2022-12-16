@@ -16,6 +16,7 @@ import CalPaginate from "../../utils/CalPaginate";
 
 /* Components */
 import ArticleCard from "./ArticleCard";
+import Pagination from "../Pagination";
 
 const WritingAllArticles = () => {
   const dispatch = useDispatch();
@@ -24,8 +25,6 @@ const WritingAllArticles = () => {
 
   const router = useRouter();
   const pageNumber = parseInt(router.query.page) || 1;
-
-  console.log({ pageNumber });
 
   const { startIndex, endIndex, pages, noItems } = CalPaginate(
     dataCount,
@@ -40,7 +39,6 @@ const WritingAllArticles = () => {
 
   useEffect(() => {
     client.fetch(`count(*[_type == 'article'])`).then((data) => {
-      console.log({ data });
       setDataCount(data);
     });
   }, []);
@@ -54,7 +52,6 @@ const WritingAllArticles = () => {
       client.fetch(query).then((data) => {
         dispatch(setArticleData(data));
         dispatch(setStopLoading());
-        console.log({ articleData: data });
       });
     }
   }, [pageNumber, startIndex, endIndex]);
@@ -62,7 +59,11 @@ const WritingAllArticles = () => {
   return (
     <section className="writing_allArticles">
       <div className="container_sm">
-        <p className="title ht_text">All articles :</p>
+        <div className="writing_allArticles--header container_y_2">
+          <p className="title ht_text">All articles :</p>
+
+          <Pagination pageNumber={pageNumber} pages={pages} noItems={noItems} />
+        </div>
 
         <div className="writing_allArticles--post_wrapper">
           {articleData.length > 0 &&
@@ -79,17 +80,7 @@ const WritingAllArticles = () => {
         </div>
 
         <div className="container_y_2">
-          {pageNumber !== 1 && (
-            <Link href={`/writing?page=${pageNumber - 1}`}>
-              <button>Back</button>
-            </Link>
-          )}
-
-          {pageNumber < pages + 1 && (
-            <Link href={`/writing?page=${pageNumber + 1}`}>
-              <button>Next</button>
-            </Link>
-          )}
+          <Pagination pageNumber={pageNumber} pages={pages} noItems={noItems} />
         </div>
       </div>
     </section>
