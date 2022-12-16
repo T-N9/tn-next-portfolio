@@ -51,7 +51,7 @@ function MyApp({ Component, pageProps }) {
     };
   }, [JSON.stringify(router), router, targetPath]);
 
-  const maintenance = true;
+  const maintenance = false;
 
   return (
     <Provider store={store}>

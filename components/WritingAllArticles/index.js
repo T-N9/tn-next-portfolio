@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { client } from "../../client";
 import { useDispatch, useSelector } from "react-redux";
 import { setArticleData } from "../../store/slices/WritingSlice";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 /* action */
 import {
@@ -10,26 +11,54 @@ import {
   setStopLoading,
 } from "../../store/slices/LoadingSlice";
 
+/* Util */
+import CalPaginate from "../../utils/CalPaginate";
+
 /* Components */
 import ArticleCard from "./ArticleCard";
 
 const WritingAllArticles = () => {
   const dispatch = useDispatch();
   const { articleData } = useSelector((state) => state.writingData);
+  const [dataCount, setDataCount] = useState(null);
+
+  const router = useRouter();
+  const pageNumber = parseInt(router.query.page) || 1;
+
+  console.log({ pageNumber });
+
+  const { startIndex, endIndex, pages, noItems } = CalPaginate(
+    dataCount,
+    pageNumber
+  );
+  console.log({
+    startIndex,
+    endIndex,
+    pages,
+    noItems,
+  });
+
+  useEffect(() => {
+    client.fetch(`count(*[_type == 'article'])`).then((data) => {
+      console.log({ data });
+      setDataCount(data);
+    });
+  }, []);
 
   useEffect(() => {
     dispatch(setStartLoading());
-    const query = '*[_type == "article"] | order(_createdAt desc)';
 
-    if (articleData.length === 0) {
+    if (startIndex !== null && endIndex !== null) {
+      const query = `*[_type == "article"] | order(_createdAt desc) [${startIndex}...${endIndex}]`;
+
       client.fetch(query).then((data) => {
         dispatch(setArticleData(data));
         dispatch(setStopLoading());
+        console.log({ articleData: data });
       });
-    } else {
-      dispatch(setStopLoading());
     }
-  }, []);
+  }, [pageNumber, startIndex, endIndex]);
+
   return (
     <section className="writing_allArticles">
       <div className="container_sm">
@@ -47,6 +76,20 @@ const WritingAllArticles = () => {
                 </Link>
               );
             })}
+        </div>
+
+        <div className="container_y_2">
+          {pageNumber !== 1 && (
+            <Link href={`/writing?page=${pageNumber - 1}`}>
+              <button>Back</button>
+            </Link>
+          )}
+
+          {pageNumber < pages + 1 && (
+            <Link href={`/writing?page=${pageNumber + 1}`}>
+              <button>Next</button>
+            </Link>
+          )}
         </div>
       </div>
     </section>
