@@ -1,11 +1,4 @@
 #portfolio {
-  @include m-breakpoint-down(large) {
-    margin-top: 15rem;
-  }
-
-  @include m-breakpoint-down(small) {
-    margin-top: 5rem;
-  }
 
   .swiper-slide {
     display: inline-block;
@@ -36,8 +29,8 @@
     margin-right: auto;
     margin-left: auto;
     touch-action: pan-y;
-    padding: calUni(20px) 0 calUni(80px) 0 !important;
-    margin-top: 3rem;
+    padding: calUni(20px) 0 3rem 0 !important;
+    margin-top: 1rem;
   }
 
   .swiper-pagination-bullet {

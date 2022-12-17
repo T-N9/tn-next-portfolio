@@ -12,7 +12,6 @@ import {
   AboutTimeline,
   HomeMotto,
   Testimonials,
-  AboutWriting,
 } from "../components";
 
 const AboutPageLayout = () => {
@@ -27,9 +26,8 @@ const AboutPageLayout = () => {
       <AboutHero />
       <HomeAbout />
       <AboutTimeline />
-      <HomeMotto />
       <Testimonials />
-      <AboutWriting />
+      <HomeMotto />
     </Transitions>
   );
 };

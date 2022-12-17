@@ -1,28 +1,12 @@
 .testimonials {
-  margin: 3.75rem 0;
-
   background-color: rgba($light-color, 0.2);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
     rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-  // background-image: url("https://www.transparenttextures.com/patterns/grid-me.png");
   background-attachment: fixed;
   position: relative;
 
   .background_div {
-    // background-attachment: fixed;
-    padding: 6rem 0;
-    // background: #2193b0; /* fallback for old browsers */
-    // background: -webkit-linear-gradient(
-    //   to right,
-    //   #00B0DC,
-    //   #1192D3
-    // ); /* Chrome 10-25, Safari 5.1-6 */
-    // background: linear-gradient(
-    //   to right,
-    //   #00B0DC,
-    //   #1192D3
-    // ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    padding: 3rem 0;
     background-image: radial-gradient(
       circle at top left,
       #fffffa 0%,
@@ -97,7 +81,6 @@
       background-image: url(../../assets/contact-bg.svg);
       background-position: center center;
       background-size: cover;
-      // border-left: 5px solid $primary-color;
       padding: 25px 30px;
       border-radius: 15px;
       height: 100%;
@@ -105,7 +88,6 @@
       flex-direction: column;
       justify-content: space-between;
       gap: 20px;
-      // min-width: 500px;
       .saying {
         &::first-letter {
           font-size: 2rem;
@@ -121,7 +103,6 @@
       .info {
         border-top: 2px solid rgba($primary-color, 0.5);
         padding-top: 5px;
-        // margin-top: 2rem;
       }
     }
   }
