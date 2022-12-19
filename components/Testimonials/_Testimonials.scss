@@ -103,6 +103,10 @@
       .info {
         border-top: 2px solid rgba($primary-color, 0.5);
         padding-top: 5px;
+
+        @include m-breakpoint-down(small) {
+          font-size: 14px;
+        }
       }
     }
   }

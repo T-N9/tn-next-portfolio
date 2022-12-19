@@ -179,6 +179,12 @@
         visibility: visible;
         opacity: 1;
       }
+
+      @include m-breakpoint-down(small) {
+        font-size: 14px;
+        justify-content: start;
+        gap: 10px;
+      }
     }
   }
   &--header {
@@ -231,6 +237,10 @@
       // background-color: #e6f4fb !important;
       @include m-breakpoint-up(large) {
         font-size: $fs-300;
+      }
+
+      @include m-breakpoint-down(small) {
+        font-size: 16px;
       }
     }
   }

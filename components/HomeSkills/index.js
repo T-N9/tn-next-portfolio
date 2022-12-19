@@ -14,7 +14,7 @@ import {
   Visualstudiocode,
   Redux,
   Nextdotjs,
-  Materialdesign,
+  Framer,
   Firebase,
 } from "@icons-pack/react-simple-icons";
 import ServiceIntro from "./ServiceIntro";
@@ -83,8 +83,8 @@ const HomeSkills = () => {
             Next JS
           </div>
           <div className="skill_item">
-            <Materialdesign xlinkTitle="true" />
-            Material UI
+            <Framer xlinkTitle="true" />
+            Framer
           </div>
           <div className="skill_item">
             <Firebase xlinkTitle="true" />
