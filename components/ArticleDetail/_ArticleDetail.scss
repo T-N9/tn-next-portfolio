@@ -18,7 +18,7 @@
       font-size: $fs-500;
 
       @include m-breakpoint-down(small) {
-        font-size: 32px;
+        font-size: 24px;
       }
     }
 
@@ -38,6 +38,10 @@
       background-color: $light-color;
       display: inline-block;
       border-radius: 9999px;
+
+      @include m-breakpoint-down(small) {
+        font-size: 16px;
+      }
     }
   }
 
@@ -75,9 +79,14 @@
 
 .dark {
   .article_page {
+    .breadcrumb {
+      .route {
+        color: $light-color;
+      }
+    }
     .categories {
       .category {
-        background-color: $dark-primary-color;
+        background-color: #2d3a47;
         color: $light-color;
       }
     }
