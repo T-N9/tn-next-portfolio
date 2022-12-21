@@ -57,7 +57,7 @@ function MyApp({ Component, pageProps }) {
     <Provider store={store}>
       <ThemeProvider attribute="class">
         <ThemeWrapper>
-          {/* <GlobalLoad loading={isLoading} /> */}
+          <GlobalLoad loading={isLoading} isLogo={true} />
 
           {!isLoading && (
             <>

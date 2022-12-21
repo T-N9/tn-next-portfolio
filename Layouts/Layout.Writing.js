@@ -22,7 +22,7 @@ const WritingPageLayout = () => {
 
   return (
     <>
-      <GlobalLoad loading={isLoading} />
+      <GlobalLoad loading={isLoading} isFetching={true} />
       <Transitions>
         <WritingHero />
         <WritingCategory />

@@ -1,9 +1,13 @@
 import React from "react";
 
-const GlobalLoading = ({ loading }) => {
+import Logo from "../Navbar/Logo";
+
+const GlobalLoading = ({ loading, isLogo, isFetching }) => {
   return (
     <div className={loading ? "loading_page visible" : "loading_page hidden"}>
-      <i className={`gg-${"spinner"}`}></i>
+      {isFetching && <i className={`gg-${"spinner"}`}></i>
+}
+      {isLogo && <Logo />}
     </div>
   );
 };
