@@ -57,20 +57,14 @@ function MyApp({ Component, pageProps }) {
     <Provider store={store}>
       <ThemeProvider attribute="class">
         <ThemeWrapper>
-          <GlobalLoad loading={isLoading} />
+          {/* <GlobalLoad loading={isLoading} /> */}
 
           {!isLoading && (
             <>
-              {maintenance ? (
-                <p>tn.dev in maintenance.</p>
-              ) : (
-                <>
-                  <NavBar />
-                  <div className="nav_spacer"></div>
-                  <Component {...pageProps} />
-                  <Footer />
-                </>
-              )}
+              <NavBar />
+              <div className="nav_spacer"></div>
+              <Component {...pageProps} />
+              <Footer />
             </>
           )}
         </ThemeWrapper>

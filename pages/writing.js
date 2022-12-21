@@ -4,7 +4,9 @@ import Head from "next/head";
 /* Layout */
 import { WritingPageLayout } from "../Layouts";
 
-const Writing = () => {
+const Writing = ({
+  handleLoading
+}) => {
   return (
     <>
       <Head>
@@ -66,7 +68,7 @@ const Writing = () => {
         <title>Writing | TeNyain&apos;s thoughts</title>
       </Head>
       <main>
-        <WritingPageLayout />
+        <WritingPageLayout handleLoading={handleLoading} />
       </main>
     </>
   );

@@ -30,12 +30,12 @@ const WritingAllArticles = () => {
     dataCount,
     pageNumber
   );
-  console.log({
-    startIndex,
-    endIndex,
-    pages,
-    noItems,
-  });
+  // console.log({
+  //   startIndex,
+  //   endIndex,
+  //   pages,
+  //   noItems,
+  // });
 
   useEffect(() => {
     client.fetch(`count(*[_type == 'article'])`).then((data) => {
