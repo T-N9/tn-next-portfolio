@@ -301,3 +301,36 @@ select {
   gap: 20px;
   align-items: center;
 }
+
+@keyframes line_animation {
+  0% {
+    transform: translateX(-100px) scaleX(0);
+  }
+
+  50% {
+    transform: translateX(0) scaleX(1);
+  }
+
+  100% {
+    transform: translateX(100px) scaleX(0);
+  }
+  
+}
+
+.loading-trans {
+  display: flex;
+  flex-direction: column;
+}
+
+.loading-line {
+  width: 100px;
+  height: 2px;
+  background-color: $primary-color;
+  animation: line_animation 1000ms ease-in infinite alternate;
+}
+
+.dark {
+  .loading-line {
+    background-color: $accent-color;
+  }
+}
