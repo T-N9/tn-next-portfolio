@@ -116,6 +116,10 @@
   flex-direction: column;
   justify-content: space-between;
 
+  @include m-breakpoint-down(medium){
+    gap: 1rem;
+  }
+
   &--image {
     img {
       width: 100%;
