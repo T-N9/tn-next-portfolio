@@ -4,7 +4,7 @@ import { motion, useViewportScroll, useTransform } from "framer-motion";
 const MediaRight = () => {
 
     const { scrollYProgress } = useViewportScroll()
-    const scale = useTransform(scrollYProgress, [0, 1], [0.5, 2.5]);
+    const scale = useTransform(scrollYProgress, [0, 1], [0.1, 2.5]);
 
     return (
         <>
