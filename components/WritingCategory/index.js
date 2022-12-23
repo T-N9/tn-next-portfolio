@@ -39,9 +39,9 @@ const WritingCategory = () => {
           Browse by categories :
         </p>
 
-        <div className="writing_category--item_wrapper">
-          {categoryData.length > 0 ? (
-            categoryData.map((category, index) => {
+        {categoryData.length > 0 ? (
+          <div className="writing_category--item_wrapper">
+            {categoryData.map((category, index) => {
               return (
                 <CategoryItem
                   key={index}
@@ -50,11 +50,13 @@ const WritingCategory = () => {
                   image={category.titleImage}
                 />
               );
-            })
-          ) : (
-            <p>Loading</p>
-          )}
-        </div>
+            })}
+          </div>
+        ) : (
+          <div className="flex_auto loading_sec">
+            <i className={`gg-${"spinner"}`}></i>
+          </div>
+        )}
       </div>
     </section>
   );

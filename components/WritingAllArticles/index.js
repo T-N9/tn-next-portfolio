@@ -22,6 +22,7 @@ const WritingAllArticles = () => {
   const dispatch = useDispatch();
   const { articleData } = useSelector((state) => state.writingData);
   const [dataCount, setDataCount] = useState(null);
+  const [arctLoading, setArctLoading] = useState(false);
 
   const router = useRouter();
   const pageNumber = parseInt(router.query.page) || 1;
@@ -45,6 +46,7 @@ const WritingAllArticles = () => {
 
   useEffect(() => {
     dispatch(setStartLoading());
+    setArctLoading(true);
 
     if (startIndex !== null && endIndex !== null) {
       const query = `*[_type == "article"] | order(_createdAt desc) [${startIndex}...${endIndex}]`;
@@ -52,6 +54,7 @@ const WritingAllArticles = () => {
       client.fetch(query).then((data) => {
         dispatch(setArticleData(data));
         dispatch(setStopLoading());
+        setArctLoading(false);
       });
     }
   }, [pageNumber, startIndex, endIndex]);
@@ -62,25 +65,41 @@ const WritingAllArticles = () => {
         <div className="writing_allArticles--header container_y_2">
           <p className="title ht_text">All articles :</p>
 
-          <Pagination baseLink={'/writing'} pageNumber={pageNumber} pages={pages} noItems={noItems} />
+          <Pagination
+            baseLink={"/writing"}
+            pageNumber={pageNumber}
+            pages={pages}
+            noItems={noItems}
+          />
         </div>
 
-        <div className="writing_allArticles--post_wrapper">
-          {articleData.length > 0 &&
-            articleData?.map((article, index) => {
-              return (
-                <Link
-                  key={index}
-                  href={`writing/articles/${article.slug.current}`}
-                >
-                  <ArticleCard data={article} />
-                </Link>
-              );
-            })}
-        </div>
+        {!arctLoading ? (
+          <div className="writing_allArticles--post_wrapper">
+            {articleData.length > 0 &&
+              articleData?.map((article, index) => {
+                return (
+                  <Link
+                    key={index}
+                    href={`writing/articles/${article.slug.current}`}
+                  >
+                    <ArticleCard data={article} />
+                  </Link>
+                );
+              })}
+          </div>
+        ) : (
+          <div className="flex_auto loading_sec">
+            <i className={`gg-${"spinner"}`}></i>
+          </div>
+        )}
 
         <div className="container_y_2">
-          <Pagination baseLink={'/writing'} pageNumber={pageNumber} pages={pages} noItems={noItems} />
+          <Pagination
+            baseLink={"/writing"}
+            pageNumber={pageNumber}
+            pages={pages}
+            noItems={noItems}
+          />
         </div>
       </div>
     </section>
