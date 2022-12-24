@@ -126,7 +126,7 @@
 
     .nav_mobile_wrapper {
       position: fixed;
-
+      overflow: scroll;
       top: 0;
       left: 0;
       width: 100%;
@@ -139,7 +139,7 @@
 
       .nav_ham {
         margin-left: auto;
-        margin-right: calUni(20px);
+        margin-right: 0.45rem;
         margin-top: 1rem;
 
         @include m-breakpoint-up(medium) {
