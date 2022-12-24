@@ -12,7 +12,7 @@ import {
 } from "../../store/slices/LoadingSlice";
 
 /* Util */
-import CalPaginate from "../../utils/CalPaginate";
+import CalPaginate from "../../hooks/CalPaginate";
 
 /* Components */
 import ArticleCard from "./ArticleCard";

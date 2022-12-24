@@ -12,7 +12,7 @@ import {
 } from "../../../store/slices/LoadingSlice";
 
 /* Hook */
-import CalPaginate from "../../../utils/CalPaginate";
+import CalPaginate from "../../../hooks/CalPaginate";
 
 /* Layout */
 import { WritingByCategoryPageLayout } from "../../../Layouts";
