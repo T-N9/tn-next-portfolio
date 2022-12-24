@@ -55,7 +55,7 @@ const AllCredits = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                "Don't start with visuals"
+                &quot;Don&apos;t start with visuals&quot;
               </a>{" "}
               and you can also check out for his website review process.
             </li>
