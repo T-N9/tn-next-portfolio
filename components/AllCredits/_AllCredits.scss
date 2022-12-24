@@ -2,6 +2,16 @@
   min-height: 100vh;
   @include flex-center;
 
+  .thankYou_ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.865rem;
+
+    @include m-breakpoint-down(small){
+      font-size: 14px;
+    }
+  }
+
   a {
     color: $primary-color !important;
   }
