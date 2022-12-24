@@ -24,21 +24,22 @@ const SearchByCategory = ({ category, slug }) => {
   const [articleData, setArticleData] = useState(null);
 
   const [dataCount, setDataCount] = useState(null);
+  const [arctLoading, setArctLoading] = useState(false);
 
   const router = useRouter();
   const pageNumber = parseInt(router.query.page) || 1;
-  console.log({ router });
+  // console.log({ router });
 
   const { startIndex, endIndex, pages, noItems } = CalPaginate(
     dataCount,
     pageNumber
   );
-  console.log({
-    startIndex,
-    endIndex,
-    pages,
-    noItems,
-  });
+  // console.log({
+  //   startIndex,
+  //   endIndex,
+  //   pages,
+  //   noItems,
+  // });
 
   useEffect(() => {
     client
@@ -52,6 +53,7 @@ const SearchByCategory = ({ category, slug }) => {
 
   useEffect(() => {
     dispatch(setStartLoading());
+
     const query = '*[_type == "category"]';
 
     if (categoryData.length === 0) {
@@ -66,6 +68,7 @@ const SearchByCategory = ({ category, slug }) => {
 
   useEffect(() => {
     dispatch(setStartLoading());
+    setArctLoading(true);
 
     if (startIndex !== null && endIndex !== null) {
       const query = `*[_type == "article" && "${category?._id}" in categories[]._ref] | order(_createdAt desc) [${startIndex}...${endIndex}]`;
@@ -73,6 +76,7 @@ const SearchByCategory = ({ category, slug }) => {
       client.fetch(query).then((data) => {
         setArticleData(data);
         dispatch(setStopLoading());
+        setArctLoading(false);
       });
     }
   }, [categoryData, slug, pageNumber, startIndex, endIndex]);
@@ -159,6 +163,7 @@ const SearchByCategory = ({ category, slug }) => {
           pages={pages}
           noItems={noItems}
           slug={slug}
+          loading={arctLoading}
         />
       </main>
     </>

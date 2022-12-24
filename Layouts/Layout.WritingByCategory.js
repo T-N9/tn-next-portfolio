@@ -12,7 +12,8 @@ const WritingByCategoryPageLayout = ({
   pageNumber,
   pages,
   noItems,
-  slug
+  slug,
+  loading
 }) => {
   const dispatch = useDispatch();
 
@@ -20,11 +21,8 @@ const WritingByCategoryPageLayout = ({
     dispatch(setCurrentPage("Writing"));
   }, []);
 
-  const { isLoading } = useSelector((state) => state.loadingState);
-
   return (
     <Transitions>
-      <GlobalLoad loading={isLoading} />
       <ArticleByCategory
         data={data}
         category={category}
@@ -32,6 +30,7 @@ const WritingByCategoryPageLayout = ({
         pages={pages}
         noItems={noItems}
         slug={slug}
+        loading={loading}
       />
     </Transitions>
   );

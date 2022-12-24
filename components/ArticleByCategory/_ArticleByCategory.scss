@@ -1,4 +1,9 @@
 .article_by_category {
+
+  .loading_sec {
+    height: 20rem;
+  }
+
   &--wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
