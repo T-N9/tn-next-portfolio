@@ -1,33 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { useSelector } from "react-redux";
-
-const pages = [
-  {
-    name: "Home",
-    route: "/",
-  },
-  {
-    name: "About",
-    route: "/about",
-  },
-  {
-    name: "Works",
-    route: "/works",
-  },
-  {
-    name: "Writing",
-    route: "/writing",
-  },
-  {
-    name: "Services",
-    route: "/services",
-  },
-  {
-    name: "Contact",
-    route: "/contact",
-  },
-];
+import pages from "../../constants/pages";
 
 const NavItems = () => {
   const { currentPage } = useSelector((state) => state.navBar);

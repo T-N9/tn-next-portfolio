@@ -4,33 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Hamburger from "./Hamburger";
 import Toggler from "./Toggler";
 import { setActive } from "../../store/slices/NavbarSlice";
-
-const pages = [
-  {
-    name: "Home",
-    route: "/",
-  },
-  {
-    name: "About",
-    route: "/about",
-  },
-  {
-    name: "Works",
-    route: "/works",
-  },
-  {
-    name: "Writing",
-    route: "/writing",
-  },
-  {
-    name: "Services",
-    route: "/services",
-  },
-  {
-    name: "Contact",
-    route: "/contact",
-  },
-];
+import pages from "../../constants/pages";
 
 const MobileMenu = () => {
   const dispatch = useDispatch();
