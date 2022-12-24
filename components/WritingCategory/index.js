@@ -16,15 +16,12 @@ const WritingCategory = () => {
   const dispatch = useDispatch();
   const { categoryData } = useSelector((state) => state.writingData);
 
-  const [categories, setCategories] = useState(null);
-
   useEffect(() => {
     dispatch(setStartLoading());
     const query = '*[_type == "category"]';
 
     if (categoryData.length === 0) {
       client.fetch(query).then((data) => {
-        setCategories(data);
         dispatch(setCategoryData(data));
         dispatch(setStopLoading());
       });
