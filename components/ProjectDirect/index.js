@@ -48,7 +48,7 @@ const ProjectDirect = ({ slug }) => {
     <div className="button_bar container_y_2 container_sm">
       <div>
         {isPrev && (
-          <Link href={`/works/${prevProject}`}>
+          <Link href={`/works/${prevProject}`} scroll>
             <button className="outlined_btn">
               <i className="gg-arrow-left-o"></i>
             </button>
@@ -58,7 +58,7 @@ const ProjectDirect = ({ slug }) => {
 
       <div>
         {nextProject !== undefined && (
-          <Link href={`/works/${nextProject}`}>
+          <Link href={`/works/${nextProject}`} scroll>
             <button className="outlined_btn">
               <i className="gg-arrow-right-o"></i>
             </button>
