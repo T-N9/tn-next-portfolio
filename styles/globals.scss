@@ -132,7 +132,7 @@ body {
   opacity: 1;
 }
 
-.dark .sun_icon{
+.dark .sun_icon {
   visibility: hidden;
   opacity: 0;
 }
@@ -142,7 +142,7 @@ body {
   opacity: 0;
 }
 
-.dark .moon_icon{
+.dark .moon_icon {
   visibility: visible;
   opacity: 1;
 }
@@ -158,7 +158,6 @@ button {
     cursor: url(../assets/dark-cursor-pointer.svg), auto !important;
   }
 }
-
 
 .route {
   cursor: url(../assets/light-cursor-pointer.svg), auto !important;
@@ -314,7 +313,6 @@ select {
   100% {
     transform: translateX(100px) scaleX(0);
   }
-  
 }
 
 .loading-trans {
@@ -332,5 +330,17 @@ select {
 .dark {
   .loading-line {
     background-color: $accent-color;
+  }
+}
+
+/* targeting only firefox browser */
+@-moz-document url-prefix() {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  /* Set core root defaults */
+  html:focus-within {
+    scroll-behavior: auto !important;
   }
 }
