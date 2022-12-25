@@ -22,51 +22,51 @@ function MyApp({ Component, pageProps }) {
 
   const targetPath = router.asPath;
 
-  useEffect(() => {
-    const handleStart = (url) => {
-      if (url !== router.asPath) {
-        // console.log("Route Start.", { url, asPath: router.asPath });
-        setIsLoading(true);
+  // useEffect(() => {
+  //   const handleStart = (url) => {
+  //     if (url !== router.asPath) {
+  //       // console.log("Route Start.", { url, asPath: router.asPath });
+  //       setIsLoading(true);
 
-        setTimeout(() => {
-          setIsLoading(false);
-        }, 3000);
-      }
-    };
-    const handleComplete = (url) => {
-      if (url === router.asPath) {
-        // console.log("Route End.", { url, asPath: router.asPath });
-        setIsLoading(false);
-      }
-    };
+  //       setTimeout(() => {
+  //         setIsLoading(false);
+  //       }, 3000);
+  //     }
+  //   };
+  //   const handleComplete = (url) => {
+  //     if (url === router.asPath) {
+  //       // console.log("Route End.", { url, asPath: router.asPath });
+  //       setIsLoading(false);
+  //     }
+  //   };
 
-    router.events.on("routeChangeStart", handleStart);
-    router.events.on("routeChangeComplete", handleComplete);
-    router.events.on("routeChangeError", handleComplete);
+  //   router.events.on("routeChangeStart", handleStart);
+  //   router.events.on("routeChangeComplete", handleComplete);
+  //   router.events.on("routeChangeError", handleComplete);
 
-    return () => {
-      router.events.off("routeChangeStart", handleStart);
-      router.events.off("routeChangeComplete", handleComplete);
-      router.events.off("routeChangeError", handleComplete);
-    };
-  }, [JSON.stringify(router), router, targetPath]);
+  //   return () => {
+  //     router.events.off("routeChangeStart", handleStart);
+  //     router.events.off("routeChangeComplete", handleComplete);
+  //     router.events.off("routeChangeError", handleComplete);
+  //   };
+  // }, [JSON.stringify(router), router, targetPath]);
 
-  const maintenance = false;
+  // const maintenance = false;
 
   return (
     <Provider store={store}>
       <ThemeProvider attribute="class">
         <ThemeWrapper>
-          <GlobalLoad loading={isLoading} isLogo={true} />
+          {/* <GlobalLoad loading={isLoading} isLogo={true} /> */}
 
-          {!isLoading && (
+          {/* {!isLoading && ( */}
             <>
               <NavBar />
               <div className="nav_spacer"></div>
               <Component {...pageProps} />
               <Footer />
             </>
-          )}
+          {/* )} */}
         </ThemeWrapper>
       </ThemeProvider>
     </Provider>
