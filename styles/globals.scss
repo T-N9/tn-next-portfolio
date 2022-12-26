@@ -217,12 +217,12 @@ ol[role="list"] {
 }
 
 html {
-  scroll-behavior: smooth !important;
+  scroll-behavior: auto !important;
 }
 
 /* Set core root defaults */
 html:focus-within {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 /* Set core body defaults */
@@ -254,10 +254,10 @@ select {
   font: inherit;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+/* Remove all animations, transitions and auto scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
   }
 
   *,
@@ -266,7 +266,7 @@ select {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: smooth !important;
+    scroll-behavior: auto !important;
   }
 }
 
