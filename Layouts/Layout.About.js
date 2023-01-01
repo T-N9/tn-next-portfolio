@@ -22,7 +22,7 @@ const AboutPageLayout = () => {
   }, []);
   return (
     <Transitions>
-      <AboutWishing />
+      {/* <AboutWishing /> */}
       <AboutHero />
       <HomeAbout />
       <AboutTimeline />
