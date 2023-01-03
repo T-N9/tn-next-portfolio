@@ -35,7 +35,7 @@ const Pagination = ({ pageNumber, pages, noItems, baseLink }) => {
           })}
       </div>
 
-      { pageNumber < pages && (
+      { (pageNumber < pages) || (pageNumber ===pages && noItems > 0) && (
         <Link href={`${baseLink}?page=${pageNumber + 1}`}>
           <button>
             <i className="gg-arrow-right"></i>
