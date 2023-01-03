@@ -67,7 +67,7 @@ export default ProjectDetail;
 
 export async function getStaticPaths() {
   const paths = await client.fetch(
-    `*[_type == "projects" && defined(slug.current)][].slug.current`
+    `*[_type == "project" && defined(slug.current)][].slug.current`
   );
 
   return {
@@ -81,7 +81,7 @@ export async function getStaticProps(context) {
   const { slug = "" } = context.params;
   const project = await client.fetch(
     `
-      *[_type == "projects" && slug.current == $slug][0]
+      *[_type == "project" && slug.current == $slug][0]
     `,
     { slug }
   );

@@ -28,7 +28,7 @@ const SwiperCards = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const query = '*[_type == "projects"] | order(order asc)';
+    const query = '*[_type == "project"]|order(orderRank)';
 
     if (contentData.length === 0) {
       setIsLoading(true);

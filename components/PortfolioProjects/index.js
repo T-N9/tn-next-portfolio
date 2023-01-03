@@ -20,7 +20,7 @@ const PortfolioProjects = () => {
   const { contentData } = useSelector((state) => state.projectData);
 
   useEffect(() => {
-    const query = '*[_type == "projects"] | order(order asc)';
+    const query = '*[_type == "project"]|order(orderRank)';
 
     contentData.length === 0 &&
       client.fetch(query).then((data) => {

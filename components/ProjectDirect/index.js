@@ -17,7 +17,7 @@ const ProjectDirect = ({ slug }) => {
   let isNext = projectNo < slugs.length + 1;
 
   useEffect(() => {
-    const query = `*[_type == "projects" ] | order(order asc)`;
+    const query = `*[_type == "project" ] | order(orderRank)`;
 
     client.fetch(query).then((data) => {
       let slugData = data.map((item) => {
