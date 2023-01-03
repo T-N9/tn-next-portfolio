@@ -6,6 +6,7 @@ import "css.gg/icons/css/arrow-left.css";
 import "css.gg/icons/css/arrow-right.css";
 
 const Pagination = ({ pageNumber, pages, noItems, baseLink }) => {
+  console.log({pages, pageNumber, noItems})
   return (
     <div className="pagination_wrapper">
       {pageNumber !== 1 && (
@@ -34,7 +35,7 @@ const Pagination = ({ pageNumber, pages, noItems, baseLink }) => {
           })}
       </div>
 
-      {noItems > 0 && pageNumber < pages + 1 && (
+      { pageNumber < pages && (
         <Link href={`${baseLink}?page=${pageNumber + 1}`}>
           <button>
             <i className="gg-arrow-right"></i>

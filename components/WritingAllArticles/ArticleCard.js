@@ -27,7 +27,7 @@ const ArticleCard = ({ data }) => {
         <h1 className="ht_text">{data.title}</h1>
 
         <div className="categories">
-          {data.categories.map((item, index) => {
+          {data?.categories?.map((item, index) => {
             let selectedCategory = categoryData.filter(
               (cate) => cate._id === item._ref
             );

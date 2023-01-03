@@ -72,7 +72,7 @@ const SearchByCategory = ({ category, slug }) => {
 
     if (startIndex !== null && endIndex !== null) {
       const query =
-        dataCount > 1
+        dataCount > 6
           ? `*[_type == "article" && "${category?._id}" in categories[]._ref] | order(_createdAt desc) [${startIndex}...${endIndex}]`
           : `*[_type == "article" && "${category?._id}" in categories[]._ref] | order(_createdAt desc)`;
 

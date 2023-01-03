@@ -17,11 +17,25 @@ import {
 /* Hook */
 import Hook from "./hook";
 
+const serializers = {
+  types: {
+    code: (props) => (
+      <div className="code-section">
+        <pre>
+          <code>{props.node.code}</code>
+        </pre>
+      </div>
+    ),
+  },
+}
+
 const ArticleDetail = ({ data, slug }) => {
   const { categoryData, titleImgProps } = Hook(data.titleImage);
 
   const router = useRouter();
   const path = router.asPath;
+
+  console.log({data})
 
   return (
     <section className="article_page">
@@ -46,7 +60,7 @@ const ArticleDetail = ({ data, slug }) => {
           </div>
 
           <div className="categories">
-            {data.categories.map((item, index) => {
+            {data?.categories?.map((item, index) => {
               let selectedCategory = categoryData.filter(
                 (cate) => cate._id === item._ref
               );
@@ -73,9 +87,10 @@ const ArticleDetail = ({ data, slug }) => {
 
           <div className="block_content">
             <BlockContent
-              projectId={"qasqfzl0"}
+              projectId={"dm3kiwds"}
               dataset={"production"}
               blocks={data.content}
+              serializers={serializers}
             />
           </div>
 

@@ -64,13 +64,26 @@
     color: $primary-color;
   }
 
+  figure img {
+    border: 1px solid gray;
+  }
+
+  blockquote {
+    padding-left: 15px;
+    border-left: 5px solid gray;
+  }
+
   p,
   img {
-    margin-bottom: 2rem;
+    margin-bottom: 10px;
 
     @include m-breakpoint-down(small) {
       font-size: calUni(16px);
     }
+  }
+
+  p:empty {
+    margin-bottom: 2rem;
   }
 
   li {
@@ -86,6 +99,14 @@
   h5,
   h6 {
     color: $primary-color !important;
+    margin-bottom: 20px;
+  }
+
+  // image label
+  h6{
+    text-align: center;
+    margin-top: 5px;
+    font-weight: normal;
   }
 
   h4 {

@@ -50,7 +50,7 @@ const WritingAllArticles = () => {
 
     if (startIndex !== null && endIndex !== null) {
       const query =
-        dataCount > 1
+        dataCount > 6
           ? `*[_type == "article"] | order(_createdAt desc) [${startIndex}...${endIndex}]`
           : `*[_type == "article"] | order(_createdAt desc)`;
 

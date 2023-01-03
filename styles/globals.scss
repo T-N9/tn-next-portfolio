@@ -344,3 +344,22 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+.code-section {
+  background: black;
+  color: lightgreen;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: scroll;
+}
+
+.code-section pre {
+  margin: 0;
+}
+
+.code-section code {
+  padding: unset;
+  background-color: unset;
+  border-radius: unset;
+  line-height: unset;
+}
