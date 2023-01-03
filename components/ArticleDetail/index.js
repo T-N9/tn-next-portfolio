@@ -32,7 +32,6 @@ const serializers = {
           language={props.node.language}
           style={dracula}
           showLineNumbers
-          wrapLongLines
         >
           {props.node.code}
         </SyntaxHighlighter>
