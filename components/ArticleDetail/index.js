@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 import moment from "moment/moment";
 import Image from "next/image";
 import BlockContent from "@sanity/block-content-to-react";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 /* Icons */
 import {
@@ -11,7 +13,7 @@ import {
   Twitter,
   Gmail,
   Linkedin,
-  Messenger
+  Messenger,
 } from "@icons-pack/react-simple-icons";
 
 /* Hook */
@@ -20,14 +22,24 @@ import Hook from "./hook";
 const serializers = {
   types: {
     code: (props) => (
-      <div className="code-section">
-        <pre>
-          <code>{props.node.code}</code>
-        </pre>
+      // <div className="code-section">
+      //   <pre>
+      //     <code>{props.node.code}</code>
+      //   </pre>
+      // </div>
+      <div className="code-hl">
+        <SyntaxHighlighter
+          language={props.node.language}
+          style={dracula}
+          showLineNumbers
+          wrapLongLines
+        >
+          {props.node.code}
+        </SyntaxHighlighter>
       </div>
     ),
   },
-}
+};
 
 const ArticleDetail = ({ data, slug }) => {
   const { categoryData, titleImgProps } = Hook(data.titleImage);
@@ -35,7 +47,7 @@ const ArticleDetail = ({ data, slug }) => {
   const router = useRouter();
   const path = router.asPath;
 
-  console.log({data})
+  console.log({ data });
 
   return (
     <section className="article_page">
@@ -125,7 +137,7 @@ const ArticleDetail = ({ data, slug }) => {
               </a>
 
               <a href="fb-messenger://share/?link=https://tenyain.com/${path}">
-                <Messenger xlinkTitle="true"/>
+                <Messenger xlinkTitle="true" />
               </a>
 
               <a

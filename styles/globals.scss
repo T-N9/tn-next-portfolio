@@ -351,6 +351,13 @@ select {
   padding: 20px;
   margin-bottom: 20px;
   overflow: scroll;
+
+  font-size: 16px;
+  font-family: monospace;
+
+  @include m-breakpoint-down(small) {
+    font-size: 14px;
+  }
 }
 
 .code-section pre {
@@ -358,6 +365,13 @@ select {
 }
 
 .code-section code {
+  padding: unset;
+  background-color: unset;
+  border-radius: unset;
+  line-height: unset;
+}
+
+.code-hl code {
   padding: unset;
   background-color: unset;
   border-radius: unset;
