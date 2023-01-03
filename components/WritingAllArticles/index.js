@@ -49,7 +49,10 @@ const WritingAllArticles = () => {
     setArctLoading(true);
 
     if (startIndex !== null && endIndex !== null) {
-      const query = `*[_type == "article"] | order(_createdAt desc) [${startIndex}...${endIndex}]`;
+      const query =
+        dataCount > 1
+          ? `*[_type == "article"] | order(_createdAt desc) [${startIndex}...${endIndex}]`
+          : `*[_type == "article"] | order(_createdAt desc)`;
 
       client.fetch(query).then((data) => {
         dispatch(setArticleData(data));
@@ -57,7 +60,7 @@ const WritingAllArticles = () => {
         setArctLoading(false);
       });
     }
-  }, [pageNumber, startIndex, endIndex]);
+  }, [pageNumber, startIndex, endIndex, dataCount]);
 
   return (
     <section className="writing_allArticles">

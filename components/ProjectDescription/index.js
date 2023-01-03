@@ -10,10 +10,10 @@ const ProjectDescription = (props) => {
     introduction,
     url,
     development,
-    mockup,
-    pandp,
+    mockup_1,
+    preparation,
     designing,
-    mockup_d,
+    mockup_2,
     palette,
     typo,
     logo,
@@ -22,8 +22,8 @@ const ProjectDescription = (props) => {
     conclusion,
   } = props;
 
-  const mockupProps = useNextSanityImage(client, mockup);
-  const mockup_dProps = useNextSanityImage(client, mockup_d);
+  const mockup_1Props = useNextSanityImage(client, mockup_1);
+  const mockup_2Props = useNextSanityImage(client, mockup_2);
   const typo_Props = useNextSanityImage(client, typo);
   const logo_Props = useNextSanityImage(client, logo);
 
@@ -90,10 +90,10 @@ const ProjectDescription = (props) => {
               <div className="block_content">
                 <BlockContent blocks={development} />
               </div>
-              {mockup && (
+              {mockup_1 && (
                 <Image
                   className="mockup_img"
-                  {...mockupProps}
+                  {...mockup_1Props}
                   style={{ maxWidth: "100%", height: "auto" }}
                   quality={100}
                   alt="mockup"
@@ -104,13 +104,13 @@ const ProjectDescription = (props) => {
         </div>
       </div>
 
-      {pandp && (
+      {preparation && (
         <>
           <div className="container_x_sm">
             <div className="description--development container_sm">
               <h1 className="title_text">Preparation</h1>
               <div className="block_content">
-                <BlockContent blocks={pandp} />
+                <BlockContent blocks={preparation} />
               </div>
             </div>
           </div>
@@ -128,7 +128,7 @@ const ProjectDescription = (props) => {
 
               <Image
                 className="mockup_img"
-                {...mockup_dProps}
+                {...mockup_2Props}
                 style={{ maxWidth: "100%", height: "auto" }}
                 quality={100}
                 alt="mockup"

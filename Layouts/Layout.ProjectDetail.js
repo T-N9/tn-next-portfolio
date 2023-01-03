@@ -32,10 +32,10 @@ const ProjectDetailPageLayout = ({ data, slug }) => {
   const period = data?.period;
   const introduction = data?.introduction;
   const development = data?.development && data?.development;
-  const mockup = data?.mockup && data?.mockup;
-  const pandp = data?.pandp && data?.pandp;
+  const mockup_1 = data?.mockup_1 && data?.mockup_1;
+  const preparation = data?.preparation && data?.preparation;
   const designing = data?.designing && data?.designing;
-  const mockup_d = data?.mockup_d && data?.mockup_d;
+  const mockup_2 = data?.mockup_2 && data?.mockup_2;
   const palette = data?.colors && data?.colors;
   const typo = data?.typo && data?.typo;
   const logo = data?.logo && data?.logo;
@@ -57,10 +57,10 @@ const ProjectDetailPageLayout = ({ data, slug }) => {
         introduction={introduction}
         url={url}
         development={development}
-        mockup={mockup}
-        pandp={pandp}
+        mockup_1={mockup_1}
+        preparation={preparation}
         designing={designing}
-        mockup_d={mockup_d}
+        mockup_2={mockup_2}
         palette={palette}
         typo={typo}
         logo={logo}

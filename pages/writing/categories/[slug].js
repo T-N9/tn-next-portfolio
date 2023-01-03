@@ -71,7 +71,10 @@ const SearchByCategory = ({ category, slug }) => {
     setArctLoading(true);
 
     if (startIndex !== null && endIndex !== null) {
-      const query = `*[_type == "article" && "${category?._id}" in categories[]._ref] | order(_createdAt desc) [${startIndex}...${endIndex}]`;
+      const query =
+        dataCount > 1
+          ? `*[_type == "article" && "${category?._id}" in categories[]._ref] | order(_createdAt desc) [${startIndex}...${endIndex}]`
+          : `*[_type == "article" && "${category?._id}" in categories[]._ref] | order(_createdAt desc)`;
 
       client.fetch(query).then((data) => {
         setArticleData(data);
@@ -79,7 +82,7 @@ const SearchByCategory = ({ category, slug }) => {
         setArctLoading(false);
       });
     }
-  }, [categoryData, slug, pageNumber, startIndex, endIndex]);
+  }, [categoryData, slug, pageNumber, startIndex, endIndex, dataCount]);
 
   return (
     <>
