@@ -41,15 +41,15 @@ const SearchByCategory = ({ category, slug }) => {
   //   noItems,
   // });
 
-  useEffect(() => {
-    client
-      .fetch(
-        `count(*[_type == "article" && "${category?._id}" in categories[]._ref])`
-      )
-      .then((data) => {
-        setDataCount(data);
-      });
-  }, []);
+  // useEffect(() => {
+  //   client
+  //     .fetch(
+  //       `count(*[_type == "article" && "${category?._id}" in categories[]._ref])`
+  //     )
+  //     .then((data) => {
+  //       setDataCount(data);
+  //     });
+  // }, []);
 
   useEffect(() => {
     dispatch(setStartLoading());
@@ -70,19 +70,36 @@ const SearchByCategory = ({ category, slug }) => {
     dispatch(setStartLoading());
     setArctLoading(true);
 
-    if (startIndex !== null && endIndex !== null) {
-      const query =
-        dataCount > 6
-          ? `*[_type == "article" && "${category?._id}" in categories[]._ref] | order(_createdAt desc) [${startIndex}...${endIndex}]`
-          : `*[_type == "article" && "${category?._id}" in categories[]._ref] | order(_createdAt desc)`;
+    client
+      .fetch(
+        `count(*[_type == "article" && "${category?._id}" in categories[]._ref])`
+      )
+      .then((count) => {
+        setDataCount(count);
 
-      client.fetch(query).then((data) => {
-        setArticleData(data);
-        dispatch(setStopLoading());
-        setArctLoading(false);
+        if (count <= 6) {
+          if (startIndex !== null && endIndex !== null) {
+            const query = `*[_type == "article" && "${category?._id}" in categories[]._ref] | order(_createdAt desc) {title, _createdAt,titleImage, categories,slug}`;
+
+            client.fetch(query).then((data) => {
+              setArticleData(data);
+              dispatch(setStopLoading());
+              setArctLoading(false);
+            });
+          }
+        } else {
+          if (startIndex !== null && endIndex !== null) {
+            const query = `*[_type == "article" && "${category?._id}" in categories[]._ref] | order(_createdAt desc) [${startIndex}...${endIndex}] {title, _createdAt,titleImage, categories,slug}`;
+
+            client.fetch(query).then((data) => {
+              setArticleData(data);
+              dispatch(setStopLoading());
+              setArctLoading(false);
+            });
+          }
+        }
       });
-    }
-  }, [categoryData, slug, pageNumber, startIndex, endIndex, dataCount]);
+  }, [categoryData, slug, pageNumber, startIndex, endIndex]);
 
   return (
     <>

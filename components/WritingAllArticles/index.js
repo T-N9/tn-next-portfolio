@@ -31,36 +31,39 @@ const WritingAllArticles = () => {
     dataCount,
     pageNumber
   );
-  // console.log({
-  //   startIndex,
-  //   endIndex,
-  //   pages,
-  //   noItems,
-  // });
+  console.log({
+    startIndex,
+    endIndex,
+    pages,
+    noItems,
+  });
 
-  useEffect(() => {
-    client.fetch(`count(*[_type == 'article'])`).then((data) => {
-      setDataCount(data);
-    });
-  }, []);
+  // useEffect(() => {
+  //   client.fetch(`count(*[_type == 'article'])`).then((data) => {
+  //     setDataCount(data);
+  //   });
+  // }, []);
 
   useEffect(() => {
     dispatch(setStartLoading());
     setArctLoading(true);
 
-    if (startIndex !== null && endIndex !== null) {
-      const query =
-        dataCount > 6
-          ? `*[_type == "article"] | order(_createdAt desc) [${startIndex}...${endIndex}]`
-          : `*[_type == "article"] | order(_createdAt desc)`;
+    client.fetch(`count(*[_type == 'article'])`).then((data) => {
+      setDataCount(data);
 
-      client.fetch(query).then((data) => {
-        dispatch(setArticleData(data));
-        dispatch(setStopLoading());
-        setArctLoading(false);
-      });
-    }
-  }, [pageNumber, startIndex, endIndex, dataCount]);
+      if (startIndex !== null && endIndex !== null) {
+        const query = `*[_type == "article"] | order(_createdAt desc) [${startIndex}...${endIndex}]  {title, _createdAt,titleImage, categories,slug}`;
+
+        client.fetch(query).then((data) => {
+          dispatch(setArticleData(data));
+          dispatch(setStopLoading());
+          setArctLoading(false);
+
+          console.log("Data is Updated", data);
+        });
+      }
+    });
+  }, [pageNumber, startIndex, endIndex]);
 
   return (
     <section className="writing_allArticles">
