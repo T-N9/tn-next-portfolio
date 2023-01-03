@@ -360,6 +360,14 @@ select {
   }
 }
 
+.code-hl {
+  font-size: 16px;
+
+  @include m-breakpoint-down(small) {
+    font-size: 14px;
+  }
+}
+
 .code-section pre {
   margin: 0;
 }
