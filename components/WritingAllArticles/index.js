@@ -31,12 +31,12 @@ const WritingAllArticles = () => {
     dataCount,
     pageNumber
   );
-  console.log({
-    startIndex,
-    endIndex,
-    pages,
-    noItems,
-  });
+  // console.log({
+  //   startIndex,
+  //   endIndex,
+  //   pages,
+  //   noItems,
+  // });
 
   // useEffect(() => {
   //   client.fetch(`count(*[_type == 'article'])`).then((data) => {
@@ -44,10 +44,7 @@ const WritingAllArticles = () => {
   //   });
   // }, []);
 
-  useEffect(() => {
-    dispatch(setStartLoading());
-    setArctLoading(true);
-
+  const fetchData = () => {
     client.fetch(`count(*[_type == 'article'])`).then((data) => {
       setDataCount(data);
 
@@ -63,7 +60,20 @@ const WritingAllArticles = () => {
         });
       }
     });
+  };
+
+  useEffect(() => {
+    dispatch(setStartLoading());
+    setArctLoading(true);
+
+    fetchData();
   }, [pageNumber, startIndex, endIndex]);
+
+  useEffect(() => {
+    if (articleData.length === 0) {
+      fetchData();
+    }
+  }, [articleData]);
 
   return (
     <section className="writing_allArticles">
