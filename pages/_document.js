@@ -40,7 +40,7 @@ export default function Document() {
         <div id="fb-customer-chat" class="fb-customerchat"></div>
         <Script
           id="messenger-tag"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `      var chatbox = document.getElementById('fb-customer-chat');
             chatbox.setAttribute("page_id", "107118861736913");
@@ -49,7 +49,7 @@ export default function Document() {
         ></Script>
         <Script
           id="messenger-sdk"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: ` window.fbAsyncInit = function() {
               FB.init({
