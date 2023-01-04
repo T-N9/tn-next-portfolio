@@ -183,6 +183,11 @@ code {
   background-color: $light-color;
   border-radius: 5px;
   line-height: 3;
+  font-size: 16px;
+
+  @include m-breakpoint-down(small) {
+    font-size: 14px;
+  }
 }
 
 .dark code {
