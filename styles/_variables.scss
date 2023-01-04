@@ -14,10 +14,16 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: Z06Walone;
+  src: url(../fonts/Z06Walone.ttf);
+  font-display: swap;
+}
+
 // Font families
 $font-title: "Poppins", MyanmarSabae,sans-serif;
 // $font-primary: 'Karla', sans-serif;
-$font-primary: "Inter", MyanmarSabae, sans-serif;
+$font-primary: "Inter", Z06Walone, sans-serif;
 $font-writing: "Berkshire Swash", cursive;
 
 // Colors
