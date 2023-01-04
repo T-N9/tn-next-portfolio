@@ -33,6 +33,8 @@ const WritingAllArticles = () => {
   );
 
   const fetchData = () => {
+    dispatch(setStartLoading());
+    setArctLoading(true);
     client.fetch(`count(*[_type == 'article'])`).then((data) => {
       setDataCount(data);
 
@@ -49,9 +51,6 @@ const WritingAllArticles = () => {
   };
 
   useEffect(() => {
-    dispatch(setStartLoading());
-    setArctLoading(true);
-
     fetchData();
   }, [pageNumber, startIndex, endIndex]);
 
