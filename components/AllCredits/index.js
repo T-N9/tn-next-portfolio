@@ -7,7 +7,8 @@ const AllCredits = () => {
         <div className="container_x_sm">
           <h1>
             All <span className="ht_text">Vectors</span>,{" "}
-            <span className="ht_text">SVGs</span>, and{" "}
+            <span className="ht_text">SVGs</span>,
+            <span className="ht_text">Fonts</span>, and{" "}
             <span className="ht_text">Icons</span> used in this website have
             their rightful owners.
           </h1>
@@ -30,6 +31,19 @@ const AllCredits = () => {
             <li>
               SVG illustrations by{" "}
               <a href="https://illlustrations.co/">Illustrations.co</a>
+            </li>
+
+            <li>
+              One of the Burmese fonts used in this website is{" "}
+              <b> Z06 Walone</b> created by{" "}
+              <a
+                href="https://www.facebook.com/profile.php?id=100076104782520"
+                target="_blank"
+                rel="noreferrer"
+              >
+                ZINBO
+              </a>
+              . Thank you for letting me use the font in this project.
             </li>
 
             <li>
