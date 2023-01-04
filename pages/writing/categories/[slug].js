@@ -28,28 +28,11 @@ const SearchByCategory = ({ category, slug }) => {
 
   const router = useRouter();
   const pageNumber = parseInt(router.query.page) || 1;
-  // console.log({ router });
 
   const { startIndex, endIndex, pages, noItems } = CalPaginate(
     dataCount,
     pageNumber
   );
-  // console.log({
-  //   startIndex,
-  //   endIndex,
-  //   pages,
-  //   noItems,
-  // });
-
-  // useEffect(() => {
-  //   client
-  //     .fetch(
-  //       `count(*[_type == "article" && "${category?._id}" in categories[]._ref])`
-  //     )
-  //     .then((data) => {
-  //       setDataCount(data);
-  //     });
-  // }, []);
 
   useEffect(() => {
     dispatch(setStartLoading());

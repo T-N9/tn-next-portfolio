@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import moment from "moment/moment";
 import Image from "next/image";
 import BlockContent from "@sanity/block-content-to-react";
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 /* Icons */
@@ -22,11 +22,6 @@ import Hook from "./hook";
 const serializers = {
   types: {
     code: (props) => (
-      // <div className="code-section">
-      //   <pre>
-      //     <code>{props.node.code}</code>
-      //   </pre>
-      // </div>
       <div className="code-hl">
         <SyntaxHighlighter
           language={props.node.language}
@@ -45,8 +40,6 @@ const ArticleDetail = ({ data, slug }) => {
 
   const router = useRouter();
   const path = router.asPath;
-
-  console.log({ data });
 
   return (
     <section className="article_page">

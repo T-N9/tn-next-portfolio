@@ -31,18 +31,6 @@ const WritingAllArticles = () => {
     dataCount,
     pageNumber
   );
-  // console.log({
-  //   startIndex,
-  //   endIndex,
-  //   pages,
-  //   noItems,
-  // });
-
-  // useEffect(() => {
-  //   client.fetch(`count(*[_type == 'article'])`).then((data) => {
-  //     setDataCount(data);
-  //   });
-  // }, []);
 
   const fetchData = () => {
     client.fetch(`count(*[_type == 'article'])`).then((data) => {
@@ -55,8 +43,6 @@ const WritingAllArticles = () => {
           dispatch(setArticleData(data));
           dispatch(setStopLoading());
           setArctLoading(false);
-
-          console.log("Data is Updated", data);
         });
       }
     });
