@@ -64,6 +64,10 @@
     color: $primary-color;
   }
 
+  figure {
+    margin-bottom: 10px;
+  }
+
   figure img {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   }
@@ -105,8 +109,9 @@
   // image label
   h6{
     text-align: center;
-    margin-top: 5px;
+    margin-top: 0px;
     font-weight: normal;
+    font-family: $font-primary !important;
   }
 
   h4 {
