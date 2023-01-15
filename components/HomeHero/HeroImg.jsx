@@ -12,7 +12,7 @@ const HeroImg = () => {
             height={380}
             quality={100}
             className="hero_img--image"
-            src="/hero-img.webp"
+            src="/propic.webp"
             alt="tenyain with a plane"
             priority
           />
