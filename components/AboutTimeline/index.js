@@ -50,6 +50,16 @@ const AboutTimeline = () => {
                   <li>
                     UCSH English Impromptu Speech - 1<sup>st</sup> Prize
                   </li>
+                  <li>
+                    Designer at{" "}
+                    <a
+                      href="https://www.facebook.com/BarCampHinthada"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      BarCamp Hinthada 2018
+                    </a>{" "}
+                  </li>
                 </ul>
               </div>
             </div>
@@ -129,7 +139,9 @@ const AboutTimeline = () => {
                 <h1 className="ht_text">2022 - present</h1>
                 <p>On Job Training</p>
                 <ul>
-                  <li>4 months of OJT at <b>Myanmar High Society</b></li>
+                  <li>
+                    4 months of OJT at <b>Myanmar High Society</b>
+                  </li>
 
                   <li>
                     Preparation for JLPT + ITPEC Fundamental Engineering
