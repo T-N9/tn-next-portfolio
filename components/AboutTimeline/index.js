@@ -53,6 +53,7 @@ const AboutTimeline = () => {
                   <li>
                     Designer at{" "}
                     <a
+                    className="ht_text"
                       href="https://www.facebook.com/BarCampHinthada"
                       target="_blank"
                       rel="noreferrer"
@@ -115,7 +116,7 @@ const AboutTimeline = () => {
               </div>
 
               <div className="description">
-                <h1 className="ht_text">2021 - present</h1>
+                <h1 className="ht_text">2021</h1>
                 <p>Dark Times in Myanmar</p>
                 <ul>
                   <li>
@@ -136,7 +137,7 @@ const AboutTimeline = () => {
               <div className="point"></div>
 
               <div className="description">
-                <h1 className="ht_text">2022 - present</h1>
+                <h1 className="ht_text">2022</h1>
                 <p>On Job Training</p>
                 <ul>
                   <li>
