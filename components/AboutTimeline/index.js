@@ -53,7 +53,7 @@ const AboutTimeline = () => {
                   <li>
                     Designer at{" "}
                     <a
-                    className="ht_text"
+                      className="ht_text"
                       href="https://www.facebook.com/BarCampHinthada"
                       target="_blank"
                       rel="noreferrer"
@@ -78,6 +78,17 @@ const AboutTimeline = () => {
                 <ul>
                   <li>
                     UCSH ICT & Project Show - 1<sup>st</sup> Prize
+                  </li>
+                  <li>
+                    Co-founded{" "}
+                    <a
+                      className="ht_text"
+                      href="https://sites.google.com/view/ucshmusicclub/home?pli=1"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      UCSH Music Club
+                    </a>
                   </li>
                 </ul>
               </div>
