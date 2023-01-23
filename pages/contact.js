@@ -15,16 +15,16 @@ const Contact = () => {
         <meta name="title" content="TAILOR THE WEB with TN.dev" />
         <meta
           name="description"
-          content="I am wishing to work and collaborate."
+          content="Hire a highly skilled front-end developer for your next project. With expertise in branding and front-end technologies such as React and Next JS, this freelancer offers responsive and visually stunning website and web application development. Available for remote and freelance work opportunities."
         />
         <meta
           name="keywords"
-          content="Te Nyain Moe Lwin, TeNyain, Moe Lwin, Moe, web, web developer, web development, front-end, UI, Myanmar, junior web developer, job, freelance, promoting, branding, product branding, creative"
+          content="Te Nyain Moe Lwin, Te Nyain, Moe Lwin, Moe, web, web developer, web development, front-end, UI, Myanmar, junior web developer, job, freelance, promoting, branding, product branding, creative"
         />
         <meta name="robots" content="index, follow" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
-        <meta name="author" content="TeNyain Moe Lwin" />
+        <meta name="author" content="Te Nyain Moe Lwin" />
         <meta property="og:locale" content="en-US" />
 
         {/* <!-- Primary Meta Tags --> */}
@@ -32,7 +32,7 @@ const Contact = () => {
         <meta name="title" content="TAILOR THE WEB with TN.dev" />
         <meta
           name="description"
-          content="I am wishing to work and collaborate."
+          content="Hire a highly skilled front-end developer for your next project. With expertise in branding and front-end technologies such as React and Next JS, this freelancer offers responsive and visually stunning website and web application development. Available for remote and freelance work opportunities."
         />
 
         {/* <!-- Open Graph / Facebook --> */}
@@ -41,7 +41,7 @@ const Contact = () => {
         <meta property="og:title" content="TAILOR THE WEB with TN.dev" />
         <meta
           property="og:description"
-          content="I am wishing to work and collaborate."
+          content="Hire a highly skilled front-end developer for your next project. With expertise in branding and front-end technologies such as React and Next JS, this freelancer offers responsive and visually stunning website and web application development. Available for remote and freelance work opportunities."
         />
         <meta property="og:image" content="meta-tn.png" />
 
@@ -54,8 +54,7 @@ const Contact = () => {
         <meta property="twitter:title" content="TAILOR THE WEB with TN.dev" />
         <meta
           property="twitter:description"
-          content="I am wishing to work
-          and collaborate."
+          content="Hire a highly skilled front-end developer for your next project. With expertise in branding and front-end technologies such as React and Next JS, this freelancer offers responsive and visually stunning website and web application development. Available for remote and freelance work opportunities."
         />
         <meta property="twitter:image" content="meta-tn.png" />
 
