@@ -13,7 +13,7 @@ const HeroTxt = () => {
       <div className="hero_txt">
         <div className="content">
           <p className="intro">
-            Hello there, I am <span className="ht_text">TeNyain</span>
+            Hello there, I am <span className="ht_text">Te Nyain</span>
           </p>
           <h1 className="hero_txt--text">
             <span className="ht_text">Front-end </span> Developer
