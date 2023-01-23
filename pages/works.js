@@ -15,16 +15,16 @@ const Work = () => {
         <meta name="title" content="Works | My project experience" />
         <meta
           name="description"
-          content="The followings are my practical and personal projects."
+          content="Explore the portfolio of a creative front-end developer, who specialized in building modern, responsive websites and web applications using the latest technologies such as React & Next JS. Discover a passion for intuitive design and ideas."
         />
         <meta
           name="keywords"
-          content="Te Nyain Moe Lwin, TeNyain, Moe Lwin, Moe, web, web developer, web development, front-end, UI, Myanmar, junior web developer, job, freelance, promoting, branding, product branding, creative"
+          content="Te Nyain Moe Lwin, Te Nyain, Moe Lwin, Moe, web, web developer, web development, front-end, UI, Myanmar, junior web developer, job, freelance, promoting, branding, product branding, creative"
         />
         <meta name="robots" content="index, follow" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
-        <meta name="author" content="TeNyain Moe Lwin" />
+        <meta name="author" content="Te Nyain Moe Lwin" />
         <meta property="og:locale" content="en-US" />
 
         {/* <!-- Primary Meta Tags --> */}
@@ -32,7 +32,7 @@ const Work = () => {
         <meta name="title" content="Works | My project experience" />
         <meta
           name="description"
-          content="The followings are my practical and personal projects."
+          content="Explore the portfolio of a creative front-end developer, who specialized in building modern, responsive websites and web applications using the latest technologies such as React & Next JS. Discover a passion for intuitive design and ideas."
         />
 
         {/* <!-- Open Graph / Facebook --> */}
@@ -41,7 +41,7 @@ const Work = () => {
         <meta property="og:title" content="Works | My project experience" />
         <meta
           property="og:description"
-          content="The followings are my practical and personal projects."
+          content="Explore the portfolio of a creative front-end developer, who specialized in building modern, responsive websites and web applications using the latest technologies such as React & Next JS. Discover a passion for intuitive design and ideas."
         />
         <meta property="og:image" content="meta-tn.png" />
 
@@ -54,8 +54,7 @@ const Work = () => {
         />
         <meta
           property="twitter:description"
-          content="The followings are my practical
-          and personal projects."
+          content="Explore the portfolio of a creative front-end developer, who specialized in building modern, responsive websites and web applications using the latest technologies such as React & Next JS. Discover a passion for intuitive design and ideas."
         />
         <meta property="twitter:image" content="meta-tn.png" />
 
