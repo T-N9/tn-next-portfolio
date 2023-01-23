@@ -15,16 +15,16 @@ const Services = () => {
         <meta name="title" content="Services | Features and Technologies I provide" />
         <meta
           name="description"
-          content="I care about your business values and targeted customers to meet your golden goals for tomorrow."
+          content="As a front-end web developer, I make sure that my website has good design qualities, from colors, and typography to clean coding and performance. I care about your business values and targeted customers to meet your golden goals for tomorrow."
         />
         <meta
           name="keywords"
-          content="Te Nyain Moe Lwin, TeNyain, Moe Lwin, Moe, web, web developer, web development, front-end, UI, Myanmar, junior web developer, job, freelance, promoting, branding, product branding, creative"
+          content="Te Nyain Moe Lwin, Te Nyain, Moe Lwin, Moe, web, web developer, web development, front-end, UI, Myanmar, junior web developer, job, freelance, promoting, branding, product branding, creative"
         />
         <meta name="robots" content="index, follow" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
-        <meta name="author" content="TeNyain Moe Lwin" />
+        <meta name="author" content="Te Nyain Moe Lwin" />
         <meta property="og:locale" content="en-US" />
 
         {/* <!-- Primary Meta Tags --> */}
@@ -32,7 +32,7 @@ const Services = () => {
         <meta name="title" content="Services | Features and Technologies I provide" />
         <meta
           name="description"
-          content="I care about your business values and targeted customers to meet your golden goals for tomorrow."
+          content="As a front-end web developer, I make sure that my website has good design qualities, from colors, and typography to clean coding and performance. I care about your business values and targeted customers to meet your golden goals for tomorrow."
         />
 
         {/* <!-- Open Graph / Facebook --> */}
@@ -41,7 +41,7 @@ const Services = () => {
         <meta property="og:title" content="Services | Features and Technologies I provide" />
         <meta
           property="og:description"
-          content="I care about your business values and targeted customers to meet your golden goals for tomorrow."
+          content="As a front-end web developer, I make sure that my website has good design qualities, from colors, and typography to clean coding and performance. I care about your business values and targeted customers to meet your golden goals for tomorrow."
         />
         <meta property="og:image" content="meta-tn.png" />
 
@@ -54,7 +54,7 @@ const Services = () => {
         />
         <meta
           property="twitter:description"
-          content="I care about your business values and targeted customers to meet your golden goals for tomorrow."
+          content="As a front-end web developer, I make sure that my website has good design qualities, from colors, and typography to clean coding and performance. I care about your business values and targeted customers to meet your golden goals for tomorrow."
         />
         <meta property="twitter:image" content="meta-tn.png" />
 
