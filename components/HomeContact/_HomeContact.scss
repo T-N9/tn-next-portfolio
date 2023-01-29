@@ -3,6 +3,7 @@
   .contact_page {
     display: flex;
     margin: 0 5rem;
+    max-width: 1348px;
     padding: 7rem 0;
     transition: all 200ms ease-out;
     box-shadow: rgba(223, 223, 223, 0.3) 0px 0px 0px 3px;
@@ -20,6 +21,10 @@
     @include m-breakpoint-down(small) {
       margin: 0 1rem;
       padding: 5rem 20px;
+    }
+
+    @include m-breakpoint-up(xxlarge) {
+      margin: auto;
     }
 
     &:hover {
