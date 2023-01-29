@@ -11,8 +11,10 @@ const NavBar = () => {
             <div className='container nav_com'>
                 <Logo/>
                 <Hamburger/>
+
+
                 <div className='nav_content hide_on_mobile'>
-                    <NavItems/>
+                <NavItems/>
                     <Toggler/>
                 </div>
 

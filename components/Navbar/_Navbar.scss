@@ -14,11 +14,11 @@
   width: 100%;
   left: 0;
   top: 0;
-  background-color: rgba($white, 0.5);
-  backdrop-filter: saturate(180%) blur(20px);
+  // background-color: rgba($white, 0.5);
+  // backdrop-filter: saturate(180%) blur(20px);
   z-index: 3000;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  // box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+  //   rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 
   .nav_com {
     display: flex;
@@ -27,11 +27,17 @@
 
     .nav_items {
       display: flex;
-      padding: 0;
-      margin: 0.2rem 0;
-
+      margin:0rem;
+      // margin-top: -5px;
+      background-color: rgba($white, 0.5);
+      backdrop-filter: saturate(180%) blur(20px);
+      z-index: 3000;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+        rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
       list-style-type: none;
       font-weight: 600;
+      padding:5px 10px;
+      border-radius: 0 0 20px 20px;
 
       .nav_item {
         border-radius: 30px;
@@ -41,10 +47,6 @@
           height: 100%;
           display: block;
         }
-
-        &:not(:last-child) {
-          margin-right: calUni(10px);
-        }
       }
     }
 
@@ -52,9 +54,10 @@
       position: relative;
       width: calUni(50px);
       height: calUni(25px);
-      border: 1px solid $dark-color;
+      // border: 1px solid $dark-color;
       background-color: $white;
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+      // box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+      box-shadow: rgba(178, 178, 178, 30%) 0px 0px 0px 3px;
       border-radius: 30px;
       margin-left: calUni(20px);
       cursor: pointer;
@@ -84,7 +87,6 @@
         top: 50%;
         transform: translateY(-50%) rotate(-90deg);
         color: $primary-color;
-
       }
     }
 
@@ -203,16 +205,17 @@
 
 .dark {
   .nav_com_wrapper {
-    background-color: rgba($dark-color, 0.5);
 
+    .nav_items {
+      background-color: rgba($dark-color, 0.5);
+    }
     .nav_item {
       a {
-        color: $light-color ;
+        color: $light-color;
       }
-
     }
     .nav_toggler {
-      border: 1px solid $white;
+      // border: 1px solid $white;
       background-color: $dark-color;
 
       i {
