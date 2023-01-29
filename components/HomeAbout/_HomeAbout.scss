@@ -8,7 +8,7 @@
       left: 0;
       top: calUni(15px);
 
-      @include m-breakpoint-down(large) {
+      @include m-breakpoint-down(lmedium) {
         transform: scale(0.8);
         left: -22px;
         top: 0.0625rem;
@@ -30,7 +30,7 @@
         bottom: -35px;
         left: 145px;
 
-        @include m-breakpoint-down(large) {
+        @include m-breakpoint-down(lmedium) {
           bottom: unset;
           top: calUni(50px);
           left: calUni(335px);
@@ -62,7 +62,7 @@
         }
       }
 
-      @include m-breakpoint-down(large) {
+      @include m-breakpoint-down(lmedium) {
         transform: scale(0.8);
         top: unset;
         bottom: -12.375rem;
@@ -80,7 +80,7 @@
       width: 47%;
       margin: auto;
 
-      @include m-breakpoint-down(large) {
+      @include m-breakpoint-down(lmedium) {
         width: 72%;
         margin-top: 15rem;
       }
