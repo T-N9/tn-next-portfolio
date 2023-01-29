@@ -52,6 +52,10 @@
           font-size: 1.6rem;
           font-weight: 700;
 
+          @include m-breakpoint-down(lmedium) {
+            text-align: center;
+          }
+
           @include m-breakpoint-down(small) {
             text-align: center;
             font-size: 1.3rem;
@@ -64,13 +68,17 @@
 
           @include m-breakpoint-down(lmedium) {
             text-align: left;
- 
+
             width: 75%;
+          }
+
+          @include m-breakpoint-down(lmedium) {
+            margin: auto;
           }
 
           @include m-breakpoint-down(small) {
             // text-align: left;
-            margin: auto;
+
             font-size: 16px;
           }
         }
@@ -80,8 +88,13 @@
         font-size: 3rem;
         // margin-bottom: calUni(25px);
 
+        
         @include m-breakpoint-down(large) {
           font-size: 2.5rem;
+        }
+
+        @include m-breakpoint-down(lmedium) {
+          text-align: center;
         }
 
         @include m-breakpoint-down(small) {
@@ -90,7 +103,7 @@
         }
       }
 
-      @include m-breakpoint-down(small) {
+      @include m-breakpoint-down(lmedium) {
         a {
           display: table;
           margin: auto;

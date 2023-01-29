@@ -9,9 +9,11 @@ const Hamburger = () => {
 
     return (
         <>
-            <div onClick={() => dispatch(setActive())} className={active ? 'nav_ham hide_on_desktop active'  : 'nav_ham hide_on_desktop'}>
-                <span></span>
-                <span></span>
+            <div className='nav_ham_wrapper'>
+                <div onClick={() => dispatch(setActive())} className={active ? 'nav_ham hide_on_desktop active'  : 'nav_ham hide_on_desktop'}>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </>
     );
