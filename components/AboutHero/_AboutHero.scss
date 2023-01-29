@@ -65,9 +65,10 @@
     img {
       width: 90%;
       height: 600px;
-      border: 2px solid $primary-color;
+      border: 3px solid $primary-color;
       object-fit: cover;
       object-position: bottom;
+      border-radius: 15px;
 
       @include m-breakpoint-down(lmedium) {
         width: 100%;
@@ -84,7 +85,7 @@
   .about_hero {
     &--image {
       img {
-        border: 2px solid $accent-color;
+        border: 3px solid $accent-color;
       }
     }
   }

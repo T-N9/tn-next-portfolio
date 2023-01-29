@@ -32,8 +32,7 @@
       background-color: rgba($white, 0.5);
       backdrop-filter: saturate(180%) blur(20px);
       z-index: 3000;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-        rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+      box-shadow: rgb(178, 178, 178, 30%) 0px 0px 0px 3px;
       list-style-type: none;
       font-weight: 600;
       padding:5px 10px;
@@ -208,6 +207,7 @@
 
     .nav_items {
       background-color: rgba($dark-color, 0.5);
+
     }
     .nav_item {
       a {
