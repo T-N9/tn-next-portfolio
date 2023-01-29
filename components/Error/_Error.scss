@@ -1,0 +1,23 @@
+.error_page {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 30%;
+    margin: auto;
+
+    @include m-breakpoint-down(small) {
+        width: 80%;
+    }
+
+    .error_img {
+        width: 100px;
+        height: auto;
+    }
+
+    p {
+        text-align: center;
+    }
+}

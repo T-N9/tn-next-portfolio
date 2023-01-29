@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import App from "next/app";
 
 /* CSS */
 import "../styles/globals.scss";
@@ -15,6 +16,8 @@ import { NavBar, Footer, GlobalLoad } from "../components";
 /* Wrapper */
 import ThemeWrapper from "../wrapper/ThemeWrapper";
 import { ThemeProvider } from "next-themes";
+
+import { AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -54,23 +57,37 @@ function MyApp({ Component, pageProps }) {
   // const maintenance = false;
 
   return (
-    <Provider store={store}>
-      <ThemeProvider attribute="class">
-        <ThemeWrapper>
-          {/* <GlobalLoad loading={isLoading} isLogo={true} /> */}
+    <AnimatePresence exitBeforeEnter>
+      <Provider store={store}>
+        <ThemeProvider attribute="class">
+          <ThemeWrapper>
+            {/* <GlobalLoad loading={isLoading} isLogo={true} /> */}
 
-          {/* {!isLoading && ( */}
+            {/* {!isLoading && ( */}
             <>
               <NavBar />
               <div className="nav_spacer"></div>
               <Component {...pageProps} />
               <Footer />
             </>
-          {/* )} */}
-        </ThemeWrapper>
-      </ThemeProvider>
-    </Provider>
+            {/* )} */}
+          </ThemeWrapper>
+        </ThemeProvider>
+      </Provider>
+    </AnimatePresence>
   );
 }
+
+MyApp.getInitialProps = async ({ Component, ctx }) => {
+  try {
+    return await App.getInitialProps(ctx);
+  } catch (error) {
+    return {
+      pageProps: {
+        statusCode: error.statusCode || 500,
+      },
+    };
+  }
+};
 
 export default MyApp;

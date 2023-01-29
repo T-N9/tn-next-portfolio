@@ -39,3 +39,5 @@ export { default as ArticleByCategory } from './ArticleByCategory';
 export { default as GlobalLoad } from './GlobalLoad';
 
 export { default as Pagination } from './Pagination';
+
+export { default as ErrorPage } from './Error'
