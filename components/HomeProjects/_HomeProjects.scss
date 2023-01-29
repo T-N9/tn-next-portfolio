@@ -356,7 +356,7 @@
         grid-gap: 15px;
         padding-top: 20px;
 
-        @include m-breakpoint-down(large) {
+        @include m-breakpoint-down(lmedium) {
           grid-template-columns: repeat(2, 1fr);
         }
 
