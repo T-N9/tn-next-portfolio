@@ -149,7 +149,7 @@
           border: none;
           background-color: white;
           padding: 5px;
-          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          box-shadow: rgba(223, 223, 223, 0.3) 0px 0px 0px 3px;
           border: 1px solid transparent;
           font-family: $font-title;
           font-size: 14px;
@@ -318,7 +318,7 @@
 
           .tn_form_input {
             background-color: #4d5a68;
-            box-shadow: rgba($light-color, 0.16) 0px 1px 4px;
+            // box-shadow: rgba($light-color, 0.16) 0px 1px 4px;
             color: #fff;
             &:focus {
               border: 1px solid $accent-color;
