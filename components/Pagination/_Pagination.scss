@@ -8,6 +8,11 @@
     @include flex-center;
   }
 
+  .paginate_btn {
+    border-radius: 10px;
+    box-shadow: rgb(178, 178, 178 , 30%) 0px 0px 0px 3px;
+  }
+
   .page_numbers {
     display: flex;
     gap: 10px;
@@ -19,6 +24,7 @@
       background-color: #2d3a47;
       color: white;
       font-weight: bold;
+      border-radius: 10px;
     }
 
     .active {

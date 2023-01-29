@@ -11,7 +11,7 @@ const Pagination = ({ pageNumber, pages, noItems, baseLink }) => {
     <div className="pagination_wrapper">
       {pageNumber !== 1 && (
         <Link href={`${baseLink}?page=${pageNumber - 1}`}>
-          <button>
+          <button className="paginate_btn">
             <i className="gg-arrow-left"></i>
           </button>
         </Link>
@@ -37,7 +37,7 @@ const Pagination = ({ pageNumber, pages, noItems, baseLink }) => {
 
       {(pageNumber < pages || (pageNumber === pages && noItems > 0)) && (
         <Link href={`${baseLink}?page=${pageNumber + 1}`}>
-          <button>
+          <button className="paginate_btn">
             <i className="gg-arrow-right"></i>
           </button>
         </Link>
