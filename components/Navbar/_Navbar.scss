@@ -4,9 +4,24 @@
 @import "../../styles/utilities";
 
 .tn_logo {
-  width: 90px;
+  width: 40px;
   height: -moz-fit-content;
   height: fit-content;
+  margin-top: 5px;
+}
+
+.dark-logo{
+  display: none;
+}
+
+.dark {
+  .light-logo{
+    display: none;
+  }
+
+  .dark-logo {
+    display: block;
+  }
 }
 
 .nav_com_wrapper {
@@ -23,7 +38,7 @@
   .nav_com {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
 
     .nav_items {
       display: flex;
