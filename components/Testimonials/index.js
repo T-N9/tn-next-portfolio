@@ -61,12 +61,12 @@ const Testimonials = () => {
               pagination={{
                 clickable: true,
               }}
-              autoplay={{
-                delay: 6000,
-                disableOnInteraction: false,
-              }}
+              // autoplay={{
+              //   delay: 6000,
+              //   disableOnInteraction: false,
+              // }}
               // loop={true}
-              modules={[FreeMode, Pagination, Autoplay ]}
+              modules={[FreeMode, Pagination ]}
               className="mySwiper"
               breakpoints={{
                 640: {
