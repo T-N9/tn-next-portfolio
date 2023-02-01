@@ -2,6 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
 
+  babel: {
+    devtool: "source-map",
+  },
+
   images: {
     domains: ["cdn.sanity.io"],
     // loader: "custom",

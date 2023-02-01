@@ -8,8 +8,8 @@ const HeroImg = () => {
       <div className="hero_img">
         <div className="image_wrapper">
           <Image
-            width={390}
-            height={380}
+            width={365}
+            height={365}
             quality={100}
             className="hero_img--image"
             src="/propic.webp"

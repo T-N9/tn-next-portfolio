@@ -2,6 +2,8 @@ import Head from "next/head";
 /* Layout */
 import { HomePageLayout } from "../Layouts";
 
+import 'source-map-support/register';
+
 export default function Home() {
   return (
     <>

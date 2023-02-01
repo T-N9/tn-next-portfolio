@@ -120,8 +120,8 @@
       &--image {
         position: relative;
         display: block;
-        width: calUni(390px);
-        height: calUni(380px);
+        width: calUni(365px);
+        height: calUni(365px);
         border: 3px solid $primary-color;
         border-radius: calUni(19px);
         margin: 0;
@@ -130,8 +130,8 @@
         transition: border-color 200ms ease;
 
         @include m-breakpoint-down(small) {
-          width: 253.99px;
-          height: 247.48px;
+          width: 249px;
+          height: 242px;
         }
       }
 
