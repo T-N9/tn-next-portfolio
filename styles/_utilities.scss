@@ -121,10 +121,6 @@ h6 {
   background-color: $white;
   color: $dark-color;
   transition: background-color 200ms ease-in 50ms;
-
-  @include m-breakpoint-down(lmedium) {
-    padding-bottom: 3rem;
-  }
 }
 
 .dark .main_content {

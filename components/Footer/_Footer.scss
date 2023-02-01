@@ -1,4 +1,8 @@
 .footer_page_wrapper {
+
+    @include m-breakpoint-down(lmedium) {
+        padding-bottom: 3rem;
+      }
  
     a {
         color: $dark-color !important;
