@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Logo = () => {
   return (
@@ -25,8 +26,8 @@ const Logo = () => {
         </svg> */}
 
 
-        <img className="tn_logo light-logo" src="/TN-Logo-web.png" alt="" />
-        <img className="tn_logo dark-logo" src="/TN-Logo-web-dark.png" alt="" />
+        <Image width={40} height={58.18} className="tn_logo light-logo" src="/TN-Logo-web.webp" alt="TeNyain logo" />
+        <Image width={40} height={58.18} className="tn_logo dark-logo" src="/TN-Logo-web-dark.webp" alt="TeNyain logo" />
       </Link>
     </>
   );
