@@ -3,6 +3,10 @@
     font-weight: bold;
   }
 
+  .container_y_3 {
+    padding-bottom: 1rem;
+  }
+
   .loading_sec {
     height: 10rem;
   }
@@ -18,7 +22,7 @@
     }
 
     @include m-breakpoint-down(small) {
-      gap: 15px;
+      gap: 10px;
       grid-template-columns: repeat(2, 45%);
       justify-content: center;
     }
@@ -44,19 +48,19 @@
 
       .overlay {
         // width: 200px;
-        height: 100px;
+        height: 60px;
         background-color: rgba($dark-color, 0.8);
         @include flex-center;
 
         @include m-breakpoint-down(small) {
-            height: 70px;
+            height: 50px;
         }
       }
 
       .title {
         font-weight: bold;
         font-family: $font-title;
-        font-size: $fs-200;
+        font-size: 16px;
         text-align: center;
         color: $light-color;
         transition: all 300ms ease;
