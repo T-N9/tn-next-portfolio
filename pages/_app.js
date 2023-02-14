@@ -20,14 +20,14 @@ import { ThemeProvider } from "next-themes";
 
 import { AnimatePresence } from "framer-motion";
 
+/* Constants */
+import { excludedPaths } from "../constants/pages";
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const [navSpace, setNavSpace] = useState(true);
 
-  const excludedPaths = ["/works", "/writing", "/services", "/contact"];
-
   const targetPath = router.asPath;
-  console.log({ targetPath });
 
   useEffect(() => {
     if (!excludedPaths.includes(targetPath)) {

@@ -24,5 +24,7 @@ const pages = [
     route: "/contact",
   },
 ];
+ 
+export const excludedPaths = ["/works", "/writing", "/services", "/contact"];
 
 export default pages;
