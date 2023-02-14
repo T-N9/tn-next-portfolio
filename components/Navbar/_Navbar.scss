@@ -162,7 +162,7 @@
       height: 100vh;
 
       background-color: $primary-color;
-      clip-path: circle(0% at 100% 0);
+      clip-path: inset(0 0 100% 0);
       transition: all 300ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
       z-index: 3000;
 
@@ -235,7 +235,7 @@
 
     .nav_mobile_wrapper.active {
       background-color: $white;
-      clip-path: circle(141.7% at 100% 0);
+      clip-path: inset(0 0 0 0);
     }
 
     .nav_content {
@@ -289,7 +289,7 @@
 
     .nav_mobile_wrapper.active {
       background-color: $dark-color;
-      clip-path: circle(141.7% at 100% 0);
+      clip-path: inset(0 0 0 0);
     }
   }
 }
