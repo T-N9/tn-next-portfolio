@@ -1,4 +1,10 @@
 .writing_hero {
   box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px inset;
   background-image: url("https://www.transparenttextures.com/patterns/lined-paper-2.png");
+
+  padding-top: calUni(53.77px);
+
+  @include m-breakpoint-up(large) {
+    padding-top: calUni(53.77px);
+  }
 }

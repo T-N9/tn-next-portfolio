@@ -2,7 +2,7 @@
   &--wrapper {
     display: flex;
 
-    min-height: 70vh;
+    min-height: 80vh;
 
     @include m-breakpoint-down(lmedium) {
       gap: 2rem;
