@@ -347,13 +347,17 @@
   }
 }
 
+.projects_section {
+  padding-top: 4rem;
+}
+
 .portfolio_route_wrapper {
   .content_wrapper {
     // background: linear-gradient(0deg, rgba($primary-color, 0.5) 0%, $white 100%);
     background-color: $white;
 
     .projectContent {
-      padding-top: 8rem;
+      padding-top: 4rem;
       padding-bottom: 8rem;
       &--grid {
         display: grid;

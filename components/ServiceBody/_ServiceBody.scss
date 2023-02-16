@@ -1,6 +1,7 @@
 .service_body {
+  padding-top: 4rem;
   .content_wrapper {
-    padding-top: 8rem;
+    padding-top: 4rem;
     padding-bottom: 8rem;
   }
 
@@ -116,7 +117,7 @@
       z-index: 5;
       background-color: white;
       text-align: center;
-      font-family: $font-primary;
+      font-family: $font-title;
       transition: background-color 200ms ease-in 50ms;
       font-size: 4.5rem;
 

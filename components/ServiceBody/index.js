@@ -20,8 +20,8 @@ var Element = Scroll.Element;
 const ServiceBody = () => {
   return (
     <section className="service_body">
-      <Element name={"services_section"}>
-        <div id="services" className="container content_wrapper">
+      <div id="services" className="container content_wrapper">
+        <Element name={"services_section"}>
           <h1 className="title_text center_text outlined_title">What I do</h1>
 
           <div className="service_body--grid">
@@ -158,8 +158,8 @@ const ServiceBody = () => {
           <a href="mailto:tenyainmoelwin@gmail.com">
             <button className="primary_btn">Contact Me</button>
           </a>
-        </div>
-      </Element>
+        </Element>
+      </div>
     </section>
   );
 };

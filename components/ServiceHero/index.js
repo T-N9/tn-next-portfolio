@@ -21,8 +21,8 @@ const ServiceHero = () => {
         <ScrollLink
             to={"services_section"}
             spy={true}
-            duration={100}
-            smooth={"linear"}
+            duration={500}
+            smooth={"easeInCubic"}
           >
           <button className="downToContent"><i className="gg-arrow-down"></i></button>
         </ScrollLink>

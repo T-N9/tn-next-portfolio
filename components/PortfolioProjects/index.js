@@ -10,7 +10,7 @@ import ProjectCard from "../HomeProjects/ProjectCard";
 /* Action */
 import { setProjectData } from "../../store/slices/ProjectsSlice";
 
-import * as Scroll from 'react-scroll';
+import * as Scroll from "react-scroll";
 
 var Element = Scroll.Element;
 
@@ -48,13 +48,13 @@ const PortfolioProjects = () => {
   }
 
   return (
-    <Element name="projects_section">
-      <div id="projects" className="projectContent container">
+    <div id="projects" className="projectContent container">
+      <Element name="projects_section" className="projects_section">
         {/* <span ></span> */}
         <h1 className="title_text">Recent Works</h1>
         <div className="projectContent--grid">{projectList}</div>
-      </div>
-    </Element>
+      </Element>
+    </div>
   );
 };
 
