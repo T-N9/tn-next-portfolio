@@ -9,6 +9,7 @@ const AboutTimeline = () => {
           <div className="about-timeline--content">
             <div className="item">
               <div className="point">
+                <div className="animate-ping"></div>
                 <span></span>
               </div>
 
@@ -19,6 +20,7 @@ const AboutTimeline = () => {
             </div>
             <div className="item">
               <div className="point">
+                <div className="animate-ping"></div>
                 <span></span>
               </div>
 
@@ -38,6 +40,7 @@ const AboutTimeline = () => {
 
             <div className="item">
               <div className="point">
+                <div className="animate-ping"></div>
                 <span></span>
               </div>
 
@@ -67,6 +70,7 @@ const AboutTimeline = () => {
 
             <div className="item">
               <div className="point">
+                <div className="animate-ping"></div>
                 <span></span>
               </div>
 
@@ -96,6 +100,7 @@ const AboutTimeline = () => {
 
             <div className="item">
               <div className="point">
+                <div className="animate-ping"></div>
                 <span></span>
               </div>
 
@@ -123,6 +128,7 @@ const AboutTimeline = () => {
 
             <div className="item">
               <div className="point">
+                <div className="animate-ping"></div>
                 <span></span>
               </div>
 
@@ -145,7 +151,9 @@ const AboutTimeline = () => {
             </div>
 
             <div className="item">
-              <div className="point"></div>
+              <div className="point">
+                <div className="animate-ping"></div>
+              </div>
 
               <div className="description">
                 <h1 className="ht_text">2022</h1>
