@@ -49,6 +49,11 @@
   .portfolio_page {
     padding-right: 0;
   }
+
+  @include m-breakpoint-down(small) {
+    padding-top: 7rem;
+  }
+
 }
 
 .portfolio {

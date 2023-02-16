@@ -9,6 +9,7 @@ import {
   HomeSkills,
   HomeContact,
   Testimonials,
+  HomeMotto
 } from "../components";
 import Transitions from "../components/Animated/Transitions";
 
@@ -27,6 +28,7 @@ const HomePageLayout = () => {
         <Testimonials />
         <HomeSkills />
         <HomeContact />
+        <HomeMotto/>
       </Transitions>
     </>
   );
