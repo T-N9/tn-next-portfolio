@@ -119,7 +119,7 @@ const ProjectDescription = (props) => {
 
       {designing && (
         <>
-          <div className="container_x_sm container_y_2">
+          <div className="designing_section container_x_sm container_y_2">
             <div className="description--development container_sm">
               <h1 className="title_text">Designing</h1>
               <div className="block_content">

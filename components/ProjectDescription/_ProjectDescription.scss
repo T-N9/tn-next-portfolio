@@ -98,7 +98,6 @@
 
   h1,
   h2,
-  h3,
   h4,
   h5,
   h6 {
@@ -125,6 +124,11 @@
   h5 {
     font-size: 23px;
     margin: 1.2rem 0;
+    margin-bottom: 0.3rem;
+  }
+
+  h3 {
+    margin-bottom: 0.3rem;
   }
 
   ul,
@@ -161,6 +165,12 @@
       box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
         rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     }
+  }
+}
+
+.designing_section {
+  .container_sm {
+    margin-top: 2rem;
   }
 }
 
