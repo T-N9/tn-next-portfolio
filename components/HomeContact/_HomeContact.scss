@@ -262,28 +262,29 @@
       }
     }
   }
+}
 
-  .linkedIn_wrapper {
-    .linkedIn--grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+.linkedIn_wrapper {
+  margin-bottom: 3rem;
+  .linkedIn--grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 
-      @include m-breakpoint-down(lmedium) {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    @include m-breakpoint-down(lmedium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-      @include m-breakpoint-down(small) {
-        grid-template-columns: repeat(1, 1fr);
-      }
+    @include m-breakpoint-down(small) {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
-      iframe {
-        width: 100%;
-        min-height: 600px;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-        padding: 10px;
-        border-radius: 10px;
-      }
+    iframe {
+      width: 100%;
+      min-height: 600px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      padding: 10px;
+      border-radius: 10px;
     }
   }
 }

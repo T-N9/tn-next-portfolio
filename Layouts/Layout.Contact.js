@@ -4,7 +4,7 @@ import { setCurrentPage } from "../store/slices/NavbarSlice";
 import Transitions from "../components/Animated/Transitions";
 
 /* Components */
-import { ContactHero, HomeContact } from "../components";
+import { ContactHero, HomeContact, LinkedInSection } from "../components";
 
 const ContactPageLayout = () => {
   const dispatch = useDispatch();
@@ -16,6 +16,7 @@ const ContactPageLayout = () => {
     <Transitions>
       <ContactHero />
       <HomeContact />
+      <LinkedInSection/>
     </Transitions>
   );
 };

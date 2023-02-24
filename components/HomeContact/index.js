@@ -1,7 +1,6 @@
 import React from "react";
 import ContactImg from "./ContactImg";
 import ContactForm from "./ContactForm";
-import LinkedIn from "./LinkedIn";
 
 const HeroContact = () => {
   return (
@@ -10,8 +9,6 @@ const HeroContact = () => {
         <ContactImg />
         <ContactForm />
       </div>
-
-      <LinkedIn/>
     </section>
   );
 };
