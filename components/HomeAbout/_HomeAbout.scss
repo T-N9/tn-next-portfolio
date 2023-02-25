@@ -2,6 +2,14 @@
   margin-top: 5rem;
   position: relative;
   padding: 10rem 0;
+
+  .karen_flag {
+    border: 2px solid white;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    object-fit: cover;
+    margin: 0 5px;
+    display: inline;
+  }
   .about_page {
     .media_left_wrapper {
       position: absolute;

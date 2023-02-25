@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const AboutContent = () => {
   return (
@@ -7,9 +8,23 @@ const AboutContent = () => {
         {/* <h1 className="title_text center_text">About Me</h1> */}
 
         <p className="lg_para">
-          I am a computer science student from Myanmar. I am currently
-          specializing in front-end web development and creating web
-          applications from my own idea.
+          I am a karen
+          <a
+            href="https://en.wikipedia.org/wiki/Karen_people"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              className="karen_flag"
+              width={40}
+              height={25}
+              src="/karennationflag.svg"
+              alt="Karen Nation Flag"
+            />
+          </a>
+          , a computer science student from Myanmar. I am currently specializing
+          in front-end web development and creating web applications from my own
+          idea.
         </p>
 
         <p className="quote_para center_text">
@@ -24,7 +39,8 @@ const AboutContent = () => {
         </p>
 
         <p className="quote_para center_text">
-          “I care about your business values and targeted customers to meet your golden goals for tomorrow.”
+          “I care about your business values and targeted customers to meet your
+          golden goals for tomorrow.”
         </p>
       </div>
     </>
