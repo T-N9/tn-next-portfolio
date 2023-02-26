@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="footer_line">
           <p>
             <span className="ht_text">
-              Designed & Implemented by Te Nyain | &copy; 2022 |
+              Designed & Implemented by Te Nyain | &copy; 2023 |
             </span>
 
             <Link href="/credits">&nbsp; Credits & Attributions</Link>
