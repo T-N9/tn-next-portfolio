@@ -5,7 +5,6 @@ const AboutContent = () => {
   return (
     <>
       <div className="content_wrapper">
-        {/* <h1 className="title_text center_text">About Me</h1> */}
 
         <p className="lg_para">
           I am a karen
@@ -18,7 +17,7 @@ const AboutContent = () => {
               className="karen_flag"
               width={40}
               height={25}
-              src="/karennationflag.svg"
+              src="/content/karennationflag.svg"
               alt="Karen Nation Flag"
             />
           </a>
