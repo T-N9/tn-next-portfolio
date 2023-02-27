@@ -151,11 +151,14 @@ const ServiceBody = () => {
               My design is simple, minimal, and reachable to users. I build and
               learn newer technologies to deliver fast and reliable websites.
               <br />
-              <br />I care about your business values and targeted customers to
-              meet your golden goals for tomorrow.
+              <br />
+              <span className="quote_para center_text">
+                I care about your business values and targeted customers to meet
+                your golden goals for tomorrow.
+              </span>
             </p>
           </div>
-          <a href="mailto:tenyainmoelwin@gmail.com">
+          <a className="mail_link" href="mailto:tenyainmoelwin@gmail.com">
             <button className="primary_btn">Contact Me</button>
           </a>
         </Element>
