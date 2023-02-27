@@ -11,8 +11,8 @@ const HeroImg = () => {
             height={365}
             quality={100}
             className="hero_img--image"
-            src="/propic.webp"
-            alt="tenyain with a plane"
+            src="/content/propic.webp"
+            alt="tenyain moe lwin with laptop"
             priority
           />
           <span className="squares square_1"></span>
