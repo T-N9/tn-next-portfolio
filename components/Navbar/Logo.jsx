@@ -26,8 +26,8 @@ const Logo = () => {
         </svg> */}
 
 
-        <Image width={40} height={58.18} className="tn_logo light-logo" src="/TN-Logo-web.webp" alt="TeNyain logo" />
-        <Image width={40} height={58.18} className="tn_logo dark-logo" src="/TN-Logo-web-dark.webp" alt="TeNyain logo" />
+        <Image width={40} height={58.18} className="tn_logo light-logo" src="/content/TN-Logo-web.webp" alt="TeNyain logo" />
+        <Image width={40} height={58.18} className="tn_logo dark-logo" src="/content/TN-Logo-web-dark.webp" alt="TeNyain logo" />
       </Link>
     </>
   );
