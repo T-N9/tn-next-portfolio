@@ -12,6 +12,7 @@ const AboutContent = () => {
             href="https://en.wikipedia.org/wiki/Karen_people"
             target="_blank"
             rel="noreferrer"
+            className="about_karen"
           >
             <Image
               className="karen_flag"
