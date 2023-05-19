@@ -37,7 +37,7 @@ export default function Document() {
         <div id="fb-root"></div>
 
         {/* <!-- Your Chat plugin code --> */}
-        <div id="fb-customer-chat" class="fb-customerchat"></div>
+        <div id="fb-customer-chat" className="fb-customerchat"></div>
         <Script
           id="messenger-tag"
           strategy="lazyOnload"
