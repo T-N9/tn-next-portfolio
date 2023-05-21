@@ -153,6 +153,7 @@ const AboutTimeline = () => {
             <div className="item">
               <div className="point">
                 <div className="animate-ping"></div>
+                <span></span>
               </div>
 
               <div className="description">
@@ -167,6 +168,20 @@ const AboutTimeline = () => {
                     Preparation for JLPT + ITPEC Fundamental Engineering
                     Examination
                   </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="item">
+              <div className="point">
+                <div className="animate-ping"></div>
+              </div>
+
+              <div className="description">
+                <h1 className="ht_text">2023</h1>
+                <p>In Progress</p>
+                <ul>
+                  <li>Passed ITPEC Fundamental IT Engineer Examination</li>
                 </ul>
               </div>
             </div>
