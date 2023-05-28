@@ -91,5 +91,6 @@ export async function getStaticProps(context) {
       project,
       slug,
     },
+    revalidate: 10,
   };
 }
