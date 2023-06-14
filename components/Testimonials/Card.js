@@ -11,9 +11,9 @@ const Card = ({ person }) => {
         <p className="">
           <b className="ht_text">{person.name}</b> | {person.position}{" "}
           {person.company && (
-            <span>
-              at <b>{person.company}</b>
-            </span>
+            <>
+              at <a href={person.website} target="_blank" rel="noreferrer"><b>{person.company}</b></a>
+            </>
           )}{" "}
           , {person.country}
         </p>

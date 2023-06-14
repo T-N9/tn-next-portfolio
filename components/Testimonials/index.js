@@ -17,6 +17,7 @@ const data = [
     name: "Hein Htet Zan",
     country: "Myanmar",
     position: "Web Instructor",
+    website : "https://mms-it.com/",
     company: "MMSIT",
     saying:
       'Te Nyain is a well-trained student who took the "Special Web Design" course from us. He is specialized in Front-end development and delivering trustworthy interactive websites to his consumers.',
@@ -25,6 +26,7 @@ const data = [
     name: "Tr. Thant",
     company: "BS Camp",
     country: "Myanmar",
+    website : "https://bscampmm.com/",
     position: "IT instructor",
     saying:
       "Te Nyain is a cooperative and collaborative student. He is open to learning and receptive to improving his studies. He follows directions perfectly and shows respect for peers and teachers. I'm impressed by his passion for discussion and collaboration. It's an honor to be his teacher.",
