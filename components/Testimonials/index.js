@@ -14,6 +14,16 @@ import Card from "./Card";
 
 const data = [
   {
+    name: "Cho Cho Chen",
+    country: "USA",
+    position: "Business Owner",
+    website : "https://www.bridetobebridal.com/",
+    company: "Bride To Be Bridal",
+    saying:
+      'I am thrilled with the website created by the talented website developer TeNyain. The design is visually stunning, the functionality is seamless, and it perfectly represents my business. Working with TeNyain was a pleasure, and I highly recommend his services to anyone in need of a remarkable website.',
+  },
+  ,
+  {
     name: "Hein Htet Zan",
     country: "Myanmar",
     position: "Web Instructor",
@@ -39,9 +49,9 @@ const Testimonials = () => {
       <div className="background_div">
         <div className="">
           <h1 className="title_text text_center">What they say</h1>
-          <p className="text_center desc_text">
+          {/* <p className="text_center desc_text">
             Things my mentors and seniors talk about me.
-          </p>
+          </p> */}
 
           <div className="card_wrapper">
             <Swiper
