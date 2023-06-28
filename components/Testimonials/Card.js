@@ -9,13 +9,13 @@ const Card = ({ person }) => {
 
       <div className="info">
         <p className="">
-          <b className="ht_text">{person.name}</b> | {person.position}{" "}
+          <b className="ht_text">{person.name}</b> | <span className="person_desc">{person.position}{" "}
           {person.company && (
             <>
               at <a href={person.website} target="_blank" rel="noreferrer"><b>{person.company}</b></a>
             </>
           )}{" "}
-          , {person.country}
+          , {person.country}</span>
         </p>
       </div>
     </div>

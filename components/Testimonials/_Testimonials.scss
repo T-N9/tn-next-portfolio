@@ -105,6 +105,10 @@
         border-top: 2px solid rgba($primary-color, 0.5);
         padding-top: 5px;
 
+        .person_desc {
+          font-size: 14px;
+        }
+
         @include m-breakpoint-down(small) {
           font-size: 14px;
         }
