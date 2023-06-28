@@ -109,6 +109,10 @@
           font-size: 14px;
         }
 
+        a {
+          color : $primary-color;
+        }
+
         @include m-breakpoint-down(small) {
           font-size: 14px;
         }
@@ -153,6 +157,10 @@
 
         .info {
           border-top: 2px solid rgba($accent-color, 0.5);
+
+          a {
+            color : $accent-color;
+          }
         }
       }
     }
