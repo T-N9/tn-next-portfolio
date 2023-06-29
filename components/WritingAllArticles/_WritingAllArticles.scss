@@ -57,6 +57,12 @@
     padding: 20px;
 
     h1 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* number of lines to show */
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
       @include m-breakpoint-down(small) {
         font-size: 24px;
       }
