@@ -11,7 +11,7 @@
         }
 
         @include m-breakpoint-down(small) {
-            background-size: 105%;
+            background-size: 0%;
             background-position: center calUni(125px);
         }
         &--grid {
