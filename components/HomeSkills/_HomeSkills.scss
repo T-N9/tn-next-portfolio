@@ -26,6 +26,7 @@
             }
 
             @include m-breakpoint-down(small) {
+                grid-gap: 20px 0;
                 width: 90%;
             }
 

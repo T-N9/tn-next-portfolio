@@ -1,5 +1,9 @@
 .contact_page_wrapper {
-  // padding: 3.75rem 0;
+
+
+  @include m-breakpoint-down(small) {
+  padding: 1.75rem 0;
+  }
   .contact_page {
     display: flex;
     margin: 0 5rem;
@@ -20,7 +24,7 @@
 
     @include m-breakpoint-down(small) {
       margin: 0 1rem;
-      padding: 5rem 20px;
+      padding: 2.365rem 20px;
     }
 
     @include m-breakpoint-up(xxlarge) {
