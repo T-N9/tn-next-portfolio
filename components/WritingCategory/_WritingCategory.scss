@@ -12,23 +12,27 @@
   }
 
   &--item_wrapper {
-    display: grid;
-    gap: 15px;
+    // display: grid;
+    // gap: 15px;
     margin-top: 1rem;
-    grid-template-columns: repeat(6, 1fr);
+    // grid-template-columns: repeat(6, 1fr);
 
-    @include m-breakpoint-down(lmedium) {
-      grid-template-columns: repeat(4, 25%);
-    }
+    // @include m-breakpoint-down(lmedium) {
+    //   grid-template-columns: repeat(4, 25%);
+    // }
 
-    @include m-breakpoint-down(small) {
-      gap: 10px;
-      grid-template-columns: repeat(2, 45%);
-      justify-content: center;
-    }
+    // @include m-breakpoint-down(small) {
+    //   gap: 10px;
+    //   grid-template-columns: repeat(2, 45%);
+    //   justify-content: center;
+    // }
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
 
     .category_item {
       border-radius: 10px;
+
 
       background-position: center;
       background-repeat: no-repeat;
@@ -48,21 +52,24 @@
 
       .overlay {
         // width: 200px;
-        height: 60px;
-        background-color: rgba($dark-color, 0.8);
+        // height: 60px;
+        padding: 5px 10px;
+        // background-color: rgba($dark-color, 0.8);
+        background-color: white;
         @include flex-center;
 
-        @include m-breakpoint-down(small) {
-            height: 50px;
-        }
+        // @include m-breakpoint-down(small) {
+        //     height: 50px;
+        // }
       }
 
       .title {
-        font-weight: bold;
+        font-weight: 300;
         font-family: $font-title;
         font-size: 16px;
         text-align: center;
-        color: $light-color;
+        // color: $light-color;
+        color: $dark-color;
         transition: all 300ms ease;
 
         @include m-breakpoint-down(small) {
@@ -77,6 +84,12 @@
   .writing_category {
     &--item_wrapper {
       .category_item {
+        .overlay {
+          background-color: $dark-color;
+        }
+        .title {
+          color: $light-color;
+        }
         &:hover {
           box-shadow: $accent-color 0px 0px 0px 3px;
           .title {

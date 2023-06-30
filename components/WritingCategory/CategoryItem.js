@@ -6,7 +6,7 @@ const CategoryItem = ({ title, slug, image }) => {
   return (
     <Link href={`/writing/categories/${slug}`}>
       <div
-        style={{ backgroundImage: `url(${urlFor(image)})` }}
+        // style={{ backgroundImage: `url(${urlFor(image)})` }}
         className="category_item"
       >
         <div className="overlay">
