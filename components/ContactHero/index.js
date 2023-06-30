@@ -23,11 +23,14 @@ const ContactHero = () => {
             <h1 className="title_text">Open to work</h1>
             <div className="description">
               <p className="lg_para">
-
-              I am currently on the lookout for exciting job opportunities and experiences that will allow me to grow and thrive in the world of web development. Whether it's freelance / part-time web design work, or junior-level positions, I am open to them all. Feel free to get in touch with me - I would absolutely love the chance to work with you and your amazing team!
+                I am currently on the lookout for exciting job opportunities and
+                experiences that will allow me to grow and thrive in the world
+                of web development. Whether it&apos;s freelance / part-time web
+                design work, or junior-level positions, I am open to them all.
+                Feel free to get in touch with me - I would absolutely love the
+                chance to work with you and your amazing team!
               </p>
 
-             
               <Link href="/services">
                 <button className="secondary_btn">My Services</button>
               </Link>
