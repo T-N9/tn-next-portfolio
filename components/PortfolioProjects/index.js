@@ -51,7 +51,7 @@ const PortfolioProjects = () => {
     <div id="projects" className="projectContent container">
       <Element name="projects_section" className="projects_section">
         {/* <span ></span> */}
-        <h1 className="title_text">Recent Works</h1>
+        <h1 className="title_text center_text outlined_title">Recent Works</h1>
         <div className="projectContent--grid">{projectList}</div>
       </Element>
     </div>

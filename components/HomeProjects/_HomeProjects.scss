@@ -358,12 +358,12 @@
 
     .projectContent {
       padding-top: 4rem;
-      padding-bottom: 8rem;
+      padding-bottom: 5rem;
       &--grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 15px;
-        padding-top: 20px;
+        padding-top: 2rem;
 
         @include m-breakpoint-down(lmedium) {
           grid-template-columns: repeat(2, 1fr);
