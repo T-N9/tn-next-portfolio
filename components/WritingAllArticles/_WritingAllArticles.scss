@@ -49,6 +49,18 @@
   background-color: #fcfcfc;
   transition: all 200ms ease-out;
 
+  .article_card_img {
+    object-fit: cover;
+
+    width: 416px;
+    height: 235px;
+
+    @include m-breakpoint-down(small) {
+      width: 382px;
+      height: 215px;
+    }
+  }
+
   &:hover {
     transform: translateY(-5px);
   }

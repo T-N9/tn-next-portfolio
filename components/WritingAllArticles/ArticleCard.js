@@ -15,7 +15,10 @@ const ArticleCard = ({ data }) => {
     <div className="article_card">
       <Image
         {...titleImgProps}
-        style={{ maxWidth: "100%", height: "auto" }}
+        style={{ maxWidth: "100%"}}
+        width={416}
+        height={235}
+        className="article_card_img"
         quality={80}
         alt="Post Image"
       />
