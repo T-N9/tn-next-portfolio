@@ -192,6 +192,10 @@
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
+        @include m-breakpoint-down(lmedium) {
+          display: none;
+        }
+
       }
 
       .paper-off {
