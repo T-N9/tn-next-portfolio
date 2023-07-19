@@ -60,6 +60,26 @@
 
 .block_content {
   margin-bottom: 1rem;
+
+  p:empty {
+    display: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    br {
+      display: none;
+    }
+  }
+
+  h5:empty {
+    display: none;
+  }
+  h5 {
+    padding-top: 20px;
+    border-top: 1px solid $light-color;
+    margin-bottom: 1rem !important;
+  }
+
   a {
     color: $primary-color;
   }
@@ -207,6 +227,10 @@
       a {
         color: $accent-color !important;
       }
+    }
+
+    h5 {
+      border-top: 1px solid #4d5a68;
     }
   }
 

@@ -1,4 +1,8 @@
 .article_page {
+
+  .separator {
+    margin-top: 3rem;
+  }
   .container_x_sm {
     @include m-breakpoint-down(small) {
       padding: 0;
@@ -6,7 +10,8 @@
   }
   .breadcrumb {
     margin-bottom: 1rem;
-    font-size: 18px;
+    font-size: 14px;
+    opacity: 0.8;
     .item {
       cursor: pointer;
     }
@@ -16,14 +21,17 @@
 
     .title {
       font-size: $fs-500;
+      line-height: 50px;
 
       @include m-breakpoint-down(small) {
         font-size: 24px;
+        line-height: 30px;
       }
     }
 
     .created_date {
       font-size: 14px;
+      opacity: 0.8;
     }
   }
 

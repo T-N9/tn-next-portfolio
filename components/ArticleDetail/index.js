@@ -51,7 +51,7 @@ const ArticleDetail = ({ data, slug }) => {
               <Link className="item route" href={"/writing"}>
                 Writing
               </Link>{" "}
-              &gt; <span className="ht_text">{data.title}</span>
+              &gt; <span className="">{data.title}</span>
             </p>
           </div>
 
