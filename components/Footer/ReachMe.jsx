@@ -2,9 +2,9 @@ import React from "react";
 import {
   Github,
   Linkedin,
-  Codepen,
+  Medium,
   Gmail,
-  Mastodon
+  Mastodon,
 } from "@icons-pack/react-simple-icons";
 import ReactMarkdown from "react-markdown";
 
@@ -27,6 +27,10 @@ const ReachMe = () => {
           </a>
           <a href="https://burma.social/@tenyain" target="_blank" rel="noreferrer">
             <Mastodon xlinkTitle="true" />
+          </a>
+
+          <a href="https://tenyainmoelwin.medium.com/" target="_blank" rel="noreferrer">
+            <Medium xlinkTitle="true" />
           </a>
 
           <a href="https://www.threads.net/@tenyain_moe_lwin" target="_blank" rel="noreferrer">
