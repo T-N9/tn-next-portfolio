@@ -7,23 +7,27 @@
 
   .background_div {
     padding: 3rem 0;
-    background-image: radial-gradient(
-      circle at top left,
-      #fffffa 0%,
-      #fffffa 2%,
-      #fcfcfc 2%,
-      #fcfcfc 23%,
-      #fffffa 23%,
-      #fffffa 55%,
-      #fcfcfc 55%,
-      #fcfcfc 80%,
-      #42c0ff60 80%,
-      #42c0ff60 86%,
-      #26a8ea60 86%,
-      #26a8ea60 96%,
-      #1192d360 96%,
-      #1192d360 100%
-    );
+    // background-image: radial-gradient(
+    //   circle at top left,
+    //   #fffffa 0%,
+    //   #fffffa 2%,
+    //   #fcfcfc 2%,
+    //   #fcfcfc 23%,
+    //   #fffffa 23%,
+    //   #fffffa 55%,
+    //   #fcfcfc 55%,
+    //   #fcfcfc 80%,
+    //   #42c0ff60 80%,
+    //   #42c0ff60 86%,
+    //   #26a8ea60 86%,
+    //   #26a8ea60 96%,
+    //   #1192d360 96%,
+    //   #1192d360 100%
+    // );
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../assets/wts.png);
   }
 
   .warn-top {
@@ -57,6 +61,7 @@
       font-size: 0.8rem;
     }
   }
+
   .card_wrapper {
     margin-top: 2rem;
     display: flex;
@@ -109,7 +114,7 @@
         }
 
         a {
-          color : $primary-color;
+          color: $primary-color;
         }
 
         @include m-breakpoint-down(small) {
@@ -118,6 +123,12 @@
       }
     }
   }
+
+  .oneByone_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 }
 
 .dark {
@@ -125,23 +136,24 @@
     background-color: rgba(#333, 0.2);
 
     .background_div {
-      background-image: radial-gradient(
-        circle at top left,
-        #2d3a47 0%,
-        #2d3a47 2%,
-        #4e5d6c70 2%,
-        #4e5d6c70 23%,
-        #414d59 23%,
-        #414d59 55%,
-        #3a4856 55%,
-        #3a4856 80%,
-        #83ffda60 80%,
-        #83ffda60 86%,
-        #64e9c260 86%,
-        #64e9c260 96%,
-        #2fe0ac60 96%,
-        #2fe0ac60 100%
-      );
+      // background-image: radial-gradient(
+      //   circle at top left,
+      //   #2d3a47 0%,
+      //   #2d3a47 2%,
+      //   #4e5d6c70 2%,
+      //   #4e5d6c70 23%,
+      //   #414d59 23%,
+      //   #414d59 55%,
+      //   #3a4856 55%,
+      //   #3a4856 80%,
+      //   #83ffda60 80%,
+      //   #83ffda60 86%,
+      //   #64e9c260 86%,
+      //   #64e9c260 96%,
+      //   #2fe0ac60 96%,
+      //   #2fe0ac60 100%
+      // );
+      background-image: url(../../assets/wts.png);
     }
     .card_wrapper {
       .card {
@@ -158,7 +170,7 @@
           border-top: 2px solid rgba($accent-color, 0.5);
 
           a {
-            color : $accent-color;
+            color: $accent-color;
           }
         }
       }

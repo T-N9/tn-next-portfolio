@@ -20,6 +20,7 @@
     "eslint-config-next": "13.0.6",
     "framer-motion": "^7.6.19",
     "moment": "^2.29.4",
+    "motion": "^10.16.2",
     "next": "13.0.6",
     "next-sanity-image": "^5.0.0",
     "next-sitemap": "^4.1.3",
