@@ -95,8 +95,8 @@ const Testimonials = () => {
             <div className="oneByone_wrapper container_sm hide_on_mobile">
               {data.map((person, index) => {
                 return (
-                  <SRG2 index={index}>
-                    <Card key={index} person={person} />
+                  <SRG2 key={index} index={index}>
+                    <Card person={person} />
                   </SRG2>
                 );
               })}
