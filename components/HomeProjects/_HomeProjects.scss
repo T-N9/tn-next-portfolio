@@ -322,10 +322,7 @@
     background-color: rgba($primary-color, 0.1) !important;
     border-radius: 20px;
     transition: all 200ms ease !important;
-    &:hover {
-      box-shadow: rgba($primary-color, 0.3) 0px 2px 5px -1px,
-        rgba($primary-color, 0.3) 0px 1px 3px -1px;
-    }
+
 
     .image_wrapper {
       flex: 6;
@@ -369,6 +366,8 @@
     }
 
     &:hover {
+      box-shadow: rgba($primary-color, 0.3) 0px 2px 5px -1px,
+        rgba($primary-color, 0.3) 0px 1px 3px -1px;
       .col_2 {
         .view_pjBtn {
           visibility: visible;
@@ -387,7 +386,7 @@
 
         @include m-breakpoint-down(large) {
           img {
-            transform: scale(1);
+            transform: scale(1.0165);
           }
         }
       }

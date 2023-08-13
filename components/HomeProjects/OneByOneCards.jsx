@@ -7,6 +7,8 @@ import Link from "next/link";
 
 import { client, urlFor } from "../../client";
 
+import ScrollRevealDiv from "../common/ScrollRevealDiv";
+
 /* Components */
 import ProjectCard from "./ProjectCard";
 import LoadingIcon from "../../assets/loading.svg";
@@ -38,18 +40,22 @@ const OneByOneCards = () => {
     }
   }, []);
 
-  const ProjectCards = contentData?.slice(0, 3).map((project) => {
+  const ProjectCards = contentData?.slice(0, 3).map((project, index) => {
     const { title, description, icon, category, slug } = project;
     return (
-      <Link key={nanoid()} href={`/works/${slug.current}`}>
-        <ProjectCard
-          title={title}
-          desc={description}
-          image={project.imgUrl}
-          icon={icon}
-          category={category}
-        />
-      </Link>
+      <React.Fragment key={nanoid()}>
+        <ScrollRevealDiv>
+          <Link href={`/works/${slug.current}`}>
+            <ProjectCard
+              title={title}
+              desc={description}
+              image={project.imgUrl}
+              icon={icon}
+              category={category}
+            />
+          </Link>
+        </ScrollRevealDiv>
+      </React.Fragment>
     );
   });
 
