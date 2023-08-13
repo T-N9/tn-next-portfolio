@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import SwiperCards from "./SwiperCards";
+import OneByOneCards from "./OneByOneCards";
 
 const HomeProject = () => {
   return (
@@ -8,7 +9,12 @@ const HomeProject = () => {
       <section className="portfolio_page_wrapper">
         <div className="portfolio_page">
           <Header />
-          <SwiperCards />
+          <span className="hide_on_desktop">
+            <SwiperCards />
+          </span>
+          <span className="hide_on_mobile">
+            <OneByOneCards />
+          </span>
         </div>
       </section>
     </div>

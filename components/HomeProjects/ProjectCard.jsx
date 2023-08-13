@@ -9,6 +9,7 @@ import "css.gg/icons/css/code-slash.css";
 import "css.gg/icons/css/arrow-right-r.css";
 import "css.gg/icons/css/code.css";
 import "css.gg/icons/css/color-bucket.css";
+import "css.gg/icons/css/chevron-right.css";
 
 const ProjectCard = (props) => {
   const { title, desc, image, icon, category } = props;
@@ -17,7 +18,7 @@ const ProjectCard = (props) => {
   return (
     <>
       <div className="projectCard">
-        <div>
+        <div className="image_wrapper">
           <div className="projectCard--header">
             <div className="category_tag">
               <i className={`gg-${icon}`}></i>
@@ -38,6 +39,12 @@ const ProjectCard = (props) => {
           <div className="projectCard--text">
             <h1>{title}</h1>
             <p>{desc}</p>
+          </div>
+
+          <div className="separation_btn">
+            <p>View Project</p>
+
+            <i className={`gg-chevron-right`}></i>
           </div>
 
           <button className="view_pjBtn">
