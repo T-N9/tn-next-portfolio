@@ -72,7 +72,7 @@
             text-align: center;
             margin: auto;
 
-            @include m-breakpoint-down(large) {
+            @include m-breakpoint-down(lmedium) {
                 width: 60%;
             }
 

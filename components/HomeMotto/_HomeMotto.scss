@@ -7,7 +7,7 @@
             color: rgba( $dark_color, 0.3);
             text-align: center;
 
-            @include m_breakpoint_down(large) {
+            @include m_breakpoint_down(lmedium) {
                 font-size: $fs_100;
                 padding: 0 4rem;
             }
