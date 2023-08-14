@@ -20,7 +20,7 @@ const ContactHero = () => {
       <section className="container_x_sm open_to_work">
         <div className="container_sm otw_content container_y_2">
           <div className="content">
-            <h1 className="title_text">Open to work</h1>
+            <h1 className="title_text outlined_title">Open to work</h1>
             <div className="description">
               <p className="lg_para">
                 I am currently on the lookout for exciting job opportunities and
