@@ -228,7 +228,7 @@
     transition: transform 200ms ease-in;
     transform: translateY(40px);
 
-    @include m-breakpoint-down(large) {
+    @include m-breakpoint-down(lmedium) {
       transform: translateY(0);
     }
     h1 {
@@ -237,7 +237,7 @@
       font-size: calUni(28px);
       color: $primary-color;
 
-      @include m-breakpoint-up(large) {
+      @include m-breakpoint-up(lmedium) {
         font-size: $fs-400;
       }
     }
@@ -247,7 +247,7 @@
       z-index: 200;
       // background-color: #e6f4fb !important;
       @include m-breakpoint-up(large) {
-        font-size: $fs-300;
+        font-size: $fs-200;
       }
 
       @include m-breakpoint-down(small) {
@@ -504,7 +504,7 @@
               opacity: 0;
               transition: all 200ms ease-in;
 
-              @include m-breakpoint-down(large) {
+              @include m-breakpoint-down(lmedium) {
                 opacity: 1;
                 visibility: visible;
               }
