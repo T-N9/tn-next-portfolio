@@ -8,7 +8,7 @@ const ScrollRevealDiv = ({children}) => {
 
   useEffect(() => {
     if (inView) {
-      controls.start({ opacity: 1, y: 0, transition: { duration: 1 } });
+      controls.start({ opacity: 1, y: 0, transition: { duration: 0.5 ,delay : 0.3}, });
     }
   }, [controls, inView]);
 

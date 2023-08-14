@@ -2,12 +2,21 @@ import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const SRG2 = ({ children, index }) => {
+const SRG2 = ({ children, index, type, noOfColumn }) => {
   console.log({ childIndex: index });
   const controls = useAnimation();
   const [ref, inView] = useInView();
-  const column = index % 2;
-  const transitionDelay = column === 0 ? 0.4 : 0; // Adjust the delay as needed
+  const column = index % noOfColumn;
+  let transitionDelay = 0; // Adjust the delay as needed
+
+  if (type === "even") {
+    transitionDelay = column === 0 ? 0.4 : 0; // Adjust the delay as needed
+  } else if (type === "column") {
+    transitionDelay = column === 0 ? 0 : column /5; // Adjust the delay as needed
+    console.log({index, column})
+  } else {
+    transitionDelay = 0;
+  }
 
   useEffect(() => {
     if (inView) {

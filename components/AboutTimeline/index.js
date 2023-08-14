@@ -213,7 +213,7 @@ const AboutTimeline = () => {
                 <span></span>
               </div>
 
-              <SRG2 index={1}>
+              <SRG2 index={1} type="even" noOfColumn ={2}>
                 <div className="description">
                   <h1 className="ht_text">2015-2016</h1>
                   <p>Passed Matriculation Examination</p>
@@ -226,7 +226,7 @@ const AboutTimeline = () => {
                 <span></span>
               </div>
 
-              <SRG2 index={2}>
+              <SRG2 index={2} type="even" noOfColumn ={2}>
                 <div className="description">
                   <h1 className="ht_text">2016-2017</h1>
                   <p>
@@ -248,7 +248,7 @@ const AboutTimeline = () => {
                 <span></span>
               </div>
 
-              <SRG2 index={3}>
+              <SRG2 index={3} type="even" noOfColumn ={2}>
                 <div className="description">
                   <h1 className="ht_text">2017-2018</h1>
                   <p>
@@ -280,7 +280,7 @@ const AboutTimeline = () => {
                 <span></span>
               </div>
 
-              <SRG2 index={4}>
+              <SRG2 index={4} type="even" noOfColumn ={2}>
                 <div className="description">
                   <h1 className="ht_text">2018-2019</h1>
                   <p>
@@ -312,7 +312,7 @@ const AboutTimeline = () => {
                 <span></span>
               </div>
 
-              <SRG2 index={5}>
+              <SRG2 index={5} type="even" noOfColumn ={2}>
                 <div className="description">
                   <h1 className="ht_text">2020</h1>
                   <p>Covid Outbreak</p>
@@ -343,7 +343,7 @@ const AboutTimeline = () => {
                 <span></span>
               </div>
 
-              <SRG2 index={6}>
+              <SRG2 index={6} type="even" noOfColumn ={2}>
                 <div className="description">
                   <h1 className="ht_text">2021</h1>
                   <p>Dark Times in Myanmar</p>
@@ -368,7 +368,7 @@ const AboutTimeline = () => {
                 <span></span>
               </div>
 
-              <SRG2 index={7}>
+              <SRG2 index={7} type="even" noOfColumn ={2}>
                 <div className="description">
                   <h1 className="ht_text">2022</h1>
                   <p>On Job Training</p>
@@ -390,7 +390,7 @@ const AboutTimeline = () => {
                 <div className="animate-ping"></div>
               </div>
 
-              <SRG2 index={8}>
+              <SRG2 index={8} type="even" noOfColumn ={2}>
                 <div className="description">
                   <h1 className="ht_text">2023</h1>
                   <p>In Progress</p>
