@@ -74,6 +74,9 @@
   h5:empty {
     display: none;
   }
+  h3 {
+    font-weight: 500;
+  }
   h5 {
     font-weight: 500;
     padding-top: 20px;
@@ -206,9 +209,8 @@
 }
 
 .mockup_img {
-  margin: 2rem 0rem;
+  margin: 5rem auto;
   width: 80%;
-  margin: auto;
 
   @include m-breakpoint-down(lmedium) {
     width: 100%;

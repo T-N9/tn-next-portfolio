@@ -5,6 +5,8 @@ import Image from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
 import { client } from "../../client";
 
+import ScrollRevealDiv from '../common/ScrollRevealDiv';
+
 const ProjectDescription = (props) => {
   const {
     introduction,
@@ -91,13 +93,15 @@ const ProjectDescription = (props) => {
                 <BlockContent blocks={development} />
               </div>
               {mockup_1 && (
-                <Image
-                  className="mockup_img"
-                  {...mockup_1Props}
-                  style={{ maxWidth: "100%", height: "auto" }}
-                  quality={100}
-                  alt="mockup"
-                />
+                <ScrollRevealDiv>
+                  <Image
+                    className="mockup_img"
+                    {...mockup_1Props}
+                    style={{ maxWidth: "100%", height: "auto" }}
+                    quality={100}
+                    alt="mockup"
+                  />
+                </ScrollRevealDiv>
               )}
             </>
           )}
@@ -126,13 +130,15 @@ const ProjectDescription = (props) => {
                 <BlockContent blocks={designing} />
               </div>
 
-              <Image
-                className="mockup_img"
-                {...mockup_2Props}
-                style={{ maxWidth: "100%", height: "auto" }}
-                quality={100}
-                alt="mockup"
-              />
+              <ScrollRevealDiv>
+                <Image
+                  className="mockup_img"
+                  {...mockup_2Props}
+                  style={{ maxWidth: "100%", height: "auto" }}
+                  quality={100}
+                  alt="mockup"
+                />
+              </ScrollRevealDiv>
             </div>
             {paletteList && (
               <div className="container_sm container_y_1">
