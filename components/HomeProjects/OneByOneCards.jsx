@@ -46,16 +46,16 @@ const OneByOneCards = () => {
     return (
       <React.Fragment key={nanoid()}>
         <ScrollRevealDiv>
-          {/* <Link href={`/works/${slug.current}`}> */}
-          <ProjectCard
-            title={title}
-            desc={description}
-            image={project.imgUrl}
-            icon={icon}
-            category={category}
-            projectLink={`/works/${slug.current}`}
-          />
-          {/* </Link> */}
+          <Link href={`/works/${slug.current}`}>
+            <ProjectCard
+              title={title}
+              desc={description}
+              image={project.imgUrl}
+              icon={icon}
+              category={category}
+              projectLink={`/works/${slug.current}`}
+            />
+          </Link>
         </ScrollRevealDiv>
       </React.Fragment>
     );
