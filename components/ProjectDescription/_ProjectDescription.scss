@@ -209,11 +209,14 @@
 }
 
 .mockup_img {
-  margin: 5rem auto;
+  margin: 9rem auto;
   width: 80%;
+  transform: scale(1.5);
 
   @include m-breakpoint-down(lmedium) {
     width: 100%;
+    margin: 3rem auto;
+    transform: scale(1);
   }
 }
 
