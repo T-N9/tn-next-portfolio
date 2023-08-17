@@ -11,7 +11,7 @@ const HeroImg = () => {
             height={365}
             quality={100}
             className="hero_img--image"
-            src="/content/propic.webp"
+            src="/content/hero-img.webp"
             alt="tenyain moe lwin with laptop"
             priority
           />
