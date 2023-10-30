@@ -3,7 +3,7 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const SRG2 = ({ children, index, type, noOfColumn }) => {
-  console.log({ childIndex: index });
+  // console.log({ childIndex: index });
   const controls = useAnimation();
   const [ref, inView] = useInView();
   const column = index % noOfColumn;
@@ -13,7 +13,7 @@ const SRG2 = ({ children, index, type, noOfColumn }) => {
     transitionDelay = column === 0 ? 0.4 : 0; // Adjust the delay as needed
   } else if (type === "column") {
     transitionDelay = column === 0 ? 0 : column /5; // Adjust the delay as needed
-    console.log({index, column})
+    // console.log({index, column})
   } else {
     transitionDelay = 0;
   }

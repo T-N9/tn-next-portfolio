@@ -8,10 +8,10 @@ const HeroImg = () => {
         <div className="image_wrapper">
           <Image
             width={365}
-            height={365}
+            height={442}
             quality={100}
             className="hero_img--image"
-            src="/content/hero-img.webp"
+            src="/content/profile.webp"
             alt="tenyain moe lwin with laptop"
             priority
           />

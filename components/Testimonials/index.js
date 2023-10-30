@@ -94,7 +94,7 @@ const Testimonials = () => {
 
             <div className="oneByone_wrapper container_sm hide_on_mobile">
               {data.map((person, index) => {
-                console.log({here: index})
+                // console.log({here: index})
                 return (
                   <SRG2 key={index} index={index} type="column" noOfColumn={2}>
                     <Card person={person} />

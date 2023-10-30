@@ -23,7 +23,7 @@
 
   .hero_page {
     @include flex-center;
-    gap: 1rem 0;
+    gap: 3rem 0;
 
     @include m-breakpoint-down(lmedium) {
       flex-direction: column-reverse;
@@ -121,7 +121,7 @@
         position: relative;
         display: block;
         width: calUni(365px);
-        height: calUni(365px);
+        height: calUni(442px);
         border: 3px solid $primary-color;
         border-radius: calUni(19px);
         margin: 0;
@@ -131,16 +131,16 @@
 
         @include m-breakpoint-down(small) {
           width: 249px;
-          height: 242px;
+          height: 301.35px;
         }
       }
 
       .squares {
         width: calUni(390px);
-        height: calUni(380px);
+        height: 27.75rem;
         position: absolute;
         left: 9%;
-        top: 10%;
+        top: 4%;
         border: 3px solid rgba($primary-color, 0.3);
         border-radius: calUni(19px);
         background-color: rgba($primary-color, 0.3);
@@ -149,7 +149,9 @@
 
         @include m-breakpoint-down(small) {
           width: 253.99px;
-          height: 247.48px;
+          height: 295.48px;
+
+          top: 2%;
         }
       }
 

@@ -42,7 +42,7 @@ const OneByOneCards = () => {
 
   const ProjectCards = contentData?.slice(0, 3).map((project, index) => {
     const { title, description, icon, category, slug } = project;
-    console.log({ link: `/works/${slug.current}` });
+    // console.log({ link: `/works/${slug.current}` });
     return (
       <React.Fragment key={nanoid()}>
         <ScrollRevealDiv>
