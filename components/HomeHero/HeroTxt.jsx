@@ -25,10 +25,11 @@ const HeroTxt = () => {
           </p>
         </div>
 
-        <a href="#portfolio" aria-label="View portfolio works">
+        <a href="#portfolio" aria-label="View Works">
           <button
             type="button"
             className="hero_txt--btn primary_btn"
+            aria-label="View Works"
           >
             View Works
           </button>
