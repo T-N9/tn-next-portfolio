@@ -34,11 +34,11 @@ export default function Document() {
       </Head>
       <body>
         {/* <!-- Messenger Chat plugin Code --> */}
-        <div id="fb-root"></div>
+        {/* <div id="fb-root"></div> */}
 
         {/* <!-- Your Chat plugin code --> */}
-        <div id="fb-customer-chat" className="fb-customerchat"></div>
-        <Script
+        {/* <div id="fb-customer-chat" className="fb-customerchat"></div> */}
+        {/* <Script
           id="messenger-tag"
           strategy="lazyOnload"
           dangerouslySetInnerHTML={{
@@ -66,7 +66,7 @@ export default function Document() {
               fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));`,
           }}
-        ></Script>
+        ></Script> */}
         <Main />
         <NextScript />
       </body>
