@@ -25,9 +25,9 @@ const HeroTxt = () => {
           </p>
         </div>
 
-        <a href="#portfolio">
+        <a href="#portfolio" aria-label="View portfolio works">
           <button
-            aria-label="contact tenyain"
+            type="button"
             className="hero_txt--btn primary_btn"
           >
             View Works
