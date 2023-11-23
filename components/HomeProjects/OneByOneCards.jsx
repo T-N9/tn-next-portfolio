@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { nanoid } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
 
 import Image from "next/image";
 import Link from "next/link";
 
-import { client, urlFor } from "../../client";
+import { client } from "../../client";
 
 import ScrollRevealDiv from "../common/ScrollRevealDiv";
 
@@ -17,14 +16,10 @@ import LoadingIconDark from "../../assets/loading-dark.svg";
 /* Actions */
 import { setProjectData } from "../../store/slices/ProjectsSlice";
 
-// import required modules
-import { Pagination } from "swiper";
-
 const OneByOneCards = () => {
   const dispatch = useDispatch();
   const { contentData } = useSelector((state) => state.projectData);
 
-  const [projects, setProjects] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -33,7 +28,6 @@ const OneByOneCards = () => {
     if (contentData.length === 0) {
       setIsLoading(true);
       client.fetch(query).then((data) => {
-        setProjects(data);
         dispatch(setProjectData(data));
         setIsLoading(false);
       });
@@ -44,7 +38,7 @@ const OneByOneCards = () => {
     const { title, description, icon, category, slug } = project;
     // console.log({ link: `/works/${slug.current}` });
     return (
-      <React.Fragment key={nanoid()}>
+      <React.Fragment key={index}>
         <ScrollRevealDiv>
           <Link href={`/works/${slug.current}`}>
             <ProjectCard
