@@ -15,8 +15,8 @@ const HeroImg = () => {
             alt="tenyain moe lwin with laptop"
             priority
           />
-          <span className="squares square_1"></span>
-          <span className="squares square_2"></span>
+          {/* <span className="squares square_1"></span>
+          <span className="squares square_2"></span> */}
           <p className="jp-code">トリウム浜田</p>
         </div>
       </div>
