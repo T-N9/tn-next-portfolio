@@ -10,6 +10,11 @@ const nextConfig = {
     domains: ["cdn.sanity.io"],
     // loader: "custom",
   },
+
+  experimental: {
+    // Enables the effect of the immutable keyword on JS and CSS
+    jsconfigPaths: true,
+  },
 };
 
 module.exports = nextConfig;

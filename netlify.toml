@@ -1,4 +1,4 @@
 [[headers]]
-  for = "/*"
-    [headers.values]
-    Cache-Control = "public, max-age=3600"  # Adjust max-age based on your requirements
+for = "/*.js"
+  [headers.values]
+  Cache-Control = "public, max-age=31536000, immutable"
