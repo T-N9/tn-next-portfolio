@@ -1,8 +1,11 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 /* Layout */
-import { HomePageLayout } from "../Layouts";
+// import { HomePageLayout } from "../Layouts";
 
 import 'source-map-support/register';
+
+const HomePageLayout = dynamic(() => import('../Layouts/Layout.Home'));
 
 export default function Home() {
   return (
