@@ -17,7 +17,7 @@ import Card from "./Card";
 
 const data = [
   {
-    name: "Cho Cho Chen",
+    name: "Szu Ho Chen",
     country: "USA",
     position: "Business Owner",
     website: "https://www.bridetobebridal.com/",
