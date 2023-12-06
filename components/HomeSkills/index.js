@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import {
   Html5,
   CssThree,
@@ -22,10 +23,12 @@ import ServiceIntro from "./ServiceIntro";
 import SRG2 from "../common/SRG2";
 
 const HomeSkills = () => {
+
+  const {t} = useTranslation();
   return (
     <section className="skill_page_wrapper">
       <div className="container skill_page">
-        <h1 className="title_text text_center">Skills</h1>
+        <h1 className="title_text text_center">{t('skills')}</h1>
         <div className="skill_page--grid">
           <div className="skill_item">
             <SRG2 type="column" noOfColumn={4} index={0}>
