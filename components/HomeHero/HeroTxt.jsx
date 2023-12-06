@@ -1,28 +1,30 @@
 import React, { useEffect } from "react";
 import * as Scroll from "react-scroll";
+import { useTranslation } from "next-i18next";
 
-var ScrollLink = Scroll.Link;
 var scrollSpy = Scroll.scrollSpy;
 
 const HeroTxt = () => {
   useEffect(() => {
-    scrollSpy.update();
+    if (typeof window !== "undefined") {
+      // Only run on the client side
+      scrollSpy.update();
+    }
   });
+
+  const { t } = useTranslation();
   return (
     <>
       <div className="hero_txt">
         <div className="content">
           <p className="intro">
-            Hello there, I am <span className="ht_text">Te Nyain</span>
+            {t("home_line_1")}{" "}
+            <span className="ht_text">{t("first_name")}</span>
           </p>
           <h1 className="hero_txt--text">
-            <span className="ht_text">Front-end </span> Developer
+            <span className="ht_text">{t("frontend")} </span> {t("developer")}
           </h1>
-          <p className="description">
-            A developer who delivers fast and reliable websites. I care about
-            your business values and targeted customers to meet your golden
-            goals for tomorrow.
-          </p>
+          <p className="description">{t("home_description")}</p>
         </div>
 
         <a href="#portfolio" aria-label="View Works">
@@ -31,7 +33,7 @@ const HeroTxt = () => {
             className="hero_txt--btn primary_btn"
             aria-label="View Works"
           >
-            View Works
+            {t("view_works")}
           </button>
         </a>
       </div>

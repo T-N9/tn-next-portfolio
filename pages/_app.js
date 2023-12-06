@@ -2,6 +2,8 @@ import "source-map-support/register";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import App from "next/app";
+import { appWithTranslation } from 'next-i18next';
+import '../i18n';
 
 /* CSS */
 import "../styles/globals.scss";
@@ -68,4 +70,4 @@ MyApp.getInitialProps = async ({ Component, ctx }) => {
   }
 };
 
-export default MyApp;
+export default appWithTranslation(MyApp);

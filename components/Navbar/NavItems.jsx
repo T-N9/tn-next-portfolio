@@ -2,9 +2,11 @@ import React from "react";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 import pages from "../../constants/pages";
+import { useTranslation } from "react-i18next";
 
 const NavItems = () => {
   const { currentPage } = useSelector((state) => state.navBar);
+  const { t } = useTranslation();
 
   return (
     <>
@@ -17,7 +19,7 @@ const NavItems = () => {
                 currentPage === page.name && "ht_text"
               }`}
             >
-              <Link href={page.route}>{page.name}</Link>
+              <Link href={page.route}>{t(page.name)}</Link>
             </li>
           );
         })}

@@ -1,10 +1,13 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import Hamburger from "./Hamburger";
 import Toggler from "./Toggler";
 import { setActive } from "../../store/slices/NavbarSlice";
 import pages from "../../constants/pages";
+import { useTranslation } from "react-i18next";
+const LanguageSwitcher = dynamic(() => import('../LanguageSwitcher'),{ ssr: false });
 
 const MobileMenu = () => {
   const dispatch = useDispatch();
@@ -12,6 +15,8 @@ const MobileMenu = () => {
   const toggleClick = () => {
     dispatch(setActive());
   };
+
+  const { t } = useTranslation();
 
   return (
     <>
@@ -29,13 +34,17 @@ const MobileMenu = () => {
                   currentPage === page.name && "ht_text"
                 }`}
               >
-                <Link href={page.route}>{page.name}</Link>
+                <Link href={page.route}>{t(page.name)}</Link>
               </li>
             );
           })}
         </ul>
 
+        <LanguageSwitcher/>
+
         <Toggler />
+
+
         <div className="separator nav_separator"></div>
         <div className="mail_div">
           <a href="mailto:tenyainmoelwin@gmail.com">
