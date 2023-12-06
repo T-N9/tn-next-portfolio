@@ -6,17 +6,31 @@ const LanguageSwitcher = () => {
   const [currentLanguage, setCurrentLanguage] = useState();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+  const languageOptions = [
+    { value: "en", label: "English", src: "/content/gb.svg" },
+    { value: "jp", label: "Japanese", src: "/content/jp.svg" },
+  ];
+
   useEffect(() => {
+    setCurrentLanguage(languageOptions[0].value);
     if (typeof window !== "undefined") {
       const storedLanguage = localStorage.getItem("preferredLanguage");
-      setCurrentLanguage(storedLanguage || i18n.language);
-      console.log("Current Language:", storedLanguage || i18n.language);
+      setCurrentLanguage(storedLanguage || languageOptions[0].value);
+      console.log(
+        "Current Language:",
+        storedLanguage || languageOptions[0].value
+      );
 
-      changeLanguage(storedLanguage);
+      if(storedLanguage) {
+        changeLanguage(storedLanguage);
+      }else {
+        changeLanguage(languageOptions[0].value);
+      }
+
     }
   }, []);
 
-  console.log(currentLanguage);
+  console.log(currentLanguage, languageOptions[0].value);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -39,18 +53,15 @@ const LanguageSwitcher = () => {
     changeLanguage(value);
   };
 
-  const languageOptions = [
-    { value: "en", label: "English", src: "/content/gb.svg" },
-    { value: "jp", label: "Japanese", src: "/content/jp.svg" },
-    // Add more languages if needed
-  ];
-
   return (
-    <div className='languageSwitcher'>
+    <div className="languageSwitcher">
       {/* Toggle button */}
-      <div className='dropdownToggle' onClick={toggleDropdown}>
+      <div className="dropdownToggle" onClick={toggleDropdown}>
         <img
-          src={languageOptions.find((option) => option.value === currentLanguage)?.src}
+          src={
+            languageOptions.find((option) => option.value === currentLanguage)
+              ?.src
+          }
           alt="language flag"
           width={50}
           height={50}
@@ -59,14 +70,19 @@ const LanguageSwitcher = () => {
 
       {/* Dropdown options */}
       {isDropdownOpen && (
-        <div className='dropdownOptions'>
+        <div className="dropdownOptions">
           {languageOptions.map((option) => (
             <div
               key={option.value}
-              className='option'
+              className="option"
               onClick={() => handleLanguageClick(option.value)}
             >
-              <img src={option.src} alt="language flag" width={50} height={50} />
+              <img
+                src={option.src}
+                alt="language flag"
+                width={50}
+                height={50}
+              />
               {option.value}
             </div>
           ))}
