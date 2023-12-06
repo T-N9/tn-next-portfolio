@@ -13,6 +13,7 @@ export const navBarSlice = createSlice({
     active: false,
     theme: themeKey,
     currentPage: "",
+    currentLanguage: "en",
   },
   reducers: {
     setActive: (state) => {
@@ -27,9 +28,17 @@ export const navBarSlice = createSlice({
     setCurrentPage: (state, action) => {
       state.currentPage = action.payload;
     },
+    setCurrentLanguage: (state, action) => {
+      state.currentLanguage = action.payload;
+    },
   },
 });
 
-export const { setActive, setTheme, setCurrentTheme, setCurrentPage } =
-  navBarSlice.actions;
+export const {
+  setActive,
+  setTheme,
+  setCurrentTheme,
+  setCurrentPage,
+  setCurrentLanguage,
+} = navBarSlice.actions;
 export default navBarSlice.reducer;

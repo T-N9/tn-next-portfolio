@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 import { client } from "../../client";
 import { useNextSanityImage } from "next-sanity-image";
@@ -13,6 +13,7 @@ import "css.gg/icons/css/color-bucket.css";
 import "css.gg/icons/css/chevron-right.css";
 
 const ProjectCard = ({ title, desc, image, icon, category }) => {
+  const {t} = useTranslation();
 
   const imageProps = useNextSanityImage(client, image);
   return (
@@ -37,18 +38,19 @@ const ProjectCard = ({ title, desc, image, icon, category }) => {
         </div>
         <div className="col_2">
           <div className="projectCard--text">
-              <h1>{title}</h1>
+              <h1>{t(title)}</h1>
+              {console.log(title)}
 
-            <p>{desc}</p>
+            <p>{t(desc)}</p>
           </div>
 
             <div className="separation_btn">
-              <p>View Project</p>
+              <p>{t("View Project")}</p>
               <i className={`gg-chevron-right`}></i>
             </div>
 
           <button className="view_pjBtn">
-            view detail
+            {t("view detail")}
             <i className={`gg-arrow-right-r`}></i>
           </button>
         </div>

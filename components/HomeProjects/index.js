@@ -1,7 +1,10 @@
 import React from "react";
-import Header from "./Header";
+import dynamic from "next/dynamic";
+// import Header from "./Header";
 import SwiperCards from "./SwiperCards";
 import OneByOneCards from "./OneByOneCards";
+
+const Header = dynamic(() => import('./Header'),{ ssr: false });
 
 const HomeProject = () => {
   return (

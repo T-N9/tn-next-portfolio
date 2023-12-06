@@ -8,11 +8,22 @@
 
   "Home": "ホーム",
   "About": "紹介",
-  "Writing" : "記事",
+  "Writing": "記事",
   "Works": "作品",
   "Services": "サービス",
   "Contact": "コンタクト",
 
-  "projects" : "プロジェクト",
-  "view_all_works" :"全て見る"
+  "projects": "プロジェクト",
+  "view_all_works": "全て見る",
+  "Bride To Be Bridal": "ブライド ト ビ ブライダル",
+  "Bridal Boutique Transformation with Next JS : Beauty, Savings, Success": "Next JS でのブライダルブティック変革：美しさ、節約、成功",
+  "View Project": "プロジェクトを見る",
+  "view detail": "詳細を見る",
+  "Gui-Transpo": "ギー・トランスポ",
+  "Developing a pocket guitar chord transposing and song lyric generator.": "ポケットギターコード変換と歌詞生成の開発中",
+  "CINE": "シネ",
+  "TMDB alternative website to view live cinematic information and download movie torrents.": "TMDB 代替ウェブサイト：ライブシネマ情報の閲覧と映画トレントのダウンロード",
+
+  "What they say" : "評価",
+  "I am thrilled with the website created by the talented website developer TeNyain. The design is visually stunning, the functionality is seamless, and it perfectly represents my business. Working with TeNyain was a pleasure, and I highly recommend his services to anyone in need of a remarkable website." : "テニャインという才能あるウェブサイト開発者によって作成されたウェブサイトには大変満足しています。デザインは視覚的に素晴らしく、機能もスムーズで、私のビジネスを完璧に表現しています。テニャインとの仕事は喜びであり、傑出したウェブサイトを必要とするすべての方に彼のサービスを強くお勧めします。"
 }

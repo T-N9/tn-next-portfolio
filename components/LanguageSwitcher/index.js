@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
+import { setCurrentLanguage } from "../../store/slices/NavbarSlice";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
-  const [currentLanguage, setCurrentLanguage] = useState();
+  // const [currentLanguage, setCurrentLanguage] = useState();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dispatch = useDispatch();
+  const { currentLanguage } = useSelector((state) => state.navBar);
 
   const languageOptions = [
     { value: "en", label: "English", src: "/content/gb.svg" },
@@ -12,29 +16,26 @@ const LanguageSwitcher = () => {
   ];
 
   useEffect(() => {
-    setCurrentLanguage(languageOptions[0].value);
+    dispatch(setCurrentLanguage(languageOptions[0].value));
     if (typeof window !== "undefined") {
       const storedLanguage = localStorage.getItem("preferredLanguage");
-      setCurrentLanguage(storedLanguage || languageOptions[0].value);
+      dispatch(setCurrentLanguage(storedLanguage || languageOptions[0].value));
       console.log(
         "Current Language:",
         storedLanguage || languageOptions[0].value
       );
 
-      if(storedLanguage) {
+      if (storedLanguage) {
         changeLanguage(storedLanguage);
-      }else {
+      } else {
         changeLanguage(languageOptions[0].value);
       }
-
     }
   }, []);
 
-  console.log(currentLanguage, languageOptions[0].value);
-
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-    setCurrentLanguage(lng);
+    dispatch(setCurrentLanguage(lng));
     if (typeof window !== "undefined") {
       localStorage.setItem("preferredLanguage", lng);
     }
