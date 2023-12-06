@@ -11,5 +11,8 @@
   "Works": "Works",
   "Writing": "Writing",
   "Services": "Services",
-  "Contact": "Contact"
+  "Contact": "Contact",
+
+  "projects" : "Projects",
+  "view_all_works" :"view all works"
 }

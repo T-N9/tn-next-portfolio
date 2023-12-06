@@ -11,5 +11,8 @@
   "Writing" : "記事",
   "Works": "作品",
   "Services": "サービス",
-  "Contact": "コンタクト"
+  "Contact": "コンタクト",
+
+  "projects" : "プロジェクト",
+  "view_all_works" :"全て見る"
 }

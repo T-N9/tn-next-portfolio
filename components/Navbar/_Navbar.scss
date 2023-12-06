@@ -296,7 +296,7 @@
   box-shadow: rgba(178, 178, 178, 0.3) 0px 0px 0px 3px;
   border-radius: 10px;
   margin: 0 1rem;
-  max-width: 50px;
+  max-width: 30px;
 
   @include m-breakpoint-down(small) {
     margin: auto;
@@ -335,7 +335,7 @@
   align-items: center;
   padding: 8px;
   cursor: pointer;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   text-transform: uppercase;
 

@@ -63,8 +63,8 @@ const LanguageSwitcher = () => {
               ?.src
           }
           alt="language flag"
-          width={50}
-          height={50}
+          width={30}
+          height={30}
         />
       </div>
 
@@ -80,8 +80,8 @@ const LanguageSwitcher = () => {
               <img
                 src={option.src}
                 alt="language flag"
-                width={50}
-                height={50}
+                width={30}
+                height={30}
               />
               {option.value}
             </div>
