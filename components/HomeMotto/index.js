@@ -1,13 +1,14 @@
 import React from "react";
 import Bricks from "./Bricks";
+import { useTranslation } from "react-i18next";
 
 const HomeMotto = () => {
+  const { t } = useTranslation();
   return (
     <section className="motto_page_wrapper">
       <div className="motto_page">
         <h1>
-          “ If I cannot build a wall, I will lay a brick every day one by one
-          until it becomes a wall. “
+          “ {t('motto')} “
         </h1>
 
         <div className="bricks">

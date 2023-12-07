@@ -27,5 +27,15 @@
   "What they say": "評価",
   "skills": "スキル",
   "skill_description": "私は個人のウェブサイトやポートフォリオサイトの構築、そしてウェブデザインテンプレートをデザイン機能のあるウェブサイトに変換するウェブデザイン開発サービスを提供しています。",
-  "view_services": "サービスを見る"
+  "view_services": "サービスを見る",
+  "get_in_touch" : "お問い合わせ",
+  "your_name" : "名前",
+  "your_email": "メール",
+  "your_message": "メッセージ",
+  "send_message": "メッセージを送る",
+  "sending" : "送信中...",
+  "form_complete": "完全に記入してください。",
+  "thank_you_contact" : "お問い合わせいただきありがとうございます。🤩",
+  "soon_contact" : "近日中にご連絡いたします...",
+  "motto" : "壁を築けないなら、毎日一つずつレンガを積み上げ、いつか壁になるまで。"
 }

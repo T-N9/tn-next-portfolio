@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { client } from "../../client";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,8 @@ const ContactForm = () => {
     email: "",
     message: "",
   });
+
+  const { t } = useTranslation();
 
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -90,7 +93,7 @@ const ContactForm = () => {
           </form>
         </div>
 
-        <h1 className="title_text">Get In Touch</h1>
+        <h1 className="title_text">{t("get_in_touch")}</h1>
 
         {!isFormSubmitted ? (
           <form onSubmit={handleSubmit} className="tn_form">
@@ -100,7 +103,7 @@ const ContactForm = () => {
                 type="text"
                 name="username"
                 id="name"
-                placeholder="Your Name"
+                placeholder={t("your_name")}
                 value={username}
                 onChange={handleChangeInput}
               />
@@ -109,25 +112,25 @@ const ContactForm = () => {
                 type="email"
                 name="email"
                 id="email"
-                placeholder="Your Email"
+                placeholder={t("your_email")}
                 value={email}
                 onChange={handleChangeInput}
               />
             </div>
             <textarea
               className="tn_form_input area"
-              placeholder="Your Message"
+              placeholder={t("your_message")}
               name="message"
               value={message}
               onChange={handleChangeInput}
             />
 
             <button type="submit" className="primary_btn">
-              {!loading ? "Send Message" : "Sending..."}
+              {!loading ? t("send_message") : t("sending")}
             </button>
 
             {error ? (
-              <p className="error-form">** Please fill completly. **</p>
+              <p className="error-form">** {t('form_complete')} **</p>
             ) : (
               ""
             )}
@@ -140,8 +143,8 @@ const ContactForm = () => {
             transition={{ duration: 1 }}
           >
             <div className="thankyou_txt">
-              <h1>Thank you for reaching me.🤩</h1>
-              <p>I will get back to you soon...</p>
+              <h1>{t('thank_you_contact')}</h1>
+              <p>{t('soon_contact')}</p>
             </div>
           </motion.div>
         )}

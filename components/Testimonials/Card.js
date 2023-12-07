@@ -4,8 +4,6 @@ import { useSelector } from "react-redux";
 const Card = ({ person }) => {
   const { currentLanguage } = useSelector((state) => state.navBar);
 
-  console.log({ currentLanguage });
-
   return (
     <div className="card">
       <div className="saying">

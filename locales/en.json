@@ -28,5 +28,15 @@
   "What they say": "What they say",
   "skills" : "Skills",
   "skill_description" : "I provide web design development services such as building personal websites, portfolio websites, and transforming a web design template into a design functional website.",
-  "view_services" : "View Services"
+  "view_services" : "View Services",
+  "get_in_touch" : "Get In Touch",
+  "your_name" : "Your Name",
+  "your_email": "Your Email",
+  "your_message": "Your Message",
+  "send_message": "Send Message",
+  "sending" : "Sending...",
+  "form_complete": "Please fill completely.",
+  "thank_you_contact" : "Thank you for reaching me.🤩",
+  "soon_contact" : "I will get back to you soon...",
+  "motto" : "If I cannot build a wall, I will lay a brick every day one by one until it becomes a wall."
 }

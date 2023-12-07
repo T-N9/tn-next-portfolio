@@ -20,10 +20,6 @@ const LanguageSwitcher = () => {
     if (typeof window !== "undefined") {
       const storedLanguage = localStorage.getItem("preferredLanguage");
       dispatch(setCurrentLanguage(storedLanguage || languageOptions[0].value));
-      console.log(
-        "Current Language:",
-        storedLanguage || languageOptions[0].value
-      );
 
       if (storedLanguage) {
         changeLanguage(storedLanguage);
