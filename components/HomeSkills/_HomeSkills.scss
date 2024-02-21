@@ -1,10 +1,11 @@
 .skill_page_wrapper {
     padding: 3.75rem 0;
     .skill_page {
-        background-image: url(../../assets/skills-bg.webp);
+        // background-image: url(../../assets/skills-bg.webp);
         background-size: 75%;
         background-repeat: no-repeat;
         background-position: center center;
+
 
         @include m-breakpoint-down(large) {
             background-size: 85%;
@@ -16,18 +17,31 @@
         }
         &--grid {
             display: grid;
-            margin: 3rem auto;
-            width: 40%;
-            grid-template-columns: repeat(4, 1fr);
+            // margin: 3rem auto;
+            // width: 40%;
+            grid-template-columns: repeat(7, 1fr);
             grid-gap: 30px 0;
+            box-shadow: rgba(223, 223, 223, 0.3) 0px 0px 0px 3px;
+            padding: 3rem 0;
+            border-radius: 10px;
+            margin: 1rem auto;
+            transition: all 200ms ease-out;
+            background-image: url(../../assets/contact-bg.svg);
+            
 
             @include m-breakpoint-down(large) {
-                width: 45%;
+                // width: 45%;
             }
 
+            &:hover {
+                box-shadow: rgba(170, 170, 170, 0.3) 0px 0px 0px 3px;
+              }
+
             @include m-breakpoint-down(small) {
+                grid-template-columns: repeat(4, 1fr);
                 grid-gap: 20px 0;
-                width: 90%;
+                // width: 90%;
+                padding: 1rem 0;
             }
 
             .skill_item {
@@ -91,7 +105,10 @@
 .dark {
     .skill_page_wrapper {
         .skill_page {
-            background-image: url(../../assets/skills-dark-bg.webp);
+            &--grid {
+                background-image: url(../../assets/contact-bg-dark.svg);
+            }
+            // background-image: url(../../assets/skills-dark-bg.webp);
 
             .skill_item {
                 color: rgba($light-color, 0.5);

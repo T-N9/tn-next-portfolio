@@ -6,9 +6,9 @@ import ScrollRevealDiv from '../common/ScrollRevealDiv';
 
 const HeroContact = () => {
   return (
-    <section className="contact_page_wrapper">
+    <section className="contact_page_wrapper container_sm">
       <ScrollRevealDiv>
-        <div className="contact_page">
+        <div className="contact_page ">
           <ContactImg />
           <ContactForm />
         </div>

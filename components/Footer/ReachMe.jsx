@@ -6,7 +6,6 @@ import {
   Gmail,
   Mastodon,
 } from "@icons-pack/react-simple-icons";
-import ReactMarkdown from "react-markdown";
 
 const ReachMe = () => {
   return (

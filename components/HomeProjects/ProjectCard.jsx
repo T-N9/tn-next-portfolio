@@ -39,7 +39,7 @@ const ProjectCard = ({ title, desc, image, icon, category }) => {
         <div className="col_2">
           <div className="projectCard--text">
               <h1>{t(title)}</h1>
-              {console.log(title)}
+              {/* {console.log(title)} */}
 
             <p>{t(desc)}</p>
           </div>
