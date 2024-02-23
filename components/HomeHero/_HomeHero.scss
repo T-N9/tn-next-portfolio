@@ -93,24 +93,23 @@
           justify-content: center;
           gap: 2rem;
         }
-
       }
 
       .icon_banner {
         padding: 1rem 0;
         svg {
-            width: 40px;
-            height: 40px;
-            // margin-right: 2rem;
-            transition: all 200ms ease;
+          width: 40px;
+          height: 40px;
+          // margin-right: 2rem;
+          transition: all 200ms ease;
 
-            &:hover {
-                filter: drop-shadow(1px 1px 2px $primary-color);
-            }
+          &:hover {
+            filter: drop-shadow(1px 1px 2px $primary-color);
+          }
         }
 
-        >:not(:last-child){
-            margin-right: 2rem;
+        > :not(:last-child) {
+          margin-right: 2rem;
         }
 
         @include m-breakpoint-down(lmedium) {
@@ -118,7 +117,7 @@
           justify-content: center;
           align-items: center;
         }
-    }
+      }
 
       &--text {
         font-size: 3rem;
@@ -136,7 +135,6 @@
           text-align: center;
           font-size: 1.7rem;
         }
-
       }
 
       @include m-breakpoint-down(lmedium) {
@@ -152,11 +150,11 @@
       display: flex;
       justify-content: end;
       align-items: center;
-      border-right: 5px dashed $primary-color;
+      border-right: 5px dashed rgba($primary-color, 0.3);
 
       @include m-breakpoint-down(lmedium) {
-        border-right: 5px dashed $primary-color;
-        border-left: 5px dashed $primary-color;
+        border-right: 5px dashed rgba($primary-color, 0.3);
+        border-left: 5px dashed rgba($primary-color, 0.3);
       }
 
       &--image {
@@ -226,17 +224,24 @@
 
 .dark {
   .hero_page_wrapper {
-
     .hero_img {
-      border-right: 5px dashed $accent-color;
+      border-right: 5px dashed rgba($accent-color, 0.3);
 
       @include m-breakpoint-down(lmedium) {
-        border-right: 5px dashed $accent-color;
-        border-left: 5px dashed $accent-color;
+        border-right: 5px dashed rgba($accent-color, 0.3);
+        border-left: 5px dashed rgba($accent-color, 0.3);
       }
     }
     .hero_img--image {
       border-color: $accent-color;
+    }
+
+    .icon_banner {
+      svg {
+        &:hover {
+          filter: drop-shadow(1px 1px 2px $accent-color) !important;
+        }
+      }
     }
 
     .squares {
