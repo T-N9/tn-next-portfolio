@@ -10,8 +10,8 @@
 🔸Theming  
 ယနေ့ခေတ် UI trendတခုဖြစ်တဲ့ Light - Dark modeဟာဆိုရင် websiteတော်တော်များများမှာ ရရှိလို့နေပါပြီ။ Color scheme နှစ်ခုကို ကစားရတာဖြစ်တဲ့အတွက် modeနှစ်ခုစလုံးမှာ contract မျှတဖို့ ဒီProjectမှာ အတတ်နိုင်ဆုံးရေးသားထားပါတယ်။
 
-🔸Case Study  
-UIUX portfolio တွေနဲ့ developmentပိုင်းဆိုင်ရာ portfolioတွေမှာ case study တွေဟာ အရေးကြီးတဲ့ အပိုင်းမှာပါဝင်နေပါတယ်။ Project တခုပြီးမြောက်အောင် ဘယ်လိုပြင်ဆင်ခဲ့တယ်၊ ဘယ်လို requirementတွေကောက်ခဲ့တယ်၊ ဘယ်လိုနည်းနဲ့ project goal ကို approach လုပ်သလဲဆိုတာကို မိမိ customer ( သို့ ) employerတွေကို ရှင်းလင်းဖော်ပြခြင်းဖြစ်ပါတယ်။ Internationalက developerတွေ ၊ designerတွေ နဲ့ digital marketerတွေက သူတို့ရဲ့ portfolioတွေမှာ ဒီလိုနည်းနဲ့ ကိုယ့်ရဲ့ idea and thinking ကို deliverလုပ်ကြပြီး branding လုပ်ကြပါတယ်။
+🔸Project Detail  
+UIUX portfolio တွေနဲ့ developmentပိုင်းဆိုင်ရာ portfolioတွေမှာ Project Detail တွေဟာ အရေးကြီးတဲ့ အပိုင်းမှာပါဝင်နေပါတယ်။ Project တခုပြီးမြောက်အောင် ဘယ်လိုပြင်ဆင်ခဲ့တယ်၊ ဘယ်လို requirementတွေကောက်ခဲ့တယ်၊ ဘယ်လိုနည်းနဲ့ project goal ကို approach လုပ်သလဲဆိုတာကို မိမိ customer ( သို့ ) employerတွေကို ရှင်းလင်းဖော်ပြခြင်းဖြစ်ပါတယ်။ Internationalက developerတွေ ၊ designerတွေ နဲ့ digital marketerတွေက သူတို့ရဲ့ portfolioတွေမှာ ဒီလိုနည်းနဲ့ ကိုယ့်ရဲ့ idea and thinking ကို deliverလုပ်ကြပြီး branding လုပ်ကြပါတယ်။
 
 🔸Branding  
 Marketing၊ personal development ၊ career development စတဲ့ သင်တန်းတွေ၊ professionalsတွေကနေ Self Branding ၊ Persoanl Branding ဆိုတဲ့ topic တွေကို ကျွန်တော်တို့ကြားဖူးကြမှာပါ။ Quality ဘယ်လောက်ဘဲကောင်းကောင်း branding မလုပ်နိုင်ရင် လေနှင်ရာ ယိမ်းရဖို့များတယ်ဆိုတာပါဘဲ။ ဒီအချက်က Freelancing နဲ့ social organizationတွေနဲ့ ဆက်စပ်ပြီး အပြိုင်အဆိုင် အလုပ်လုပ်ရတော့မယ်ဆိုရင် အရမ်းသိသာတဲ့ အချက်အလက်ဖြစ်ပါတယ်။ ဒါကြောင့် ဒီportfolio ရဲ့ contentတွေမှာ branding experience တချို့ကို ထည့်သွင်းထားပါတယ်။

@@ -2202,7 +2202,7 @@ export const projectData = [
             _key: "1dc6040c6ce00",
             _type: "span",
             marks: [],
-            text: "🔸Case Study\nUIUX porfolio တွေနဲ့ developmentပိုင်းဆိုင်ရာ porfolioတွေမှာ case study တွေဟာ အရေးကြီးတဲ့ အပိုင်းမှာပါဝင်နေပါတယ်။ Project တခုပြီးမြောက်အောင် ဘယ်လိုပြင်ဆင်ခဲ့တယ်၊ ဘယ်လို requirementတွေကောက်ခဲ့တယ်၊ ဘယ်လိုနည်းနဲ့ project goal ကို approach လုပ်သလဲဆိုတာကို မိမိ customer ( သို့ ) employerတွေကို ရှင်းလင်းဖော်ပြခြင်းဖြစ်ပါတယ်။ Internationalက developerတွေ ၊ designerတွေ နဲ့ digital marketerတွေက သူတို့ရဲ့ porfolioတွေမှာ ဒီလိုနည်းနဲ့ ကိုယ့်ရဲ့ idea and thinking ကို deliverလုပ်ကြပြီး branding လုပ်ကြပါတယ်။",
+            text: "🔸Project Detail\nUIUX porfolio တွေနဲ့ developmentပိုင်းဆိုင်ရာ porfolioတွေမှာ Project Detail တွေဟာ အရေးကြီးတဲ့ အပိုင်းမှာပါဝင်နေပါတယ်။ Project တခုပြီးမြောက်အောင် ဘယ်လိုပြင်ဆင်ခဲ့တယ်၊ ဘယ်လို requirementတွေကောက်ခဲ့တယ်၊ ဘယ်လိုနည်းနဲ့ project goal ကို approach လုပ်သလဲဆိုတာကို မိမိ customer ( သို့ ) employerတွေကို ရှင်းလင်းဖော်ပြခြင်းဖြစ်ပါတယ်။ Internationalက developerတွေ ၊ designerတွေ နဲ့ digital marketerတွေက သူတို့ရဲ့ porfolioတွေမှာ ဒီလိုနည်းနဲ့ ကိုယ့်ရဲ့ idea and thinking ကို deliverလုပ်ကြပြီး branding လုပ်ကြပါတယ်။",
           },
         ],
         markDefs: [],

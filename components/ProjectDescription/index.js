@@ -54,7 +54,7 @@ const ProjectDescription = (props) => {
             {introduction ? (
               <BlockContent blocks={introduction} />
             ) : (
-              <p> Website is online but its case study is in process. </p>
+              <p> Website is online but its Project Detail is in process. </p>
             )}
           </div>
           <a href={url} target="_blank" rel="noreferrer">
