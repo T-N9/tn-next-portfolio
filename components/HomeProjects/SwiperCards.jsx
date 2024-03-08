@@ -40,7 +40,7 @@ const SwiperCards = () => {
     }
   }, []);
 
-  const ProjectCards = contentData?.slice(0, 3).map((project) => {
+  const ProjectCards = contentData?.slice(0, 4).map((project) => {
     const { title, description, icon, category, slug } = project;
     return (
       <SwiperSlide key={nanoid()}>
