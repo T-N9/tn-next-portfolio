@@ -12,8 +12,8 @@ const AboutHero = () => {
           <div className="about_hero--content">
             <div className="wrapper">
               <p className="intro">
-                I am <span className="ht_text">Te Nyain Moe Lwin</span>, 22
-                years old creative front-end web developer with 1+ years
+                I am <span className="ht_text">Te Nyain Moe Lwin</span>, 23
+                years old creative front-end web developer with 2+ years
                 experience. I am here to help
               </p>
               <h1 className="">
