@@ -203,6 +203,23 @@ const AboutTimeline = () => {
                 </div>
               </SRG2>
             </div>
+
+            <div className="item">
+              <div className="point hide_on_desktop">
+                <div className="animate-ping"></div>
+                
+              </div>
+
+              <SRG2 index={9} type="even" noOfColumn ={2}>
+                <div className="description">
+                  <h1 className="ht_text">2024</h1>
+                  <p>A New Chapter</p>
+                  <ul>
+                    <li>Relocated to Chiang Mai, Thailand</li>
+                  </ul>
+                </div>
+              </SRG2>
+            </div>
           </div>
 
           {/* For desktop */}
@@ -388,6 +405,7 @@ const AboutTimeline = () => {
             <div className="item">
               <div className="point hide_on_desktop">
                 <div className="animate-ping"></div>
+                <span></span>
               </div>
 
               <SRG2 index={8} type="even" noOfColumn ={2}>
@@ -396,6 +414,24 @@ const AboutTimeline = () => {
                   <p>In Progress</p>
                   <ul>
                     <li>Passed ITPEC Fundamental IT Engineer Examination</li>
+                  </ul>
+                </div>
+              </SRG2>
+            </div>
+
+            
+            <div className="item">
+              <div className="point hide_on_desktop">
+                <div className="animate-ping"></div>
+                
+              </div>
+
+              <SRG2 index={9} type="even" noOfColumn ={2}>
+                <div className="description">
+                  <h1 className="ht_text">2024</h1>
+                  <p>A New Chapter</p>
+                  <ul>
+                    <li>Relocated to Chiang Mai, Thailand</li>
                   </ul>
                 </div>
               </SRG2>

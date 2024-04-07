@@ -1,5 +1,5 @@
 .about-timeline {
-  margin-bottom: 3rem;
+  margin-bottom: 12rem;
   .container {
     padding-top: 3rem;
     padding-bottom: 5rem;
@@ -166,8 +166,6 @@
       }
     }
 
-
-
     .item {
       &:nth-child(even) {
         &::before {
@@ -231,6 +229,13 @@
         li {
           font-size: 0.9765rem;
         }
+      }
+    }
+
+    .item:last-child {
+      &::before {
+        content: "";
+        display: none;
       }
     }
 
@@ -306,10 +311,12 @@
 
   @include m-breakpoint-down(lmedium) {
     margin-top: 20rem;
+    margin-bottom: 2rem;
   }
 
   @include m-breakpoint-down(small) {
     margin-top: 12rem;
+    margin-bottom: 2rem;
   }
 }
 

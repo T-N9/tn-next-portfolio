@@ -22,7 +22,7 @@ const AboutContent = () => {
               alt="Karen Nation Flag"
             />
           </a>
-          , a computer science student from Myanmar. I am currently specializing
+          , a computer science student from Myanmar, recently relocated to Chiang Mai, Thailand. I am currently specializing
           in front-end web development and creating web applications from my own
           idea.
         </p>
