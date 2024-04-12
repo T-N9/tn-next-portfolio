@@ -1,4 +1,5 @@
 .about_hero {
+  margin-top: 2rem;
   &--wrapper {
     display: flex;
 
@@ -59,22 +60,31 @@
   &--image {
     flex: 5;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
 
+    border-right: 5px dashed rgba($primary-color, 0.3);
+    // border-left: 5px dashed rgba($primary-color, 0.3);
+    @include m-breakpoint-down(lmedium) {
+      border-right: 5px dashed rgba($primary-color, 0.3);
+      border-left: 5px dashed rgba($primary-color, 0.3);
+    }
+
     img {
-      width: 90%;
-      height: 600px;
+      width: 70%;
+      height: 500px;
       border: 3px solid $primary-color;
       object-fit: cover;
       object-position: bottom;
       border-radius: 15px;
 
       @include m-breakpoint-down(lmedium) {
-        width: 100%;
+        width: 70%;
+        height: 600px;
       }
 
       @include m-breakpoint-down(small) {
+        width: 90%;
         height: 400px;
       }
     }
@@ -84,6 +94,11 @@
 .dark {
   .about_hero {
     &--image {
+      border-right: 5px dashed rgba($accent-color, 0.3);
+      @include m-breakpoint-down(lmedium) {
+        border-right: 5px dashed rgba($accent-color, 0.3);
+        border-left: 5px dashed rgba($accent-color, 0.3);
+      }
       img {
         border: 3px solid $accent-color;
       }
