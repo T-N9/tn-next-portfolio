@@ -8,17 +8,17 @@ export default function Document() {
         {/* <!-- Google tag (gtag.js) --> */}
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-LTSQJ48F8N"
+          src="https://www.googletagmanager.com/gtag/js?id=G-E4PF2Z2LTT"
         ></script>
         <Script
           id="google-tag"
           strategy="lazyOnload"
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LTSQJ48F8N');`,
+            __html: ` window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'G-E4PF2Z2LTT');`,
           }}
         ></Script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,8 +37,8 @@ export default function Document() {
         {/* <div id="fb-root"></div> */}
 
         {/* <!-- Your Chat plugin code --> */}
-        {/* <div id="fb-customer-chat" className="fb-customerchat"></div> */}
-        {/* <Script
+        <div id="fb-customer-chat" className="fb-customerchat"></div>
+        <Script
           id="messenger-tag"
           strategy="lazyOnload"
           dangerouslySetInnerHTML={{
@@ -66,7 +66,7 @@ export default function Document() {
               fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));`,
           }}
-        ></Script> */}
+        ></Script>
         <Main />
         <NextScript />
       </body>
