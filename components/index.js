@@ -43,3 +43,5 @@ export { default as Pagination } from './Pagination';
 export { default as ErrorPage } from './Error'
 
 export { default as LinkedInSection } from './HomeContact/LinkedIn';
+
+export { default as PrivacyPolicy } from './PrivacyPolicy/';

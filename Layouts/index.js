@@ -6,3 +6,4 @@ export { default as ProjectDetailPageLayout } from './Layout.ProjectDetail';
 export { default as WritingPageLayout } from './Layout.Writing';
 export { default as ArticlePageLayout } from './Layout.Article';
 export { default as WritingByCategoryPageLayout } from './Layout.WritingByCategory';
+export { default as PrivacyPolicyLayout } from './Layout.PrivacyPolicy';
