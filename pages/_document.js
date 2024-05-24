@@ -31,6 +31,11 @@ export default function Document() {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2340030299315656"
+          crossorigin="anonymous"
+        ></script>
       </Head>
       <body>
         {/* <!-- Messenger Chat plugin Code --> */}
