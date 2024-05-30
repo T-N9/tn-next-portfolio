@@ -87,6 +87,7 @@ const SearchByCategory = ({ category, slug }) => {
   return (
     <>
       <Head>
+        <meta name="google-adsense-account" content="ca-pub-2340030299315656" />
         <meta charset="utf-8" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -157,6 +158,11 @@ const SearchByCategory = ({ category, slug }) => {
           content="nstIYPUM8pyaUUrW69SvgmJkxRRe_hS9tN_VAfzoLeI"
         />
         <title>{category?.title} | Articles by category</title>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2340030299315656"
+          crossorigin="anonymous"
+        ></script>
       </Head>
       <main>
         <WritingByCategoryPageLayout

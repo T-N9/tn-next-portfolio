@@ -4,12 +4,11 @@ import Head from "next/head";
 /* Layout */
 import { WritingPageLayout } from "../Layouts";
 
-const Writing = ({
-  handleLoading
-}) => {
+const Writing = ({ handleLoading }) => {
   return (
     <>
       <Head>
+        <meta name="google-adsense-account" content="ca-pub-2340030299315656" />
         <meta charset="utf-8" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -32,7 +31,7 @@ const Writing = ({
 
         {/* <!-- Primary Meta Tags --> */}
         <title>Writing | Te Nyain&apos;s thoughts</title>
-        <meta name="title" content="Writing | Te Nyain&apos;s thoughts" />
+        <meta name="title" content="Writing | Te Nyain's thoughts" />
         <meta
           name="description"
           content="Read articles about software engineering, management, front-end development and tips. I would like to write and do some knowledge sharing besides
@@ -42,7 +41,7 @@ const Writing = ({
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.tenyain.com/writing/" />
-        <meta property="og:title" content="Writing | Te Nyain&apos;s thoughts" />
+        <meta property="og:title" content="Writing | Te Nyain's thoughts" />
         <meta
           property="og:description"
           content="Read articles about software engineering, management, front-end development and tips. I would like to write and do some knowledge sharing besides
@@ -52,8 +51,14 @@ const Writing = ({
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.tenyain.com/writing/" />
-        <meta property="twitter:title" content="Writing | Te Nyain&apos;s thoughts" />
+        <meta
+          property="twitter:url"
+          content="https://www.tenyain.com/writing/"
+        />
+        <meta
+          property="twitter:title"
+          content="Writing | Te Nyain's thoughts"
+        />
         <meta
           property="twitter:description"
           content="Read articles about software engineering, management, front-end development and tips. I would like to write and do some knowledge sharing besides
@@ -66,6 +71,11 @@ const Writing = ({
           content="nstIYPUM8pyaUUrW69SvgmJkxRRe_hS9tN_VAfzoLeI"
         />
         <title>Writing | Te Nyain&apos;s thoughts</title>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2340030299315656"
+          crossorigin="anonymous"
+        ></script>
       </Head>
       <main>
         <WritingPageLayout handleLoading={handleLoading} />
