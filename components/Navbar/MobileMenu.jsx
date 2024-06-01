@@ -7,7 +7,9 @@ import Toggler from "./Toggler";
 import { setActive } from "../../store/slices/NavbarSlice";
 import pages from "../../constants/pages";
 import { useTranslation } from "react-i18next";
-const LanguageSwitcher = dynamic(() => import('../LanguageSwitcher'),{ ssr: false });
+const LanguageSwitcher = dynamic(() => import("../LanguageSwitcher"), {
+  ssr: false,
+});
 
 const MobileMenu = () => {
   const dispatch = useDispatch();
@@ -34,16 +36,19 @@ const MobileMenu = () => {
                   currentPage === page.name && "ht_text"
                 }`}
               >
-                <Link href={page.route}>{t(page.name)}</Link>
+                {page.name === "Writing" ? (
+                  <a href={page.route}>{t(page.name)}</a>
+                ) : (
+                  <Link href={page.route}>{t(page.name)}</Link>
+                )}
               </li>
             );
           })}
         </ul>
 
-        <LanguageSwitcher/>
+        <LanguageSwitcher />
 
         <Toggler />
-
 
         <div className="separator nav_separator"></div>
         <div className="mail_div">

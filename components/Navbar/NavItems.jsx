@@ -19,7 +19,11 @@ const NavItems = () => {
                 currentPage === page.name && "ht_text"
               }`}
             >
-              <Link href={page.route}>{t(page.name)}</Link>
+              {page.name === "Writing" ? (
+                <a href={page.route}>{t(page.name)}</a>
+              ) : (
+                <Link href={page.route}>{t(page.name)}</Link>
+              )}
             </li>
           );
         })}
