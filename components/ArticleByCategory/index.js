@@ -40,12 +40,12 @@ const ArticleByCategory = ({
               <div className="article_by_category--wrapper container_y_3">
                 {data?.map((article, index) => {
                   return (
-                    <Link
+                    <a
                       key={index}
                       href={`/writing/articles/${article.slug.current}`}
                     >
                       <ArticleCard data={article} />
-                    </Link>
+                    </a>
                   );
                 })}
               </div>

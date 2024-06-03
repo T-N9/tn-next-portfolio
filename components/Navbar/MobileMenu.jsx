@@ -37,7 +37,7 @@ const MobileMenu = () => {
                 }`}
               >
                 {page.name === "Writing" ? (
-                  <Link href={page.route}>{t(page.name)}</Link>
+                  <a href={page.route}>{t(page.name)}</a>
                 ) : (
                   <Link href={page.route}>{t(page.name)}</Link>
                 )}
