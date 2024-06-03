@@ -8,11 +8,20 @@ const useAdsense = () => {
   useEffect(() => {
     const handleRouteChange = () => {
       if (typeof window !== "undefined") {
-        try {
-          (adsbygoogle = window.adsbygoogle || []).push({});
-          console.log("Ads initialized");
-        } catch (e) {
-          console.error("Adsense error: ", e);
+        // try {
+        //   (adsbygoogle = window.adsbygoogle || []).push({});
+        //   console.log("Ads initialized");
+        // } catch (e) {
+        //   console.error("Adsense error: ", e);
+        // }
+        var ads = document.getElementsByClassName("adsbygoogle").length;
+        for (var i = 0; i < ads; i++) {
+          try {
+            (window.adsbygoogle = window.adsbygoogle || []).push({});
+            console.log("Ads initialized");
+          } catch (e) {
+            console.error("Adsense error: ", e);
+          }
         }
       }
     };
