@@ -17,6 +17,14 @@ const ArticleByCategory = ({
 }) => {
   return (
     <section className="article_by_category">
+      <ins
+        className="adsbygoogle"
+        style={{ display: "block" }}
+        data-ad-format="fluid"
+        data-ad-layout-key="-f9+5v+4m-d8+7b"
+        data-ad-client="ca-pub-2340030299315656"
+        data-ad-slot="1077714033"
+      ></ins>
       <div className="container_sm container_y_3">
         <h1 className="ht_text center_text">#{category?.title}</h1>
         <p className="center_text">Articles by this category</p>
@@ -38,6 +46,14 @@ const ArticleByCategory = ({
           <>
             {data?.length > 0 ? (
               <div className="article_by_category--wrapper container_y_3">
+                <ins
+                  className="adsbygoogle"
+                  style={{ display: "block" }}
+                  data-ad-format="fluid"
+                  data-ad-layout-key="-67+dr+8-e9+f6"
+                  data-ad-client="ca-pub-2340030299315656"
+                  data-ad-slot="4517431449"
+                ></ins>
                 {data?.map((article, index) => {
                   return (
                     <a
