@@ -64,6 +64,14 @@ const WritingAllArticles = () => {
     <section className="writing_allArticles">
       <div className="container_sm">
         <div className="writing_allArticles--header container_y_2">
+          <ins
+            className="adsbygoogle"
+            style={{display: 'block'}}
+            data-ad-client="ca-pub-2340030299315656"
+            data-ad-slot="3655775912"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
           <p className="title ht_text">All articles :</p>
 
           <Pagination
