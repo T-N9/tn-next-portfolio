@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
   }, [targetPath]);
 
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence mode="wait">
       <Provider store={store}>
         <ThemeProvider attribute="class">
           <ThemeWrapper>
