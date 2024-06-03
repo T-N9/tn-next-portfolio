@@ -79,12 +79,12 @@ const WritingAllArticles = () => {
             {articleData.length > 0 &&
               articleData?.map((article, index) => {
                 return (
-                  <a
+                  <Link
                     key={index}
                     href={`writing/articles/${article.slug.current}`}
                   >
                     <ArticleCard data={article} />
-                  </a>
+                  </Link>
                 );
               })}
           </div>

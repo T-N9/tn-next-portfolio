@@ -10,6 +10,7 @@ import {
   WritingAllArticles,
   GlobalLoad,
 } from "../components";
+import useAdsense from "../hooks/useAdsence";
 
 const WritingPageLayout = () => {
   const dispatch = useDispatch();
@@ -18,16 +19,7 @@ const WritingPageLayout = () => {
     dispatch(setCurrentPage("Writing"));
   }, []);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      try {
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        console.log("Ads initialized");
-      } catch (e) {
-        console.error("Adsense error: ", e);
-      }
-    }
-  }, []);
+  useAdsense();
 
   return (
     <>

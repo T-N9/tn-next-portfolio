@@ -5,6 +5,7 @@ import { setCurrentPage } from "../store/slices/NavbarSlice";
 
 /* Component */
 import { ArticleByCategory, GlobalLoad } from "../components";
+import useAdsense from "../hooks/useAdsence";
 
 const WritingByCategoryPageLayout = ({
   data,
@@ -13,7 +14,7 @@ const WritingByCategoryPageLayout = ({
   pages,
   noItems,
   slug,
-  loading
+  loading,
 }) => {
   const dispatch = useDispatch();
 
@@ -21,16 +22,7 @@ const WritingByCategoryPageLayout = ({
     dispatch(setCurrentPage("Writing"));
   }, []);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      try {
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        console.log("Ads initialized");
-      } catch (e) {
-        console.error("Adsense error: ", e);
-      }
-    }
-  }, []);
+  useAdsense();
 
   return (
     <Transitions>

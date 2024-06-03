@@ -5,6 +5,7 @@ import { setCurrentPage } from "../store/slices/NavbarSlice";
 
 /* Components */
 import { ArticleDetail } from "../components";
+import useAdsense from "../hooks/useAdsence";
 
 const ArticlePageLayout = ({ data, slug }) => {
   const dispatch = useDispatch();
@@ -13,17 +14,8 @@ const ArticlePageLayout = ({ data, slug }) => {
     dispatch(setCurrentPage("Writing"));
   }, []);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      try {
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        console.log("Ads initialized");
-      } catch (e) {
-        console.error("Adsense error: ", e);
-      }
-    }
-  }, []);
-  
+  useAdsense();
+
   return (
     <Transitions>
       <ArticleDetail data={data} slug={slug} />
