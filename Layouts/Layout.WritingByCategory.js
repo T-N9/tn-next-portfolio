@@ -21,6 +21,17 @@ const WritingByCategoryPageLayout = ({
     dispatch(setCurrentPage("Writing"));
   }, []);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      try {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        console.log("Ads initialized");
+      } catch (e) {
+        console.error("Adsense error: ", e);
+      }
+    }
+  }, []);
+
   return (
     <Transitions>
       <ArticleByCategory

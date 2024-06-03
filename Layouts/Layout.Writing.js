@@ -18,7 +18,16 @@ const WritingPageLayout = () => {
     dispatch(setCurrentPage("Writing"));
   }, []);
 
-  const { isLoading } = useSelector((state) => state.loadingState);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      try {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        console.log("Ads initialized");
+      } catch (e) {
+        console.error("Adsense error: ", e);
+      }
+    }
+  }, []);
 
   return (
     <>

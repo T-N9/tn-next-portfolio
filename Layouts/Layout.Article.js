@@ -12,6 +12,18 @@ const ArticlePageLayout = ({ data, slug }) => {
   useEffect(() => {
     dispatch(setCurrentPage("Writing"));
   }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      try {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        console.log("Ads initialized");
+      } catch (e) {
+        console.error("Adsense error: ", e);
+      }
+    }
+  }, []);
+  
   return (
     <Transitions>
       <ArticleDetail data={data} slug={slug} />

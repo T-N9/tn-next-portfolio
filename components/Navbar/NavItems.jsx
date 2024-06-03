@@ -20,7 +20,7 @@ const NavItems = () => {
               }`}
             >
               {page.name === "Writing" ? (
-                <a href={page.route}>{t(page.name)}</a>
+                <Link href={page.route}>{t(page.name)}</Link>
               ) : (
                 <Link href={page.route}>{t(page.name)}</Link>
               )}
