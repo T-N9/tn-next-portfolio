@@ -54,14 +54,6 @@ const ArticleByCategory = ({
           <>
             {data?.length > 0 ? (
               <div className="article_by_category--wrapper container_y_3">
-                <ins
-                  className="adsbygoogle"
-                  style={{ display: "block" }}
-                  data-ad-format="fluid"
-                  data-ad-layout-key="-67+dr+8-e9+f6"
-                  data-ad-client="ca-pub-2340030299315656"
-                  data-ad-slot="4517431449"
-                ></ins>
                 {data?.map((article, index) => {
                   return (
                     <a
@@ -89,6 +81,14 @@ const ArticleByCategory = ({
           noItems={noItems}
         />
       </div>
+      <ins
+        className="adsbygoogle"
+        style={{ display: "block" }}
+        data-ad-format="fluid"
+        data-ad-layout-key="-67+dr+8-e9+f6"
+        data-ad-client="ca-pub-2340030299315656"
+        data-ad-slot="4517431449"
+      ></ins>
     </section>
   );
 };

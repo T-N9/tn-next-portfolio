@@ -65,7 +65,7 @@ const WritingAllArticles = () => {
       <div className="container_sm">
         <ins
           className="adsbygoogle"
-          style={{display: 'block'}}
+          style={{ display: "block" }}
           data-ad-format="fluid"
           data-ad-layout-key="-f9+5v+4m-d8+7b"
           data-ad-client="ca-pub-2340030299315656"
@@ -84,14 +84,6 @@ const WritingAllArticles = () => {
 
         {!arctLoading ? (
           <div className="writing_allArticles--post_wrapper">
-            <ins
-              className="adsbygoogle"
-              style={{ display: "block" }}
-              data-ad-format="fluid"
-              data-ad-layout-key="-67+dr+8-e9+f6"
-              data-ad-client="ca-pub-2340030299315656"
-              data-ad-slot="4517431449"
-            ></ins>
             {articleData.length > 0 &&
               articleData?.map((article, index) => {
                 return (
@@ -119,6 +111,14 @@ const WritingAllArticles = () => {
           />
         </div>
       </div>
+      <ins
+        className="adsbygoogle"
+        style={{ display: "block" }}
+        data-ad-format="fluid"
+        data-ad-layout-key="-67+dr+8-e9+f6"
+        data-ad-client="ca-pub-2340030299315656"
+        data-ad-slot="4517431449"
+      ></ins>
     </section>
   );
 };
