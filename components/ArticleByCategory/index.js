@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 
 /* Components */
 import ArticleCard from "../WritingAllArticles/ArticleCard";
@@ -81,14 +80,6 @@ const ArticleByCategory = ({
           noItems={noItems}
         />
       </div>
-      <ins
-        className="adsbygoogle"
-        style={{ display: "block" }}
-        data-ad-format="fluid"
-        data-ad-layout-key="-67+dr+8-e9+f6"
-        data-ad-client="ca-pub-2340030299315656"
-        data-ad-slot="4517431449"
-      ></ins>
     </section>
   );
 };
