@@ -37,16 +37,6 @@ export default function Document() {
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2340030299315656"
           crossorigin="anonymous"
         ></script>
-        <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                (adsbygoogle = window.adsbygoogle || []).push({
-                  google_ad_client: "pub-2340030299315656",
-                  enable_page_level_ads: true
-                });
-              `
-            }}
-          />
       </Head>
       <body>
         <Main />
