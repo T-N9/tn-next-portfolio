@@ -1,4 +1,22 @@
 .article_page {
+  .blog-flex {
+    display: flex;
+    gap: 20px;
+
+    .blog-section {
+      flex : 6;
+    }
+
+    aside {
+      flex : 3;
+
+      @include m-breakpoint-down(medium) {
+        display: none;
+      }
+    }
+  }
+
+
 
   .separator {
     margin-top: 3rem;

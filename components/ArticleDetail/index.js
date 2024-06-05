@@ -43,8 +43,8 @@ const ArticleDetail = ({ data, slug }) => {
 
   return (
     <section className="article_page">
-      <div className="container_sm container_y_3">
-        <div className="container_x_sm">
+      <div className="container_sm container_y_3 blog-flex">
+        <div className="blog-section">
           <div className="breadcrumb">
             <p>
               {" "}
@@ -142,6 +142,17 @@ const ArticleDetail = ({ data, slug }) => {
             </div>
           </div>
         </div>
+        <aside>
+          <ins
+            class="adsbygoogle"
+            style={{ display: "block" }}
+            data-ad-client="ca-pub-2340030299315656"
+            data-ad-slot="3655775912"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </aside>
       </div>
     </section>
   );
