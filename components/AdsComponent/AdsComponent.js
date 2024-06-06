@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 
-const AdsComponent = ({ isDisplay = true , slotId }) => {
+const AdsComponent = ({ isDisplay = true , slotId, layoutKey = '' }) => {
   const router = useRouter();
   const { pathname } = router.pathname;
 
@@ -53,7 +53,8 @@ const AdsComponent = ({ isDisplay = true , slotId }) => {
           className="adsbygoogle"
           style={{ display: "flex", justifyContent : "center" }}
           data-ad-format="fluid"
-          data-ad-layout-key="-f9+5v+4m-d8+7b"
+          // data-ad-layout-key="-f9+5v+4m-d8+7b"
+          data-ad-layout-key={layoutKey}
           data-ad-client="ca-pub-2340030299315656"
           //   data-ad-slot="1077714033"
           data-ad-slot={slotId}

@@ -56,6 +56,7 @@ const ArticleDetail = ({ data, slug }) => {
             </p>
           </div>
 
+
           <div className="article_page--header">
             <h1 className="title ht_text">{data.title}</h1>
 
@@ -63,6 +64,8 @@ const ArticleDetail = ({ data, slug }) => {
               Published on {moment(data._createdAt).format("MMMM Do YYYY")}
             </p>
           </div>
+
+          <AdsComponent isDisplay={false} layoutKey="-f7+5u+4t-da+6l" slotId={'4773787595'}/>
 
           <div className="categories">
             {data?.categories?.map((item, index) => {
