@@ -38,6 +38,7 @@ const AdsComponent = ({ isDisplay = true , slotId }) => {
 
   return (
     <div>
+      <p style={{textAlign : 'center'}}>Ads by Google</p>
       {isDisplay ? (
         <ins
           className="adsbygoogle"

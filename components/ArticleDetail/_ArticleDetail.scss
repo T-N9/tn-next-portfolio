@@ -4,19 +4,26 @@
     gap: 20px;
 
     .blog-section {
-      flex : 6;
+      flex: 6;
     }
 
     aside {
-      flex : 3;
+      flex: 3;
+      position: relative;
+
+      .ads-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: fixed;
+        top: 3rem;
+      }
 
       @include m-breakpoint-down(medium) {
         display: none;
       }
     }
   }
-
-
 
   .separator {
     margin-top: 3rem;
