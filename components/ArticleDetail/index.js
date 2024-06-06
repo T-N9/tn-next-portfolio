@@ -18,6 +18,7 @@ import {
 
 /* Hook */
 import Hook from "./hook";
+import AdsComponent from "../AdsComponent/AdsComponent";
 
 const serializers = {
   types: {
@@ -143,15 +144,7 @@ const ArticleDetail = ({ data, slug }) => {
           </div>
         </div>
         <aside>
-          <ins
-            class="adsbygoogle"
-            style={{ display: "block" }}
-            data-ad-client="ca-pub-2340030299315656"
-            data-ad-slot="3655775912"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          ></ins>
-          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+          <AdsComponent isDisplay={true} slotId={"3655775912"} />
         </aside>
       </div>
     </section>

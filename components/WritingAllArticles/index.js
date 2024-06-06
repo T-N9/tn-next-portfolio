@@ -63,14 +63,6 @@ const WritingAllArticles = () => {
   return (
     <section className="writing_allArticles">
       <div className="container_sm">
-        <ins
-          className="adsbygoogle"
-          style={{ display: "block" }}
-          data-ad-format="fluid"
-          data-ad-layout-key="-f9+5v+4m-d8+7b"
-          data-ad-client="ca-pub-2340030299315656"
-          data-ad-slot="1077714033"
-        ></ins>
         <div className="writing_allArticles--header container_y_2">
           <p className="title ht_text">All articles :</p>
 
