@@ -17,6 +17,7 @@
         gap: 10px;
         position: fixed;
         top: 3rem;
+        width: 100%;
       }
 
       @include m-breakpoint-down(medium) {
