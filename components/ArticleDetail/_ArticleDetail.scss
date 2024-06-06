@@ -5,6 +5,9 @@
 
     .blog-section {
       flex: 6;
+      @include m-breakpoint-down(medium) {
+        width: 90vw;
+      }
     }
 
     aside {
@@ -63,6 +66,8 @@
     gap: 7px;
     flex-wrap: wrap;
     margin-bottom: 2rem;
+    margin-top: 2rem;
+
     .category {
       font-size: 18px;
       padding: 5px 15px;
