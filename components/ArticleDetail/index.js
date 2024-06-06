@@ -146,7 +146,8 @@ const ArticleDetail = ({ data, slug }) => {
         <aside>
           <div className="ads-section">
             <AdsComponent isDisplay={true} slotId={"3655775912"} />
-            <AdsComponent isDisplay={true} slotId={"5440002007"} />
+            <AdsComponent isDisplay={true} slotId={"3655775912"} />
+            <AdsComponent isDisplay={true} slotId={"3655775912"} />
           </div>
         </aside>
       </div>
