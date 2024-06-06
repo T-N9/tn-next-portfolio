@@ -38,11 +38,10 @@ const AdsComponent = ({ isDisplay = true , slotId }) => {
 
   return (
     <div>
-      <p style={{textAlign : 'center'}}>Ads by Google</p>
       {isDisplay ? (
         <ins
           className="adsbygoogle"
-          style={{ display: "block" }}
+          style={{ display: "flex", justifyContent : "center" }}
           data-ad-client="ca-pub-2340030299315656"
           //   data-ad-slot="3655775912"
           data-ad-slot={slotId}
@@ -52,7 +51,7 @@ const AdsComponent = ({ isDisplay = true , slotId }) => {
       ) : (
         <ins
           className="adsbygoogle"
-          style={{ display: "block" }}
+          style={{ display: "flex", justifyContent : "center" }}
           data-ad-format="fluid"
           data-ad-layout-key="-f9+5v+4m-d8+7b"
           data-ad-client="ca-pub-2340030299315656"
