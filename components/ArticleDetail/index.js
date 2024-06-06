@@ -145,6 +145,8 @@ const ArticleDetail = ({ data, slug }) => {
               </a>
             </div>
           </div>
+
+          <AdsComponent isDisplay={false} layoutKey="-f7+5u+4t-da+6l" slotId={'4773787595'}/>
         </div>
         <aside>
           <div className="ads-section">

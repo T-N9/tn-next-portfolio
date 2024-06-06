@@ -20,7 +20,7 @@
         gap: 10px;
       }
 
-      @include m-breakpoint-down(medium) {
+      @include m-breakpoint-down(lmedium) {
         display: none;
       }
     }
@@ -95,6 +95,7 @@
     margin: 2rem 0;
     gap: 20px;
     align-items: center;
+    margin-bottom: 2rem;
 
     @include m-breakpoint-down(small) {
       flex-direction: column;
