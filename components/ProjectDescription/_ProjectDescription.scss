@@ -99,13 +99,17 @@
   }
 
   blockquote {
+    font-size: 1.3rem;
+    padding : 1.5rem 0rem;
     padding-left: 15px;
     border-left: 5px solid gray;
+    margin : 2rem 0px ;
+
   }
 
   p,
   img {
-    margin-bottom: 10px;
+    margin-bottom: 2rem;
 
     @include m-breakpoint-down(small) {
       font-size: calUni(16px);
@@ -137,6 +141,10 @@
     margin-top: 0px;
     font-weight: normal;
     font-family: $font-primary !important;
+  }
+
+  h1 {
+    font-size: 48px;
   }
 
   h4 {
