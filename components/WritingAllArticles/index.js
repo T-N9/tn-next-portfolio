@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { client } from "../../client";
 import { useDispatch, useSelector } from "react-redux";
 import { setArticleData } from "../../store/slices/WritingSlice";
@@ -32,33 +32,31 @@ const WritingAllArticles = () => {
     pageNumber
   );
 
-  const fetchData = () => {
+  const fetchData = useCallback(() => {
     dispatch(setStartLoading());
     setArctLoading(true);
+
     client.fetch(`count(*[_type == 'article'])`).then((data) => {
       setDataCount(data);
 
       if (startIndex !== null && endIndex !== null) {
-        const query = `*[_type == "article"] | order(_createdAt desc) [${startIndex}...${endIndex}]  {title, _createdAt,titleImage, categories,slug}`;
+        const query = `*[_type == "article"] | order(_createdAt desc) [${startIndex}...${endIndex}]  {title, _createdAt, titleImage, categories, slug}`;
 
         client.fetch(query).then((data) => {
           dispatch(setArticleData(data));
           dispatch(setStopLoading());
           setArctLoading(false);
         });
+      } else {
+        dispatch(setStopLoading());
+        setArctLoading(false);
       }
     });
-  };
+  }, [dispatch, startIndex, endIndex]);
 
   useEffect(() => {
     fetchData();
-  }, [pageNumber, startIndex, endIndex]);
-
-  useEffect(() => {
-    if (articleData.length === 0) {
-      fetchData();
-    }
-  }, [articleData]);
+  }, [fetchData]);
 
   return (
     <section className="writing_allArticles">
